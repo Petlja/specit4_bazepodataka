@@ -36,12 +36,12 @@ lessons:
     folder: 1_0_Relacione baze podataka
     activities:
       - type: reading
-        title: Табеле
+        title: Релационе базе података
         file: 1_1_Tabele_lekcija.rst
         description: #Optional
         guid: d03e073c-d503-4ad5-9caa-40a744245350
       - type: quiz
-        title: Табеле - квиз
+        title: Релационе базе података - квиз
         decription: 
         file: 1_2_Tabele_kviz.rst
         guid: b757c42c-74fd-4ec6-9867-3726ae60c5b7
