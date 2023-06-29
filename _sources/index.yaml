@@ -40,7 +40,7 @@ lessons:
         file: 1_1_Tabele_lekcija.rst
         description: #Optional
         guid: d03e073c-d503-4ad5-9caa-40a744245350
-      - type: 
+      - type: quiz
         title: Табеле - квиз
         decription: 
         file: 1_2_Tabele_kviz.rst
@@ -49,7 +49,7 @@ lessons:
         title: Веза један према више
         file: 1_3_Veza 1-M_lekcija.rst
         guid: 1a699f1c-589a-4087-84e4-e2b9a473c0ec
-      - type: 
+      - type: quiz
         title: Веза један према више - квиз
         file: 1_4_Veza 1-M_kviz.rst
         guid: 8f722c8f-32a2-4c42-a02e-bfbd157ad2f5
@@ -57,7 +57,7 @@ lessons:
         title: Веза више према више
         file: 1_5_Veza M-M_lekcija.rst
         guid: 4d02c8f1-0a34-497f-9b14-dfa3292ca8c8
-      - type: 
+      - type: quiz
         title: Веза више према више - квиз
         file: 1_6_Veza M-M_kviz.rst
         guid: fdb18b95-0d83-49db-9dda-b9406df4a0ad
@@ -94,15 +94,15 @@ lessons:
         guid: 0d2ffd35-f74b-4164-97be-e53a2e0e2049
       - type: quiz
         title: Упит SELECT - упит из једне табеле - квиз
-        file: 2_3_Upit SELECT iz jedne tabele_kviz
+        file: 2_3_Upit SELECT iz jedne tabele_kviz.rst
         guid: c7f9a305-cd55-4dd1-a3f8-b685e9c58ba0
       - type: reading
         title: Упит SELECT - функције и подупити - задаци
-        file: 2_4_Upit SELECT - fje podupiti_zadaci.rst
+        file: 2_4_Upit SELECT fje podupiti_zadaci.rst
         guid: 2a9f3334-fba6-4448-a0ca-1e4c7e6a0f3b
       - type: quiz
         title: Упит SELECT - фунцкије и подупити - квиз
-        file: 2_5_Upit SELECT fje podupiti_kviz
+        file: 2_5_Upit SELECT fje podupiti_kviz.rst
         guid: 89599bb3-32be-4391-a962-9836143404ad
       - type: reading
         title: Упит SELECT - спајање - задаци
@@ -116,10 +116,6 @@ lessons:
         title: Упит SELECT - нерешени задаци
         file: 2_8_Upit SELECT_nerešeni_zadaci.rst
         guid: 6940cc0b-3375-4511-9169-92f2b02e20bb
-      - type: 
-        title: 
-        file: 
-        guid: 
   - title: База података за библиотеку
     guid: 8651f18a-0043-4fb1-8878-395f8a5df22b
     description: 
@@ -160,18 +156,39 @@ lessons:
     activities:
       - type: reading
         title: Креирање базе - практичан рад 
-        file: 
-        guid: 
-      - type: 
-        title: 
-        file: 
-        guid: 
-      - type: 
-        title: 
-        file: 
-        guid: 
-      - type: 
-        title: 
-        file: 
-        guid: 
+        file: 4_1_Kreiranje baze_praktičan_rad.rst
+        guid: 3ac582a6-d4fd-4a15-b9bc-2faf59c5bd16
+      - type: reading
+        title: Дијаграм и подаци - практичан рад
+        file: 4_2_Dijagram i podaci_praktičan_rad.rst
+        guid: acf2e7ef-7aa3-4944-914b-6503ccaa3e21
+      - type: reading
+        title: Упит SELECT - задаци 
+        file: 4_3_Upit SELECT_zadaci.rst
+        guid: b01d6933-e760-438a-9662-c7f2dc222416
+      - type: reading
+        title: Упит SELECT - нерешени задаци
+        file: 4_4_Upit SELECT_nerešeni_zadaci.rst
+        guid: 6226f8d5-28b0-46d7-9a18-2b2fbc2ef0a6
+  - title: База података за филмове
+    guid: f98a67f5-7392-4d6a-8e85-3d18c905b096
+    description: 
+    folder: 5_0_Baza podataka za filmove
+    activities:
+      - type: reading
+        title: Креирање базе - практични рад
+        file: 5_1_Kreiranje baze_praktični_rad.rst
+        guid: a457fd5c-1331-4143-9a55-62921dc1185f
+      - type: reading
+        title: Дијаграм и подаци - практични рад
+        file: 5_2_Dijagram i podaci_praktičan_rad.rst
+        guid: 1130b1c5-620f-422b-9e28-7fe1c0b2bcaa
+      - type: reading
+        title: Упит SELECT - задаци
+        file: 5_3_Upit SELECT_zadaci.rst
+        guid: 6b055203-6723-42e2-9781-954a879d076b
+      - type: reading
+        title: Упит SELECT - нерешени задаци
+        file: 5_4_Upit SELECT_nerešeni_zadaci.rst
+        guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
       
