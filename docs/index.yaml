@@ -1,0 +1,312 @@
+courseId: specit4_bazepodataka
+description:
+  externalLinks:
+  - href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+    text: Sphinx Docs
+  - href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
+    text: Petljadoc
+  - href: https://github.com/RunestoneInteractive/overview
+    text: Runestone Interactive
+  longDescription: '<div class="document">
+
+    <p>Овај курс је намењен за предмет Базе података у четвртом разреду гимназија
+    за ученика са посебним способностима за рачунарство и информатику.
+
+    Курс прати одговарајући програм наставе и учења. Поред рада у школи, курс може
+    да се пролази и самостално.</p>
+
+    <p>&lt;p&gt;
+
+    &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
+
+    &lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot;
+    src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
+
+    &lt;br /&gt;Овај курс Фондација Петља објавила je под лиценцом &lt;a rel=&quot;license&quot;
+    href=&quot;https://creativecommons.org/licenses/by/4.0/deed.sr_LATN&quot;&gt;Creative
+    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;.
+
+    &lt;/p&gt;</p>
+
+    </div>
+
+    '
+  requirements:
+  - Petljadoc
+  - Runestone
+  - Sphinx
+  shortDescription: Базе података за четврти разред гимназија за ученике са посебним
+    способностима за рачунарство и информатику.
+  toc:
+  - Intro to Petljadoc INDEX.yaml
+  willLearn:
+  - Preview of Petljadoc course
+lang: sr-Cyrl
+lessons:
+- activities:
+  - description: ''
+    file: 1_1_Tabele_lekcija.html
+    guid: d03e073c-d503-4ad5-9caa-40a744245350
+    normalized_title: Релационе базе података
+    src: 1_1_Tabele_lekcija.rst
+    title: Релационе базе података
+    type: reading
+  - description: ''
+    file: 1_2_Tabele_kviz.html
+    guid: b757c42c-74fd-4ec6-9867-3726ae60c5b7
+    normalized_title: Релационе базе података - квиз
+    src: 1_2_Tabele_kviz.rst
+    title: Релационе базе података - квиз
+    type: quiz
+  - description: ''
+    file: 1_3_Veza 1-M_lekcija.html
+    guid: 1a699f1c-589a-4087-84e4-e2b9a473c0ec
+    normalized_title: Веза један према више
+    src: 1_3_Veza 1-M_lekcija.rst
+    title: Веза један према више
+    type: reading
+  - description: ''
+    file: 1_4_Veza 1-M_kviz.html
+    guid: 8f722c8f-32a2-4c42-a02e-bfbd157ad2f5
+    normalized_title: Веза један према више - квиз
+    src: 1_4_Veza 1-M_kviz.rst
+    title: Веза један према више - квиз
+    type: quiz
+  - description: ''
+    file: 1_5_Veza M-M_lekcija.html
+    guid: 4d02c8f1-0a34-497f-9b14-dfa3292ca8c8
+    normalized_title: Веза више према више
+    src: 1_5_Veza M-M_lekcija.rst
+    title: Веза више према више
+    type: reading
+  - description: ''
+    file: 1_6_Veza M-M_kviz.html
+    guid: fdb18b95-0d83-49db-9dda-b9406df4a0ad
+    normalized_title: Веза више према више - квиз
+    src: 1_6_Veza M-M_kviz.rst
+    title: Веза више према више - квиз
+    type: quiz
+  - description: ''
+    file: 1_7_Alat za projektovanje_lekcija.html
+    guid: 915cd9a5-8819-46cc-a63a-d73a239b0f67
+    normalized_title: Алат за пројектовање
+    src: 1_7_Alat za projektovanje_lekcija.rst
+    title: Алат за пројектовање
+    type: reading
+  - description: ''
+    file: 1_8_SUBP_lekcija.html
+    guid: 16a8d056-23e9-41a0-93b7-653fb4a30845
+    normalized_title: СУБП
+    src: 1_8_SUBP_lekcija.rst
+    title: СУБП
+    type: reading
+  - description: ''
+    file: 1_9_Kreiranje baze na drugi način_lekcija.html
+    guid: 30c24b62-9d1c-4869-8048-e56b3d9df79c
+    normalized_title: Креирање базе на други начин
+    src: 1_9_Kreiranje baze na drugi način_lekcija.rst
+    title: Креирање базе на други начин
+    type: reading
+  - description: ''
+    file: 1_10_Još neke SQL komande_lekcija.html
+    guid: 4c8b49fc-9bc7-46e9-933c-461c429496d4
+    normalized_title: Још неке SQL команде
+    src: 1_10_Još neke SQL komande_lekcija.rst
+    title: Још неке SQL команде
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 1_0_Relacione baze podataka
+  guid: 01e84981-a1e7-4daf-b2f6-c557f73ffb03
+  normalized_title: Релационе базе података
+  title: Релационе базе података
+- activities:
+  - description: ''
+    file: 2_1_Upit SELECT_lekcija.html
+    guid: fa108c92-aefb-4c25-9c5f-b0192c33d2aa
+    normalized_title: Упит SELECT
+    src: 2_1_Upit SELECT_lekcija.rst
+    title: Упит SELECT
+    type: reading
+  - description: ''
+    file: 2_2_Upit SELECT iz jedne tabele_zadaci.html
+    guid: 0d2ffd35-f74b-4164-97be-e53a2e0e2049
+    normalized_title: Упиз SELECT - упит из једне табеле - задаци
+    src: 2_2_Upit SELECT iz jedne tabele_zadaci.rst
+    title: Упиз SELECT - упит из једне табеле - задаци
+    type: reading
+  - description: ''
+    file: 2_3_Upit SELECT iz jedne tabele_kviz.html
+    guid: c7f9a305-cd55-4dd1-a3f8-b685e9c58ba0
+    normalized_title: Упит SELECT - упит из једне табеле - квиз
+    src: 2_3_Upit SELECT iz jedne tabele_kviz.rst
+    title: Упит SELECT - упит из једне табеле - квиз
+    type: quiz
+  - description: ''
+    file: 2_4_Upit SELECT fje podupiti_zadaci.html
+    guid: 2a9f3334-fba6-4448-a0ca-1e4c7e6a0f3b
+    normalized_title: Упит SELECT - функције и подупити - задаци
+    src: 2_4_Upit SELECT fje podupiti_zadaci.rst
+    title: Упит SELECT - функције и подупити - задаци
+    type: reading
+  - description: ''
+    file: 2_5_Upit SELECT fje podupiti_kviz.html
+    guid: 89599bb3-32be-4391-a962-9836143404ad
+    normalized_title: Упит SELECT - фунцкије и подупити - квиз
+    src: 2_5_Upit SELECT fje podupiti_kviz.rst
+    title: Упит SELECT - фунцкије и подупити - квиз
+    type: quiz
+  - description: ''
+    file: 2_6_Upit SELECT spajanje_zadaci.html
+    guid: 39ec2d6f-153f-4cac-9169-642b8f813d4
+    normalized_title: Упит SELECT - спајање - задаци
+    src: 2_6_Upit SELECT spajanje_zadaci.rst
+    title: Упит SELECT - спајање - задаци
+    type: reading
+  - description: ''
+    file: 2_7_Upit SELECT spajanje_kviz.html
+    guid: 730479a2-278f-439c-8449-e6bc477db383
+    normalized_title: Упит SELECT - спајање - квиз
+    src: 2_7_Upit SELECT spajanje_kviz.rst
+    title: Упит SELECT - спајање - квиз
+    type: quiz
+  - description: ''
+    file: 2_8_Upit SELECT_nerešeni_zadaci.html
+    guid: 6940cc0b-3375-4511-9169-92f2b02e20bb
+    normalized_title: Упит SELECT - нерешени задаци
+    src: 2_8_Upit SELECT_nerešeni_zadaci.rst
+    title: Упит SELECT - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 2_0_Pretraživanje podataka - Upit SELECT
+  guid: 8569ff97-676a-4a48-a0e2-0b8f4e15f160
+  normalized_title: Претраживање података
+  title: Претраживање података
+- activities:
+  - description: ''
+    file: 3_1_Kreiranje baze_praktičan_rad.html
+    guid: 12f9c1fd-2f28-47c1-9f68-e533dc1f551c
+    normalized_title: Креирање базе - практичан рад
+    src: 3_1_Kreiranje baze_praktičan_rad.rst
+    title: Креирање базе - практичан рад
+    type: reading
+  - description: ''
+    file: 3_2_Upit SELECT iz jedne tabele_zadaci.html
+    guid: 17e14b5a-7f17-4a24-9a80-c733a6225f44
+    normalized_title: Упит SELECT - упит из једне табеле - задаци
+    src: 3_2_Upit SELECT iz jedne tabele_zadaci.rst
+    title: Упит SELECT - упит из једне табеле - задаци
+    type: reading
+  - description: ''
+    file: 3_3_Upit SELECT iz jedne tabele_nerešeni_zadaci.html
+    guid: 9bf2343a-4765-4ddd-a760-56d4c4b9d3eb
+    normalized_title: Упит SELECT - упит из једне табеле - нерешени задаци
+    src: 3_3_Upit SELECT iz jedne tabele_nerešeni_zadaci.rst
+    title: Упит SELECT - упит из једне табеле - нерешени задаци
+    type: reading
+  - description: ''
+    file: 3_4_Upit SELECT spajanje_zadaci.html
+    guid: f99b19c3-b47a-4b72-a121-1561abd27046
+    normalized_title: Упит SELECT - спајање - задаци
+    src: 3_4_Upit SELECT spajanje_zadaci.rst
+    title: Упит SELECT - спајање - задаци
+    type: reading
+  - description: ''
+    file: 3_5_Upit SELECT spajanje_nerešeni_zadaci.html
+    guid: c3c8f646-b325-4cd9-a5d9-060d9aeb2a19
+    normalized_title: Упит SELECT - спајање - нерешени задаци
+    src: 3_5_Upit SELECT spajanje_nerešeni_zadaci.rst
+    title: Упит SELECT - спајање - нерешени задаци
+    type: reading
+  - description: ''
+    file: 3_6_Upit SELECT fje podupiti_zadaci.html
+    guid: b348ac4d-2293-43c5-b8e0-47b475fd5bcb
+    normalized_title: Упит SELECT - функције и подупити - задаци
+    src: 3_6_Upit SELECT fje podupiti_zadaci.rst
+    title: Упит SELECT - функције и подупити - задаци
+    type: reading
+  - description: ''
+    file: 3_7_Upit SELECT fje podupiti_nerešeni_zadaci.html
+    guid: 7a385f42-e22d-4f78-85bc-bc38ea5e8235
+    normalized_title: Упит SELECT - функције и подупити - нерешени задаци
+    src: 3_7_Upit SELECT fje podupiti_nerešeni_zadaci.rst
+    title: Упит SELECT - функције и подупити - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 3_0_Baza podataka za biblioteku.rst
+  guid: 8651f18a-0043-4fb1-8878-395f8a5df22b
+  normalized_title: База података за библиотеку
+  title: База података за библиотеку
+- activities:
+  - description: ''
+    file: 4_1_Kreiranje baze_praktičan_rad.html
+    guid: 3ac582a6-d4fd-4a15-b9bc-2faf59c5bd16
+    normalized_title: Креирање базе - практичан рад
+    src: 4_1_Kreiranje baze_praktičan_rad.rst
+    title: Креирање базе - практичан рад
+    type: reading
+  - description: ''
+    file: 4_2_Dijagram i podaci_praktičan_rad.html
+    guid: acf2e7ef-7aa3-4944-914b-6503ccaa3e21
+    normalized_title: Дијаграм и подаци - практичан рад
+    src: 4_2_Dijagram i podaci_praktičan_rad.rst
+    title: Дијаграм и подаци - практичан рад
+    type: reading
+  - description: ''
+    file: 4_3_Upit SELECT_zadaci.html
+    guid: b01d6933-e760-438a-9662-c7f2dc222416
+    normalized_title: Упит SELECT - задаци
+    src: 4_3_Upit SELECT_zadaci.rst
+    title: Упит SELECT - задаци
+    type: reading
+  - description: ''
+    file: 4_4_Upit SELECT_nerešeni_zadaci.html
+    guid: 6226f8d5-28b0-46d7-9a18-2b2fbc2ef0a6
+    normalized_title: Упит SELECT - нерешени задаци
+    src: 4_4_Upit SELECT_nerešeni_zadaci.rst
+    title: Упит SELECT - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 4_0_Baza podataka za vozačke dozvole
+  guid: 3beba590-be23-407a-ac4a-a0dcd967694a
+  normalized_title: База података за возачке дозволе
+  title: База података за возачке дозволе
+- activities:
+  - description: ''
+    file: 5_1_Kreiranje baze_praktični_rad.html
+    guid: a457fd5c-1331-4143-9a55-62921dc1185f
+    normalized_title: Креирање базе - практични рад
+    src: 5_1_Kreiranje baze_praktični_rad.rst
+    title: Креирање базе - практични рад
+    type: reading
+  - description: ''
+    file: 5_2_Dijagram i podaci_praktičan_rad.html
+    guid: 1130b1c5-620f-422b-9e28-7fe1c0b2bcaa
+    normalized_title: Дијаграм и подаци - практични рад
+    src: 5_2_Dijagram i podaci_praktičan_rad.rst
+    title: Дијаграм и подаци - практични рад
+    type: reading
+  - description: ''
+    file: 5_3_Upit SELECT_zadaci.html
+    guid: 6b055203-6723-42e2-9781-954a879d076b
+    normalized_title: Упит SELECT - задаци
+    src: 5_3_Upit SELECT_zadaci.rst
+    title: Упит SELECT - задаци
+    type: reading
+  - description: ''
+    file: 5_4_Upit SELECT_nerešeni_zadaci.html
+    guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
+    normalized_title: Упит SELECT - нерешени задаци
+    src: 5_4_Upit SELECT_nerešeni_zadaci.rst
+    title: Упит SELECT - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 5_0_Baza podataka za filmove
+  guid: f98a67f5-7392-4d6a-8e85-3d18c905b096
+  normalized_title: База података за филмове
+  title: База података за филмове
+title: Базе података за четврти разред специјализованих ИТ одељења
