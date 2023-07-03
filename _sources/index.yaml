@@ -37,158 +37,137 @@ lessons:
     activities:
       - type: reading
         title: Релационе базе података
-        file: 1_1_Tabele_lekcija.rst
+        file: 1_0_1_Tabele_lekcija.rst
         description: #Optional
         guid: d03e073c-d503-4ad5-9caa-40a744245350
       - type: quiz
         title: Релационе базе података - квиз
         decription: 
-        file: 1_2_Tabele_kviz.rst
+        file: 1_0_2_Tabele_kviz.rst
         guid: b757c42c-74fd-4ec6-9867-3726ae60c5b7
       - type: reading
         title: Веза један према више
-        file: 1_3_Veza 1-M_lekcija.rst
+        file: 1_0_3_Veza 1-M_lekcija.rst
         guid: 1a699f1c-589a-4087-84e4-e2b9a473c0ec
       - type: quiz
         title: Веза један према више - квиз
-        file: 1_4_Veza 1-M_kviz.rst
+        file: 1_0_4_Veza 1-M_kviz.rst
         guid: 8f722c8f-32a2-4c42-a02e-bfbd157ad2f5
       - type: reading
         title: Веза више према више
-        file: 1_5_Veza M-M_lekcija.rst
+        file: 1_0_5_Veza M-M_lekcija.rst
         guid: 4d02c8f1-0a34-497f-9b14-dfa3292ca8c8
       - type: quiz
         title: Веза више према више - квиз
-        file: 1_6_Veza M-M_kviz.rst
+        file: 1_0_6_Veza M-M_kviz.rst
         guid: fdb18b95-0d83-49db-9dda-b9406df4a0ad
       - type: reading
         title: Алат за пројектовање
-        file: 1_7_Alat za projektovanje_lekcija.rst
+        file: 1_0_7_Alat za projektovanje_lekcija.rst
         guid: 915cd9a5-8819-46cc-a63a-d73a239b0f67
       - type: reading
         title: СУБП
-        file: 1_8_SUBP_lekcija.rst
+        file: 1_0_8_SUBP_lekcija.rst
         guid: 16a8d056-23e9-41a0-93b7-653fb4a30845
       - type: reading
         title: Креирање базе на други начин
-        file: 1_9_Kreiranje baze na drugi način_lekcija.rst
+        file: 1_0_9_Kreiranje baze na drugi način_lekcija.rst
         guid: 30c24b62-9d1c-4869-8048-e56b3d9df79c
       - type: reading
         title: Још неке SQL команде
-        file: 1_10_Još neke SQL komande_lekcija.rst
+        file: 1_0_10_Još neke SQL komande_lekcija.rst
         guid: 4c8b49fc-9bc7-46e9-933c-461c429496d4
-  - title: Претраживање података
-    guid: 8569ff97-676a-4a48-a0e2-0b8f4e15f160
-    description: 
-    folder: 2_0_Pretraživanje podataka - Upit SELECT
-    activities:
       - type: reading
         title: Упит SELECT
-        file: 2_1_Upit SELECT_lekcija.rst
+        file: 1_1_1_Upit SELECT_lekcija.rst
         description: #Optional
         guid: fa108c92-aefb-4c25-9c5f-b0192c33d2aa
       - type: reading
         title: Упиз SELECT - упит из једне табеле - задаци
         decription: 
-        file: 2_2_Upit SELECT iz jedne tabele_zadaci.rst
+        file: 1_1_2_Upit SELECT iz jedne tabele_zadaci.rst
         guid: 0d2ffd35-f74b-4164-97be-e53a2e0e2049
       - type: quiz
         title: Упит SELECT - упит из једне табеле - квиз
-        file: 2_3_Upit SELECT iz jedne tabele_kviz.rst
+        file: 1_1_3_Upit SELECT iz jedne tabele_kviz.rst
         guid: c7f9a305-cd55-4dd1-a3f8-b685e9c58ba0
       - type: reading
         title: Упит SELECT - функције и подупити - задаци
-        file: 2_4_Upit SELECT fje podupiti_zadaci.rst
+        file: 1_1_4_Upit SELECT fje podupiti_zadaci.rst
         guid: 2a9f3334-fba6-4448-a0ca-1e4c7e6a0f3b
       - type: quiz
         title: Упит SELECT - фунцкије и подупити - квиз
-        file: 2_5_Upit SELECT fje podupiti_kviz.rst
+        file: 1_1_5_Upit SELECT fje podupiti_kviz.rst
         guid: 89599bb3-32be-4391-a962-9836143404ad
       - type: reading
         title: Упит SELECT - спајање - задаци
-        file: 2_6_Upit SELECT spajanje_zadaci.rst
+        file: 1_1_6_Upit SELECT spajanje_zadaci.rst
         guid: 39ec2d6f-153f-4cac-9169-642b8f813d4
       - type: quiz
         title: Упит SELECT - спајање - квиз
-        file: 2_7_Upit SELECT spajanje_kviz.rst
+        file: 1_1_7_Upit SELECT spajanje_kviz.rst
         guid: 730479a2-278f-439c-8449-e6bc477db383
       - type: reading
         title: Упит SELECT - нерешени задаци
-        file: 2_8_Upit SELECT_nerešeni_zadaci.rst
+        file: 1_1_8_Upit SELECT_nerešeni_zadaci.rst
         guid: 6940cc0b-3375-4511-9169-92f2b02e20bb
-  - title: База података за библиотеку
-    guid: 8651f18a-0043-4fb1-8878-395f8a5df22b
-    description: 
-    folder: 3_0_Baza podataka za biblioteku.rst
-    activities:
       - type: reading
         title: Креирање базе - практичан рад
-        file: 3_1_Kreiranje baze_praktičan_rad.rst
+        file: 1_2_1_Kreiranje baze_praktičan_rad.rst
         guid: 12f9c1fd-2f28-47c1-9f68-e533dc1f551c
       - type: reading
         title: Упит SELECT - упит из једне табеле - задаци
-        file: 3_2_Upit SELECT iz jedne tabele_zadaci.rst
+        file: 1_2_2_Upit SELECT iz jedne tabele_zadaci.rst
         guid: 17e14b5a-7f17-4a24-9a80-c733a6225f44
       - type: reading
         title: Упит SELECT - упит из једне табеле - нерешени задаци
-        file: 3_3_Upit SELECT iz jedne tabele_nerešeni_zadaci.rst
+        file: 1_2_3_Upit SELECT iz jedne tabele_nerešeni_zadaci.rst
         guid: 9bf2343a-4765-4ddd-a760-56d4c4b9d3eb
       - type: reading
         title: Упит SELECT - спајање - задаци
-        file: 3_4_Upit SELECT spajanje_zadaci.rst
+        file: 1_2_4_Upit SELECT spajanje_zadaci.rst
         guid: f99b19c3-b47a-4b72-a121-1561abd27046
       - type: reading
         title: Упит SELECT - спајање - нерешени задаци
-        file: 3_5_Upit SELECT spajanje_nerešeni_zadaci.rst
+        file: 1_2_5_Upit SELECT spajanje_nerešeni_zadaci.rst
         guid: c3c8f646-b325-4cd9-a5d9-060d9aeb2a19
       - type: reading
         title: Упит SELECT - функције и подупити - задаци
-        file: 3_6_Upit SELECT fje podupiti_zadaci.rst
+        file: 1_2_6_Upit SELECT fje podupiti_zadaci.rst
         guid: b348ac4d-2293-43c5-b8e0-47b475fd5bcb
       - type: reading
         title: Упит SELECT - функције и подупити - нерешени задаци
-        file: 3_7_Upit SELECT fje podupiti_nerešeni_zadaci.rst
+        file: 1_2_7_Upit SELECT fje podupiti_nerešeni_zadaci.rst
         guid: 7a385f42-e22d-4f78-85bc-bc38ea5e8235
-  - title: База података за возачке дозволе
-    guid: 3beba590-be23-407a-ac4a-a0dcd967694a
-    description: 
-    folder: 4_0_Baza podataka za vozačke dozvole
-    activities:
       - type: reading
         title: Креирање базе - практичан рад 
-        file: 4_1_Kreiranje baze_praktičan_rad.rst
+        file: 1_3_1_Kreiranje baze_praktičan_rad.rst
         guid: 3ac582a6-d4fd-4a15-b9bc-2faf59c5bd16
       - type: reading
         title: Дијаграм и подаци - практичан рад
-        file: 4_2_Dijagram i podaci_praktičan_rad.rst
+        file: 1_3_2_Dijagram i podaci_praktičan_rad.rst
         guid: acf2e7ef-7aa3-4944-914b-6503ccaa3e21
       - type: reading
         title: Упит SELECT - задаци 
-        file: 4_3_Upit SELECT_zadaci.rst
+        file: 1_3_3_Upit SELECT_zadaci.rst
         guid: b01d6933-e760-438a-9662-c7f2dc222416
       - type: reading
         title: Упит SELECT - нерешени задаци
-        file: 4_4_Upit SELECT_nerešeni_zadaci.rst
+        file: 1_3_4_Upit SELECT_nerešeni_zadaci.rst
         guid: 6226f8d5-28b0-46d7-9a18-2b2fbc2ef0a6
-  - title: База података за филмове
-    guid: f98a67f5-7392-4d6a-8e85-3d18c905b096
-    description: 
-    folder: 5_0_Baza podataka za filmove
-    activities:
       - type: reading
         title: Креирање базе - практични рад
-        file: 5_1_Kreiranje baze_praktični_rad.rst
+        file: 1_4_1_Kreiranje baze_praktični_rad.rst
         guid: a457fd5c-1331-4143-9a55-62921dc1185f
       - type: reading
         title: Дијаграм и подаци - практични рад
-        file: 5_2_Dijagram i podaci_praktičan_rad.rst
+        file: 1_4_2_Dijagram i podaci_praktičan_rad.rst
         guid: 1130b1c5-620f-422b-9e28-7fe1c0b2bcaa
       - type: reading
         title: Упит SELECT - задаци
-        file: 5_3_Upit SELECT_zadaci.rst
+        file: 1_4_3_Upit SELECT_zadaci.rst
         guid: 6b055203-6723-42e2-9781-954a879d076b
       - type: reading
         title: Упит SELECT - нерешени задаци
-        file: 5_4_Upit SELECT_nerešeni_zadaci.rst
+        file: 1_4_4_Upit SELECT_nerešeni_zadaci.rst
         guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
-      
