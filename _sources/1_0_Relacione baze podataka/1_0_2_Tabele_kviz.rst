@@ -1,9 +1,9 @@
-РЕЛАЦИОНЕ БАЗЕ ПОДАТАКА - КВИЗ
+Релационе базе података - квиз
 ==============================
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_1
+    .. mchoice:: Pitanje_1_0_2a
         :answer_a: Да
         :answer_b: Не
         :correct: a
@@ -12,7 +12,7 @@
 
 .. quizq::
     
-    .. mchoice:: Pitanje_1_2_2
+    .. mchoice:: Pitanje_1_0_2b
         :answer_a: ucenici, roditelji, automobili, proizvodi
         :answer_b: ucenici, nastavnici, predmeti, ocene, casovi
         :answer_c: nastavnici, kuvari, vaspitaci, pisci, novinari
@@ -23,7 +23,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_3
+    .. mchoice:: Pitanje_1_0_2c
         :answer_a: Да
         :answer_b: Не
         :correct: a
@@ -32,7 +32,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_4
+    .. mchoice:: Pitanje_1_0_2d
         :answer_a: CREATE TABLE – унос података, INSERT INTO – креирање табеле
         :answer_b: CREATE TABLE – брисање података, INSERT INTO – брисање табеле
         :answer_c: CREATE TABLE – брисање табеле, INSERT INTO – брисање података
@@ -43,7 +43,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_5
+    .. mchoice:: Pitanje_1_0_2e
         :answer_a: INT, NOT NULL
         :answer_b: INT, UNIQUE
         :answer_c: INT, VARCHAR 
@@ -54,7 +54,7 @@
 
 .. quizq:: 
 
-    .. mchoice:: Pitanje_1_2_6
+    .. mchoice:: Pitanje_1_0_2f
         :answer_a: INT, NOT NULL
         :answer_b: INT, UNIQUE
         :answer_c: INT, VARCHAR
@@ -65,7 +65,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_7
+    .. mchoice:: Pitanje_1_0_2g
         :answer_a: Да
         :answer_b: Не
         :correct: b
@@ -74,7 +74,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_8
+    .. mchoice:: Pitanje_1_0_2h
         :answer_a: naziv VARCHAR(40) 
         :answer_b: naziv VARCHAR(40) NOT NULL UNIQUE
         :answer_c: naziv VARCHAR(40) NOT NULL
@@ -85,7 +85,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_9
+    .. mchoice:: Pitanje_1_0_2i
         :answer_a: Да
         :answer_b: Не
         :correct: b
@@ -94,7 +94,7 @@
 
 .. quizq::
 
-    .. mchoice:: Pitanje_1_2_10
+    .. mchoice:: Pitanje_1_0_2j
         :answer_a: INSERT INTO autori VALUES (105, 'Vidojkovic')
         :answer_b: INSERT INTO autori VALUES (105, 102, 'Vidojkovic')
         :answer_c: INSERT INTO autori VALUES (105, 'Marko', 'Vidojkovic')
