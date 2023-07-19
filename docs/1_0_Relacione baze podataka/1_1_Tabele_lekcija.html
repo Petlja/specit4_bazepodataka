@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
     <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -44,6 +46,9 @@
     <script src="../_static/skulpt.min.js"></script>
     <script src="../_static/skulpt-stdlib.js"></script>
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/jquery.highlight.js"></script>
@@ -127,6 +132,11 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="../_static/dbDirective.js"></script>
+    <script src="../_static/sql.js"></script>
+    <script src="../_static/translations.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -182,7 +192,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <div class="links-title"> Useful links</div>
+          <div class="links-title"> Корисни линкови</div>
           <div class="useful-link">
             <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
           <div class="useful-link">
@@ -222,7 +232,7 @@
 <div class="petljaCourseContent">
   
            <div class="tableOfContent">
-            <h5> Table of content </h5>
+            <h5> Садржај </h5>
             </div>
            <div>
                 <div class="courseContentsSection">
@@ -245,35 +255,35 @@
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka>
                     <h5>Претраживање података</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
                 </div>
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku.rst>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku>
                     <h5>База података за библиотеку</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
                 </div>
             </div>
                 
@@ -377,43 +387,94 @@
 <p>У пракси нам углавном за сваку табелу треба једна колона преко које можемо једнозначно да одређујемо поједине редове у табели. Та колона се назива <strong>примарни кључ</strong> и најчешће у називу те колоне стоји <em>id</em> (идентификациони број). На претходној слици можемо да видимо, на пример, да је 2 идентификациони број издавачке куће СЕТ.</p>
 <p>Приликом пројектовања, када креирамо логички модел који је пројекат на основу којег се креира база, треба да предвидимо <strong>ентитет</strong> за сваку табелу коју ћемо имати у релационој бази података. Називи ентитета су увек именице у једнини. <strong>Атрибути</strong> тог ентитета ће бити колоне табеле у бази.</p>
 <p>Сваки ентитет има више <strong>инстанци</strong>. Свакој инстанци ће одговарати један ред у табели у релационој бази података.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>ЕНТИТЕТ</p></th>
-<th class="head"><p>ИНСТАНЦЕ</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>КЊИГА</p></td>
-<td><ul class="simple">
-<li><p>Рачунарство и информатика за 3. разред гимназије</p></li>
-<li><p>Рачунарство и информатика за 4. разред гимназије</p></li>
-<li><p>Веб-програмирање</p></li>
-<li><p>Програмирање - класе и објекти</p></li>
-<li><p>Канџе</p></li>
-<li><p>Е баш вам хвала</p></li>
-<li><p>Тријумфална капија</p></li>
+<a class="reference internal image-reference" href="../_images/slika_101b.jpg"><img alt="../_images/slika_101b.jpg" class="align-center" src="../_images/slika_101b.jpg" style="width: 600px;" /></a>
+<p>Неки ентитети су јаки. На примеру књига, јаки ентитети су IZDAVAC и AUTOR. Они постоје независно, за разлику од књиге коју је неко морао да напише и неко морао да објави, па је то слаб ентитет (не постоји независно).</p>
+<a class="reference internal image-reference" href="../_images/slika_101c.jpg"><img alt="../_images/slika_101c.jpg" class="align-center" src="../_images/slika_101c.jpg" style="width: 300px;" /></a>
+<p>Атрибути се обележавају једним од три симбола:</p>
+<ul class="simple">
+<li><p>тарабица – примарни јединствени идентификатор који ће да буде примарни кључ PRIMARY KEY у табели (подразумева да мора да буде попуњен и да мора да има јединствену вредност),</p></li>
+<li><p>звездица – обавезно мора да се унесе, одговара ограничењу NOT NULL у табели,</p></li>
+<li><p>кружић – опционо, овај податак може, али не мора да се унесе у базу.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p>АУТОР</p></td>
-<td><ul class="simple">
-<li><p>Станка Матковић</p></li>
-<li><p>Мијодраг Ђуришић</p></li>
-<li><p>Марко Видојковић</p></li>
-<li><p>Ерих Марија Ремарк</p></li>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>ВАЖНО:</strong> Готово увек се уводи вештачки идентификациони број као примарни кључ. То су неки бројеви који се појављују само у бази и немају значај ван ње. Ретки изузетак су неке ситуације када можемо неки број који се користи ван базе података да употребимо за примарни кључ. На пример, број чланске карте члана библиотеке који пише на чланској карти, или инвентарски број примерка књиге који пише на првој страни примерка. Никад примарни кључ не сме да буде текстуални податак, као што је назив државе или назив издавача. То би довело до тога да исти податак чувамо на много места у бази, и тамо где је примарни и тамо где је страни кључ, па би тиме направили простор за непотребно гомилање, отежано ажурирање (промени се назив, а онда на много места мора да се измени у бази) и већу могућност грешке.</p>
+
+    </div></div>
+<p>Посебан језик за рад са релационим базама података базама података је <strong>језик SQL</strong> (енг. <em>Structured Query Language</em>). Језик није осетљив на велика и мала слова, али ипак понешто пишемо великим, а понешто малим словима, да би код био читљивији.</p>
+<p>Следи програмски код за креирање табеле <em>izdavaci</em>. Док су називи ентитета увек именице у једнини, називи табела су именице у множини. За сваку колону табеле коју креирамо треба да наведемо назив и тип податка. Поред тога наводимо и неко од ограничење по потреби (PRIMARY KEY, NOT NULL, UNIQUE). Неки од најчешћих типова података су: INT, за целе бројеве, и VARCHAR, за текстуалне податке.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">izdavaci</span>
+<span class="p">(</span> <span class="nb">id</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">naziv</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">UNIQUE</span><span class="p">,</span>
+<span class="n">adresa</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="n">veb_sajt</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="n">UNIQUE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Податке о једном издавачу уносимо у базу података командом INSERT INTO.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">izdavaci</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;CET&#39;</span><span class="p">,</span> <span class="s1">&#39;Knez Mihailova 6, Beograd&#39;</span><span class="p">,</span> <span class="s1">&#39;http://cet.rs/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Уколико, међутим, хоћемо да унесемо податке у другачијем редоследу, или хоћемо да изоставио податак који можемо да изоставимо (колона нема NOT NULL   ограничење), морамо да наведемо одговарајући списак колона. Следе примери.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">naziv</span><span class="p">,</span> <span class="n">veb_sajt</span><span class="p">,</span> <span class="n">adresa</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;CET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://cet.rs/&#39;</span><span class="p">,</span> <span class="s1">&#39;Knez Mihailova 6, Beograd&#39;</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">naziv</span><span class="p">,</span> <span class="n">adresa</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;CET&#39;</span><span class="p">,</span> <span class="s1">&#39;Knez Mihailova 6, Beograd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>У случају последње наведене команде, поље <em>veb_sajt</em> ће остати празно, тј. биће <em>null</em>. Исти резултат може да се постигне и експлицитним уносом вредности <em>null</em> у одговарајуће поље.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">izdavaci</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;CET&#39;</span><span class="p">,</span> <span class="s1">&#39;Knez Mihailova 6, Beograd&#39;</span><span class="p">,</span> <span class="n">null</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Следеће две команде се <strong>неће</strong> успешно извршити.</p>
+<ol class="arabic simple">
+<li><p>Већ постоји издавачка кућа са идентификационим бројем 2 (вредности примарног кључа морају да буду јединствене).</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">izdavaci</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Vintage&#39;</span><span class="p">,</span> <span class="s1">&#39;Random House 20, London&#39;</span><span class="p">,</span> <span class="s1">&#39;www.vintage-books.co.uk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Вредности морају да се унесу у колоне које су примарни кључ или имају NOT NULL ограничење.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">izdavaci</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="n">null</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="s1">&#39;Random House 20, London&#39;</span><span class="p">,</span> <span class="s1">&#39;www.vintage-books.co.uk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Следећи јак ентитет је AUTOR.</p>
+<p>Име и презиме се најчешће чувају као два податка у две колоне. По потреби увек можемо да их спојимо приликом приказа, али се претрага често обавља по имену или по презимену. Када би се увек име и презиме састојали од тачно по једне речи, могли би да их чувамо заједно па по потреби да их раздвојимо. Међутим, има ситуација када то није могуће. Погледајте следећа два примера:</p>
+<ul class="simple">
+<li><p>Уна Јована Вајић – две речи чине име,</p></li>
+<li><p>Теодор фон Бург – две речи чине презиме.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="row-even"><td><p>ИЗДАВАЧ</p></td>
-<td><ul class="simple">
-<li><p>CET</p></li>
-<li><p>Завод за уџбенике</p></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<a class="reference internal image-reference" href="../_images/slika_101d.jpg"><img alt="../_images/slika_101d.jpg" class="align-center" src="../_images/slika_101d.jpg" style="width: 300px;" /></a>
+<p>Следи програмски код за креирање табеле <em>autori</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">autori</span>
+<span class="p">(</span> <span class="n">id_autora</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">ime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">prezime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Податке о једном аутору уносимо у базу података наредбом INSERT INTO.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">autori</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">105</span><span class="p">,</span> <span class="s1">&#39;Marko&#39;</span><span class="p">,</span> <span class="s1">&#39;Vidojkovic&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>НАПОМЕНА: У правој великој бази података би се чувало много више података и о издавачима и о ауторима, али овај пример је мањег обима прилагођен времену које имамо на располагању у настави.</p>
+
+    </div></div>
 </section>
 
 
@@ -421,9 +482,9 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
-  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">
@@ -445,7 +506,7 @@
 
   <label class="font-size-toggle" id="fontSizeToggle">
 
-      <i class="fas fa-font"></i><label>Letters</label>
+      <i class="fas fa-font"></i><label>Слова</label>
   </label>
   <div class="font-change d-none" id="fontChangeModal">
       <span class="dec-letter-icon" id="decLetterIcon">A-</span>

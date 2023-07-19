@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>TITLE</title>
+    <title>Систем за управљање базама података</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
     <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -44,6 +46,9 @@
     <script src="../_static/skulpt.min.js"></script>
     <script src="../_static/skulpt-stdlib.js"></script>
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/jquery.highlight.js"></script>
@@ -127,6 +132,11 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="../_static/dbDirective.js"></script>
+    <script src="../_static/sql.js"></script>
+    <script src="../_static/translations.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -182,7 +192,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <div class="links-title"> Useful links</div>
+          <div class="links-title"> Корисни линкови</div>
           <div class="useful-link">
             <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
           <div class="useful-link">
@@ -222,7 +232,7 @@
 <div class="petljaCourseContent">
   
            <div class="tableOfContent">
-            <h5> Table of content </h5>
+            <h5> Садржај </h5>
             </div>
            <div>
                 <div class="courseContentsSection">
@@ -245,35 +255,35 @@
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka>
                     <h5>Претраживање података</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
                 </div>
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku.rst>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku>
                     <h5>База података за библиотеку</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
                 </div>
             </div>
                 
@@ -316,8 +326,104 @@
   
     <div id="main-content">
     
-  <section id="title">
-<h1>TITLE<a class="headerlink" href="#title" title="Permalink to this heading">¶</a></h1>
+  <section id="id1">
+<h1>Систем за управљање базама података<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Постоји више програма који нуде могућности креирања база података и рада са њима. Набројаћемо овде укратко најважније и биће описано оно што им је заједничко. У једном од алата ћемо детаљно проћи практично процес креирања базе података за коју смо већ припремили пројекат, тј. логички модел.</p>
+<p>Приказани пример базе података за библиотеку ћемо касније употребити тако што ћемо креирати програме у којима ћемо јој приступати.</p>
+<p>Алат <strong>Microsoft SQL Server Management Studio</strong> може бесплатно да се преузме са следеће адресе:</p>
+<p><a class="reference external" href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms">https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms</a></p>
+
+    </div></div>
+<p>Софтверски систем помоћу кога се формира и користи база података назива се <strong>систем за управљање базама података</strong>, скраћено <strong>СУБП</strong> (енгл. <em>database management system</em>, скраћено <em>DBMS</em>). Најпознатији системи за управљање базама података су:</p>
+<ul class="simple">
+<li><p><em>Oracle Database</em>,</p></li>
+<li><p><em>MySql</em>,</p></li>
+<li><p><em>Microsoft SQL Server</em>,</p></li>
+<li><p><em>PostgreSQL</em>,</p></li>
+<li><p><em>IBM DB2</em>,</p></li>
+<li><p><em>Redis</em>,</p></li>
+<li><p><em>SQLite</em> итд.</p></li>
+</ul>
+<p>Иако видимо да постоје различити системи различитих произвођача, основни принципи рада у њима су веома слични и током овог курса ћемо се држати онога што је заједничко и са мањим изменама применљиво у свим системима.</p>
+<p>Системи за управљање базама података својим корисницима пружају све услуге рада са подацима. Корисници су најчешће други програми, тј. апликације (на пример, пословне, мобилне или веб-апликације), али и појединци који приступају подацима у облику у коме су подаци записани у бази (на пример, стручњаци за анализу података који у неким случајевима непосредно прегледају и користе податке из базе). Могућ је и сценарио у којем неколико СУБП-ова међусобно комуницирају, тј. један СУБП приступа подацима из другог СУБП-а.</p>
+<p>Системи за управљање се брину о смештању података тако да обезбеде:</p>
+<ul class="simple">
+<li><p>могућност што ефикаснијег приступа тим подацима у циљу њихове анализе, обраде и ажурирања,</p></li>
+<li><p>интегритет тих података (спречавају настанак грешака, попут смештања неконзистентних и некоректних података),</p></li>
+<li><p>могућност истовременог коришћења података од стране већег броја корисника,</p></li>
+<li><p>могућност заштите приступа подацима и слично.</p></li>
+</ul>
+<p>Корисници база комуницирају са СУБП-ом коришћењем специјализованих језика у којима формулишу захтеве (тзв. <strong>упите</strong>) на које СУБП одговара. Такви језици се називају <strong>упитним језицима</strong>, а најпознатији и најраспрострањенији упитни језик је SQL (енгл. <em>structured query language</em>).</p>
+<p>СУБП уводи поделу посла између програмера који праве сам СУБП и програмера који праве апликације (апликативни програмери). То значи да апликативни програмер упите формулише на апстрактном нивоу и не мора да зна све детаље о томе како СУБП те податке држи у меморији и датотекама. Апликативни програмер не мора да се бави детаљима ефикасног смештања података и алгоритмима приступа подацима, јер је СУБП тај који на основу упита одређује најефикаснији начин да се одређен упит изврши и да апликација добије податке које је захтевала.</p>
+<p>Упитни језици су <strong>декларативни</strong>, што значи да се само описује који су подаци потребни, а СУБП је тај који аутоматски одређује како је најбоље доћи до тих података.</p>
+<p>Модеран СУБП може да чува огромне количине података тако да великом броју корисника омогући практично истовремено коришћење тих података, често коришћењем разнородних рачунарских система. На пример, централизовани електронски дневник на нивоу целе Србије чува податке о стотинама хиљада ученика и милионима њихових оцена тако да хиљаде наставника, ученика и родитеља имају практично тренутни приступ жељеним подацима са својих рачунара, мобилних телефона, таблета и слично.</p>
+<p>Употребом алата <strong>SQL Server Management Studio</strong> креираћемо базу података која може да се посматра као део базе података за библиотеку у којој се складиште подаци о свим примерцима књига које се налазе у библиотеци.</p>
+<p>Кликнути десни тастер миша над <strong>Databases</strong> у прозору <em>Object Explorer</em> и изабрати <em>New Database…</em></p>
+<a class="reference internal image-reference" href="../_images/slika_108a.jpg"><img alt="../_images/slika_108a.jpg" class="align-center" src="../_images/slika_108a.jpg" style="width: 400px;" /></a>
+<p>Унети назив нове базе података и кликнути дугме OK.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>НАПОМЕНА: Уколико си у трећем разреду креирао базу података за библиотеку вероватно је већ имаш на рачунару и важно је да се назив ове нове, мање базе, разликује. Као што смо већ рекли, кроз овај мањи пример обнављамо најважније о релационим базама података.</p>
+
+    </div></div>
+<a class="reference internal image-reference" href="../_images/slika_108b.jpg"><img alt="../_images/slika_108b.jpg" class="align-center" src="../_images/slika_108b.jpg" style="width: 800px;" /></a>
+<p>Новокреирана база података се појавила на списку у прозору <em>Object Explorer</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_108c.jpg"><img alt="../_images/slika_108c.jpg" class="align-center" src="../_images/slika_108c.jpg" style="width: 400px;" /></a>
+<p>Кликнути дугме <em>New Query</em> испод главног падајућег менија. Обратити пажњу на назив базе података доле лево у односу на дугме <em>New Query</em>. Уколико већ постоји више база података у овом алату зато што је раније коришћен, потребно је изабрати новокреирану.</p>
+<a class="reference internal image-reference" href="../_images/slika_108d.jpg"><img alt="../_images/slika_108d.jpg" class="align-center" src="../_images/slika_108d.jpg" style="width: 600px;" /></a>
+<p>Прво извршити све <strong>CREATE TABLE</strong> команде, једну по једну.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>ВАЖНО: Редослед је битан!</strong> Пре креирања табеле која има страни кључ, неопходно је креирати табелу на коју она показује.</p>
+
+    </div></div>
+<p>Све команде могу да се истовремено прекопирају, али се свака појединачно прво означи мишем и за сваку означену команду се кликне <em>Execute</em>, као што је приказано на следећој слици.</p>
+<a class="reference internal image-reference" href="../_images/slika_108e.jpg"><img alt="../_images/slika_108e.jpg" class="align-center" src="../_images/slika_108e.jpg" style="width: 600px;" /></a>
+<p>Након сваке успешно извршене команде појави се одговарајућа порука.</p>
+<a class="reference internal image-reference" href="../_images/slika_108f.jpg"><img alt="../_images/slika_108f.jpg" class="align-center" src="../_images/slika_108f.jpg" style="width: 600px;" /></a>
+<p>Након што се свака команда изврши, све табеле ће остати сачуване у бази података за даљу употребу. Фајл <em>SQLQuery1.sql</em> може, а и не мора да се сачува.</p>
+<p>Следе све CREATE TABLE команде за табеле базе података за библиотеку.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">autori</span>
+<span class="p">(</span> <span class="n">id_autora</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">ime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">prezime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="p">)</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">izdavaci</span>
+<span class="p">(</span> <span class="nb">id</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">naziv</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">UNIQUE</span><span class="p">,</span>
+<span class="n">adresa</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="n">veb_sajt</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="n">UNIQUE</span><span class="p">)</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">knjige</span>
+<span class="p">(</span> <span class="n">id_knjige</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">naziv</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">id_izdavaca</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">REFERENCES</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">primerci</span>
+<span class="p">(</span> <span class="n">inventarski_broj</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">id_knjige</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">REFERENCES</span> <span class="n">knjige</span><span class="p">(</span><span class="n">id_knjige</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">autori_knjige</span>
+<span class="p">(</span><span class="n">id_autora</span> <span class="n">INT</span> <span class="n">REFERENCES</span> <span class="n">autori</span><span class="p">(</span><span class="n">id_autora</span><span class="p">),</span>
+<span class="n">id_knjige</span> <span class="n">INT</span> <span class="n">REFERENCES</span> <span class="n">knjige</span><span class="p">(</span><span class="n">id_knjige</span><span class="p">),</span>
+<span class="n">PRIMARY</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_autora</span><span class="p">,</span> <span class="n">id_knjige</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Након што су све табеле креиране, појављују се на списку у прозору <em>Object Explorer</em>. Уколико се не виде, потребно је кликнути <em>Refresh</em>.</p>
 </section>
 
 
@@ -325,9 +431,9 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="1_7_Alat%20za%20projektovanje_lekcija.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="1_7_Alat%20za%20projektovanje_lekcija.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
-  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">
@@ -349,7 +455,7 @@
 
   <label class="font-size-toggle" id="fontSizeToggle">
 
-      <i class="fas fa-font"></i><label>Letters</label>
+      <i class="fas fa-font"></i><label>Слова</label>
   </label>
   <div class="font-change d-none" id="fontChangeModal">
       <span class="dec-letter-icon" id="decLetterIcon">A-</span>

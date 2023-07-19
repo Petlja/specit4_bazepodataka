@@ -32,9 +32,7 @@ description:
 
     '
   requirements:
-  - Petljadoc
-  - Runestone
-  - Sphinx
+  - SQL Server Management Studio (SSMS)
   shortDescription: Базе података за четврти разред гимназија за ученике са посебним
     способностима за рачунарство и информатику.
   toc:
@@ -179,8 +177,8 @@ lessons:
     type: reading
   archived-activities: []
   description: ''
-  folder: 2_0_Pretraživanje podataka - Upit SELECT
-  guid: 8569ff97-676a-4a48-a0e2-0b8f4e15f160
+  folder: 2_0_Pretraživanje podataka
+  guid: 9505294d-d907-4609-94bb-3fae45e7af05
   normalized_title: Претраживање података
   title: Претраживање података
 - activities:
@@ -235,8 +233,8 @@ lessons:
     type: reading
   archived-activities: []
   description: ''
-  folder: 3_0_Baza podataka za biblioteku.rst
-  guid: 8651f18a-0043-4fb1-8878-395f8a5df22b
+  folder: 3_0_Baza podataka za biblioteku
+  guid: 3c5bc666-d8bc-4a73-8bdb-2ab01d37fa4d
   normalized_title: База података за библиотеку
   title: База података за библиотеку
 - activities:
@@ -271,7 +269,7 @@ lessons:
   archived-activities: []
   description: ''
   folder: 4_0_Baza podataka za vozačke dozvole
-  guid: 3beba590-be23-407a-ac4a-a0dcd967694a
+  guid: d2625714-f7a5-483b-9c65-51818773fa79
   normalized_title: База података за возачке дозволе
   title: База података за возачке дозволе
 - activities:
@@ -306,7 +304,7 @@ lessons:
   archived-activities: []
   description: ''
   folder: 5_0_Baza podataka za filmove
-  guid: f98a67f5-7392-4d6a-8e85-3d18c905b096
+  guid: 7a78dfc0-698c-4fb9-b3b5-92e05f46cc76
   normalized_title: База података за филмове
   title: База података за филмове
 title: Базе података за четврти разред специјализованих ИТ одељења

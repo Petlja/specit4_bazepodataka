@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>TITLE</title>
+    <title>База података за возачке дозволе - креирање базе</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
     <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -44,6 +46,9 @@
     <script src="../_static/skulpt.min.js"></script>
     <script src="../_static/skulpt-stdlib.js"></script>
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/jquery.highlight.js"></script>
@@ -127,6 +132,11 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="../_static/dbDirective.js"></script>
+    <script src="../_static/sql.js"></script>
+    <script src="../_static/translations.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -182,7 +192,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <div class="links-title"> Useful links</div>
+          <div class="links-title"> Корисни линкови</div>
           <div class="useful-link">
             <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
           <div class="useful-link">
@@ -222,7 +232,7 @@
 <div class="petljaCourseContent">
   
            <div class="tableOfContent">
-            <h5> Table of content </h5>
+            <h5> Садржај </h5>
             </div>
            <div>
                 <div class="courseContentsSection">
@@ -245,35 +255,35 @@
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka>
                     <h5>Претраживање података</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
                 </div>
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku.rst>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku>
                     <h5>База података за библиотеку</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
                 </div>
             </div>
                 
@@ -316,8 +326,213 @@
   
     <div id="main-content">
     
-  <section id="title">
-<h1>TITLE<a class="headerlink" href="#title" title="Permalink to this heading">¶</a></h1>
+  <section id="id1">
+<h1>База података за возачке дозволе - креирање базе<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Следи један практичан задатак инспирисан стварним примером из живота у којем се ради са великим количинама података. Креираћемо базу података за евиденцију издатих возачких дозвола.</p>
+<p>Приказани пример базе података ћемо касније употребити тако што ћемо креирати програме у којима ћемо јој приступати.</p>
+
+    </div></div>
+<p>Возачке дозволе су издате у различитим градовима. За град чувамо назив, али је у плану проширење базе и чуваћемо више различитих података као што је, на пример, број становника, број регистрованих возила и слично. Свака дозвола има број дозволе, име и презиме особе, датум издавања и датум до када важи. На дозволи могу да се нађу различите категорије и за сваку је познат датум стицања. Категорије су: AM, A1, A2, A, B1, B, BE, C1, C1E, C, CE, D1, D1E, D, DE, F и M. Свака категорија има неки опис. Најчешћа категорија је категорија В и за њу би опис могао да буде: „Za upravljanje motornim vozilom, čija masa ne prelazi 3500 kg i koja nemaju više od 9 mesta za sedenje“.</p>
+<p>Унети у базу податке о свим категоријама и о четири возачке дозволе издате у Београду. Јанко Мировић и Филип Цагић имају само категорију В. Јанкова дозвола има број 001579640, важи од 28. априла 2022. године до 15. марта 2026. године, а категорију је стекао 21. априла 2022. године. Филипова дозвола има број 001579375, важи од 23. септембра 2022. године, када је и стекао В категорију, до 5. марта 2026. године. Душа Вуковић је 3. октобра 1995. године стекла категорије: AM, B1, B, BE, F и M, а има дозволу са бројем 001560375, која важи десет година од датума издавања 8. маја 2014. године. Возачка дозвола са бројем 000123175 припада Браниславу Зорановићу. Дозвола важи десет година, од 17. маја 2020. године када је стекао категорију А2. Осим те категорије, дозвола има и категорију В, која је стечена 15. септембра 2016. године.</p>
+<p>На следећој слици је приказан модел базе након чега следе и нека објашњења како се до овог модела дошло.</p>
+<a class="reference internal image-reference" href="../_images/slika_131a.jpg"><img alt="../_images/slika_131a.jpg" class="align-center" src="../_images/slika_131a.jpg" style="width: 780px;" /></a>
+<p>Број возачке дозволе је јединствен, али није најбољи избор за примарни кључ, па ће се увести нови идетификациони број. Због водећих нула, број возачке дозволе је добро да буде текстуални податак фиксиране дужине.</p>
+<p>Свака возачка дозвола је издата тачно у једом граду, а у истом граду је издато више возачких дозвола, па је веза између ентитета GRAD и VOZACKA_DOZVOLA један-према-више.</p>
+<p>Уз податке о возачкој дозволи се чува и идентификациони број града у којем је издата. Тако ће, уз све податке који описују возачку дозволу коју је добио Бранислав Зорановић, на крају да стоји и број 1, који представља идентификациони број града Београда.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">vozacke_dozvole</span>
+<span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">broj_dozvole</span><span class="p">,</span> <span class="n">prezimе</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">datum_izdavanja</span><span class="p">,</span> <span class="n">datum_prestanka</span><span class="p">,</span> <span class="n">id_grada</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;000123175&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoranovic&#39;</span><span class="p">,</span> <span class="s1">&#39;Branislav&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-05-17&#39;</span><span class="p">,</span> <span class="s1">&#39;2030-05-17&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Возачка дозвола Јанка Мировића је такође издата у Београду, па је и код њега унет идентификациони број 1 као вредност страног кључа који се односи на место издавања дозволе. Случајност је да је идентификациони број Јанкове возачке дозволе такође 1, али та вредност нема везе са идентификацијом града. Различите табеле за идентификационе бројеве често користе редом вредности 1, 2, 3, 4, и тако даље.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">vozacke_dozvole</span>
+<span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">broj_dozvole</span><span class="p">,</span> <span class="n">prezimе</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">datum_izdavanja</span><span class="p">,</span> <span class="n">datum_prestanka</span><span class="p">,</span> <span class="n">id_grada</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;001579640&#39;</span><span class="p">,</span> <span class="s1">&#39;Mirovic&#39;</span><span class="p">,</span> <span class="s1">&#39;Janko&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-04-28&#39;</span><span class="p">,</span> <span class="s1">&#39;2026-03-15&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Као што можемо да видимо из датих података, на четири различите возачке дозволе се налази категорија В, а две дозволе имају више од једне категорије. Веза између ентитета VOZACKA_DOZVOLA и KATEGORIJA је више-према-више. То значи да имамо посебан ентитет, односно имаћемо посебну табелу, која ће представљати ову везу. Табела у бази података ће имати комбинацију кључева којом се јасно представља на којој дозволи се налази која категорија.</p>
+<p>Уколико Бранислав Зорановић има дозволу на којој има две категорије, у табели <em>kategorije_dozvole</em> ће бити два реда која се односе на ову дозволу. У тим редовима ће бити записане две различите комбинације идентификационог броја возачке дозволе и идентификационих бројева категорија. Уколико је идентификациони број дозволе 4, а идентификациони бројеви категорија В и А2 су редом 6 и 3, а датуми стицања тих категорија су редом 15. септембар 2016. године и 17. мај 2020. године, следе два реда која се уносе у табелу <em>kategorije_dozvole</em>, а односе се на ову једну дозволу и две категорије на њој.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="p">(</span><span class="n">id_dozvole</span><span class="p">,</span> <span class="n">id_kategorije</span><span class="p">,</span> <span class="n">datum_sticanja</span><span class="p">,</span> <span class="n">ogranicenja</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;2016-09-15&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="p">(</span><span class="n">id_dozvole</span><span class="p">,</span> <span class="n">id_kategorije</span><span class="p">,</span> <span class="n">datum_sticanja</span><span class="p">,</span> <span class="n">ogranicenja</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;2020-05-17&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Креирати базу података за библиотеку употребом алата <strong>SQL Server Management Studio</strong>.</p>
+<p>Кликнути десни тастер миша над <strong>Databases</strong> у прозору <em>Object Explorer*</em> и изабрати <em>New Database…</em></p>
+<a class="reference internal image-reference" href="../_images/slika_131b.jpg"><img alt="../_images/slika_131b.jpg" class="align-center" src="../_images/slika_131b.jpg" style="width: 780px;" /></a>
+<p>Унети назив нове базе података и кликнути дугме OK.</p>
+<a class="reference internal image-reference" href="../_images/slika_131c.jpg"><img alt="../_images/slika_131c.jpg" class="align-center" src="../_images/slika_131c.jpg" style="width: 780px;" /></a>
+<p>Новокреирана база података се појавила на списку у прозору <em>Object Explorer</em>. Кликнути дугме <em>New Query</em> испод главног падајућег менија.</p>
+<a class="reference internal image-reference" href="../_images/slika_131d.jpg"><img alt="../_images/slika_131d.jpg" class="align-center" src="../_images/slika_131d.jpg" style="width: 780px;" /></a>
+<p>Прво извршити све <strong>CREATE TABLE</strong> команде, једну по једну.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>ВАЖНО: Редослед је битан!</strong> Пре креирања табеле која има страни кључ неопходно је креирати табелу на коју она показује.</p>
+
+    </div></div>
+<p>Све команде могу да се истовремено прекопирају, али се свака појединачно прво означи мишем и за сваку означену команду се кликне <em>Execute</em>, као што је приказано на следећој слици.</p>
+<a class="reference internal image-reference" href="../_images/slika_131e.jpg"><img alt="../_images/slika_131e.jpg" class="align-center" src="../_images/slika_131e.jpg" style="width: 780px;" /></a>
+<p>Након сваке успешно извршене команде појави се одговарајућа порука.</p>
+<a class="reference internal image-reference" href="../_images/slika_131f.jpg"><img alt="../_images/slika_131f.jpg" class="align-center" src="../_images/slika_131f.jpg" style="width: 780px;" /></a>
+<p>Након што се свака команда изврши, све табеле ће остати сачуване у бази података за даљу употребу. Фајл <em>SQLQuery1.sql</em> може, а и не мора да се сачува.</p>
+<p>Следе све CREATE TABLE команде за табеле базе података за библиотеку.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">gradovi</span><span class="p">(</span>
+<span class="nb">id</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">naziv</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span>
+<span class="p">)</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vozacke_dozvole</span><span class="p">(</span>
+<span class="nb">id</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">broj_dozvole</span> <span class="n">CHAR</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">UNIQUE</span><span class="p">,</span>
+<span class="n">prezime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">ime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">datum_izdavanja</span> <span class="n">DATE</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">datum_prestanka</span> <span class="n">DATE</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">id_grada</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">REFERENCES</span> <span class="n">gradovi</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">kategorije</span><span class="p">(</span>
+<span class="nb">id</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">oznaka</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">UNIQUE</span><span class="p">,</span>
+<span class="n">opis</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">kategorije_dozvole</span><span class="p">(</span>
+<span class="n">id_dozvole</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">REFERENCES</span> <span class="n">vozacke_dozvole</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
+<span class="n">id_kategorije</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">REFERENCES</span> <span class="n">kategorije</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
+<span class="n">datum_sticanja</span> <span class="n">DATE</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">ogranicenja</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">128</span><span class="p">),</span>
+<span class="n">PRIMARY</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_kategorije</span><span class="p">,</span> <span class="n">id_dozvole</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Након што су све табеле креиране, појављују се на списку у прозору <em>Object Explorer</em>. Ако се не виде, потребно је кликнути <em>Refresh</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_131g.jpg"><img alt="../_images/slika_131g.jpg" class="align-center" src="../_images/slika_131g.jpg" style="width: 780px;" /></a>
+<p>Уколико је прозор за писање команди угашен, кликнути поново дугме <em>New Query</em> испод главног падајућег менија. Све команде могу да се истовремено прекопирају, али се свака појединачно прво означи мишем и за сваку означену команду се кликне <em>Execute</em>.</p>
+<p>Након што се свака команда изврши, сви подаци ће остати сачувани у бази података за даљу употребу. Фајл <em>SQLQuery1.sql</em> може, а и не мора да се сачува.</p>
+<p>Извршити све <strong>INSERT INTO</strong> команде, једну по једну. Када редом уносимо податке у све колоне, можемо да изоставимо списак назива колона.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>ВАЖНО: Редослед је битан!</strong></p>
+
+    </div></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">gradovi</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;BEOGRAD&#39;</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">vozacke_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;001579640&#39;</span><span class="p">,</span> <span class="s1">&#39;Mirovic&#39;</span><span class="p">,</span> <span class="s1">&#39;Janko&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-04-28&#39;</span><span class="p">,</span> <span class="s1">&#39;2026-03-15&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">vozacke_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;001579375&#39;</span><span class="p">,</span> <span class="s1">&#39;Cagic&#39;</span><span class="p">,</span> <span class="s1">&#39;Filip&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-09-23&#39;</span><span class="p">,</span> <span class="s1">&#39;2026-03-05&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">vozacke_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;001560375&#39;</span><span class="p">,</span> <span class="s1">&#39;Vukovic&#39;</span><span class="p">,</span> <span class="s1">&#39;Dusa&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-05-08&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-05-08&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">vozacke_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;000123175&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoranovic&#39;</span><span class="p">,</span> <span class="s1">&#39;Branislav&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-05-17&#39;</span><span class="p">,</span> <span class="s1">&#39;2030-05-17&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;AM&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span>
+<span class="s1">&#39;Za upravljanje motornim vozilom, čija masa ne prelazi 3500 kg i koja nemaju više od 9 mesta za sedenje&#39;</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;BE&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;C1E&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;CE&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;D1&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;D1E&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;DE&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;2022-04-21&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;2022-09-23&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1995-10-03&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;1995-10-03&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;1995-10-03&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;1995-10-03&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;1995-10-03&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;1995-10-03&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;2016-09-15&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+
+<span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">kategorije_dozvole</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;2020-05-17&#39;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 
 
@@ -325,9 +540,9 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
-  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">
@@ -349,7 +564,7 @@
 
   <label class="font-size-toggle" id="fontSizeToggle">
 
-      <i class="fas fa-font"></i><label>Letters</label>
+      <i class="fas fa-font"></i><label>Слова</label>
   </label>
   <div class="font-change d-none" id="fontChangeModal">
       <span class="dec-letter-icon" id="decLetterIcon">A-</span>

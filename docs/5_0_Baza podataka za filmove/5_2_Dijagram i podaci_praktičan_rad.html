@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>TITLE</title>
+    <title>Дијаграм и унети подаци</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
     <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -44,6 +46,9 @@
     <script src="../_static/skulpt.min.js"></script>
     <script src="../_static/skulpt-stdlib.js"></script>
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/jquery.highlight.js"></script>
@@ -127,6 +132,11 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="../_static/dbDirective.js"></script>
+    <script src="../_static/sql.js"></script>
+    <script src="../_static/translations.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -182,7 +192,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <div class="links-title"> Useful links</div>
+          <div class="links-title"> Корисни линкови</div>
           <div class="useful-link">
             <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
           <div class="useful-link">
@@ -222,7 +232,7 @@
 <div class="petljaCourseContent">
   
            <div class="tableOfContent">
-            <h5> Table of content </h5>
+            <h5> Садржај </h5>
             </div>
            <div>
                 <div class="courseContentsSection">
@@ -245,35 +255,35 @@
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka>
                     <h5>Претраживање података</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
                 </div>
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku.rst>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku>
                     <h5>База података за библиотеку</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
                 </div>
             </div>
                 
@@ -316,8 +326,28 @@
   
     <div id="main-content">
     
-  <section id="title">
-<h1>TITLE<a class="headerlink" href="#title" title="Permalink to this heading">¶</a></h1>
+  <section id="id1">
+<h1>Дијаграм и унети подаци<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Пре него што кренемо да решавамо задатке и извлачимо податке из базе, важно је да се упознамо детаљно са самом базом. Направићемо дијаграм и погледаћемо све унете податке по табелама.</p>
+
+    </div></div>
+<p>Након што је креирана комплетна база података, можемо да креирамо њен дијаграм. Кликнути десни тастер миша над <em>Database Diagrams</em> под базом података за колекцију филмова, и изабрати <em>New Database Diagram</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_142a.jpg"><img alt="../_images/slika_142a.jpg" class="align-center" src="../_images/slika_142a.jpg" style="width: 780px;" /></a>
+<p>У наредном кораку додати све табеле.</p>
+<a class="reference internal image-reference" href="../_images/slika_142b.jpg"><img alt="../_images/slika_142b.jpg" class="align-center" src="../_images/slika_142b.jpg" style="width: 780px;" /></a>
+<p>Према потреби зумирати или одаљити слику и испремештати табеле. Добијени дијаграм је приказан на следећој слици.</p>
+<a class="reference internal image-reference" href="../_images/slika_142c.jpg"><img alt="../_images/slika_142c.jpg" class="align-center" src="../_images/slika_142c.jpg" style="width: 780px;" /></a>
+<p>Покретањем једноставних упита можемо да видимо како изгледају попуњене табеле.</p>
+<a class="reference internal image-reference" href="../_images/slika_142d.jpg"><img alt="../_images/slika_142d.jpg" class="align-center" src="../_images/slika_142d.jpg" style="width: 780px;" /></a>
+<a class="reference internal image-reference" href="../_images/slika_142e.jpg"><img alt="../_images/slika_142e.jpg" class="align-center" src="../_images/slika_142e.jpg" style="width: 780px;" /></a>
+<a class="reference internal image-reference" href="../_images/slika_142f.jpg"><img alt="../_images/slika_142f.jpg" class="align-center" src="../_images/slika_142f.jpg" style="width: 780px;" /></a>
+<a class="reference internal image-reference" href="../_images/slika_142g.jpg"><img alt="../_images/slika_142g.jpg" class="align-center" src="../_images/slika_142g.jpg" style="width: 780px;" /></a>
 </section>
 
 
@@ -325,9 +355,9 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="5_1_Kreiranje%20baze_prakti%C4%8Dni_rad.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="5_1_Kreiranje%20baze_prakti%C4%8Dni_rad.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
-  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">
@@ -349,7 +379,7 @@
 
   <label class="font-size-toggle" id="fontSizeToggle">
 
-      <i class="fas fa-font"></i><label>Letters</label>
+      <i class="fas fa-font"></i><label>Слова</label>
   </label>
   <div class="font-change d-none" id="fontChangeModal">
       <span class="dec-letter-icon" id="decLetterIcon">A-</span>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>TITLE</title>
+    <title>Команде језика SQL</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
     <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -44,6 +46,9 @@
     <script src="../_static/skulpt.min.js"></script>
     <script src="../_static/skulpt-stdlib.js"></script>
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/jquery.highlight.js"></script>
@@ -127,6 +132,11 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="../_static/dbDirective.js"></script>
+    <script src="../_static/sql.js"></script>
+    <script src="../_static/translations.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -182,7 +192,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <div class="links-title"> Useful links</div>
+          <div class="links-title"> Корисни линкови</div>
           <div class="useful-link">
             <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
           <div class="useful-link">
@@ -222,7 +232,7 @@
 <div class="petljaCourseContent">
   
            <div class="tableOfContent">
-            <h5> Table of content </h5>
+            <h5> Садржај </h5>
             </div>
            <div>
                 <div class="courseContentsSection">
@@ -245,35 +255,35 @@
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka>
                     <h5>Претраживање података</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
-                <a href=../2_0_Pretraživanje%20podataka%20-%20Upit%20SELECT/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
                 </div>
             </div>
                 
                 <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku.rst>
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku>
                     <h5>База података за библиотеку</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
-                <a href=../3_0_Baza%20podataka%20za%20biblioteku.rst/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
                 </div>
             </div>
                 
@@ -316,8 +326,117 @@
   
     <div id="main-content">
     
-  <section id="title">
-<h1>TITLE<a class="headerlink" href="#title" title="Permalink to this heading">¶</a></h1>
+  <section id="sql">
+<h1>Команде језика SQL<a class="headerlink" href="#sql" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Видели смо команду за креирање табеле и команду за унос података у табеле које су нам неопходне у процесу креирања базе података. Језик SQL, међутим, има много других команди, па ћемо приказати још неке од њих.</p>
+
+    </div></div>
+<p>Када су табеле креиране, командом <strong>ALTER TABLE</strong> могуће је извршити одређене измене у структури уколико је то потребно. Уколико смо, на пример, приметили да смо креирали табелу, али је тип података једне колоне погрешан, можемо да изменимо табелу на следећи начин наводећи нови тип поред имена колоне која већ постоји.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="n">TABLE</span> <span class="n">autori</span>
+<span class="n">MODIFY</span> <span class="p">(</span><span class="n">ime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Измена је могућа уколико је табела празна или уколико подаци који се у њој налазе одговарају овом новом типу.</p>
+<p>Можемо да правимо и друге измене постојеће табеле. На пример, да додамо колону:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="n">TABLE</span> <span class="n">autori</span>
+<span class="n">ADD</span> <span class="p">(</span><span class="n">mejl_adresa</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">70</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Цела табела се из базе података уклања командом <strong>DROP TABLE</strong>. Ова команда и брише комплетан садржај, тј. све податке из табеле, и уклања табелу као објекат из базе.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROPT</span> <span class="n">TABLE</span> <span class="n">autori</span>
+</pre></div>
+</div>
+<p>Унети подаци могу да се ажурирају командом <strong>UPDATE</strong>.</p>
+<p>На пример, издавачка кућа са идентификационим бројем 2 је преселила своје седиште и нова адреса је Скадарска 45. Постоји само један издавач са овим идентификационим бројем, па ће се измена догодити у једном реду.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPDATE</span> <span class="n">izdavaci</span>
+<span class="n">SET</span> <span class="n">adresa</span> <span class="o">=</span> <span class="s1">&#39;Skadarska 45, Beograd&#39;</span>
+<span class="n">WHERE</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Можемо да променимо и више од једног податка у једном реду користећи једну команду. Следећом командом мењамо и адресу и адресу веб-сајта издавача са идентификационим бројем 2.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPDATE</span> <span class="n">izdavaci</span>
+<span class="n">SET</span> <span class="n">adresa</span> <span class="o">=</span> <span class="s1">&#39;Skadarska 45, Beograd&#39;</span> <span class="n">AND</span> <span class="n">veb_adresa</span> <span class="o">=</span> <span class="s1">&#39;https://cet.rs/o-nama/&#39;</span>
+<span class="n">WHERE</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Једном командом могу да се измене подаци у више редова, a може да се користи и нека формула. На пример, неопходно је додати идентификациони број издавача, број 2, на крај сваког инвентарског броја свих примерака књиге са идентификационим бројем 555.</p>
+<p>Наредба којом се то постиже је следећа:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPDATE</span> <span class="n">primerci</span>
+<span class="n">SET</span> <span class="n">inventarski_broj</span> <span class="o">=</span> <span class="n">inventarski_broj</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">2</span>
+<span class="n">WHERE</span> <span class="n">id_knjige</span> <span class="o">=</span> <span class="mi">555</span>
+</pre></div>
+</div>
+<p>Код ажурирања података је важно и да знамо да ли постоје нека ограничења дефинисана приликом креирања табеле.</p>
+<p>Приликом креирања страног кључа у оквиру команде CREATE TABLE, могуће је додати неку од опција за ажурирање UPDATE и брисање DELETE:</p>
+<ul class="simple">
+<li><p>CASCADE</p></li>
+<li><p>NO ACTION</p></li>
+<li><p>SET NULL</p></li>
+<li><p>SET DEFAULT</p></li>
+</ul>
+<p>Прве две опције увек можемо да размотримо и применимо по потреби. Друге две опције подразумевају да вредности страног кључа могу да буду NULL, или да је дефинисана подразумевана вредност. Уколико ово није случај, те опције нису на располагању.</p>
+<p>Погледајмо допуњену команду за креирање табеле са подацима о књигама.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">knjige</span>
+<span class="p">(</span> <span class="n">id_knjige</span> <span class="n">INT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
+<span class="n">naziv</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">id_izdavaca</span> <span class="n">INT</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+<span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_izdavaca</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">ON</span> <span class="n">UPDATE</span> <span class="n">CASCADE</span> <span class="n">ON</span> <span class="n">DELETE</span> <span class="n">NO</span> <span class="n">ACTION</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Каскадна опција можда није најбоље решење за брисање зато што би брисање једног реда у једној табели потенцијално обрисало податке из више редова више различитих табела, па тиме можда и значајан део целе базе. Узмимо, на пример, да желимо да обришемо једног издавача. Уколико је укључена каскадна опција, то би значило да би брисање тог једног реда узроковало брисање свих књига тог издавача, а затим брисање свих примерака тих књига. Боље решење би било да се такво брисање не дозволи, у овом случају да се не дозволи брисање података о издавачу чије књиге имамо у библиотеци. Када брисање не успе, било би добро урадити неко архивирање података о књигама, и примерцима књига издавача којег желимо да обришемо. Затим урадити брисање обрнутим редоследом који је увек дозвољен, а то би подразумевало прво брисање свих примерака, затим свих књига тог издавача, а на крају и самог издавача.</p>
+<p>Наравно да може да се догоди да се установи да би друге опције биле боље решење након детаљне анализе захтева пословања. Можда нам не треба архива свих података о издавачу којег желимо да обришемо, па има смисла да укључимо каскадно брисање и тиме уштедимо време тако што нећемо морати све пешке да бришемо. Такође је могуће да не желимо да дозволимо измену вредности примарног кључа било које табеле. Следи измењена команда у складу са овим што је управо описано.</p>
+<p>Узмимо, на пример, да је страни кључ у табели <em>knjige</em> креиран тако да је дозвољено каскадно ажурирање.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_izdavaca</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">ON</span> <span class="n">UPDATE</span> <span class="n">CASCADE</span> <span class="n">ON</span> <span class="n">DELETE</span> <span class="n">NO</span> <span class="n">ACTION</span>
+</pre></div>
+</div>
+<p>Уколико желимо да променимо вредност идентификационог броја неког издавача, на пример, Завода за уџбенике, потребно је да напишемо следећу команду која ће се успешно извршити.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPDATE</span> <span class="n">izdavaci</span> <span class="n">SET</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">111</span>
+<span class="n">WHERE</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Nакон што се измени вредност примарног кључа у табели <em>izdavaci</em>, измениће се и одговарајуће вредности у колони која је страни кључ у табели <em>knjige</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_1010a.jpg"><img alt="../_images/slika_1010a.jpg" class="align-center" src="../_images/slika_1010a.jpg" style="width: 800px;" /></a>
+<p>Међутим, написана команда се неће успешно извршити уколико је страни кључ у табели <em>knjige</em> креиран на другачији начин, односно ако се спречава акција приликом покушаја ажурирања.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_izdavaca</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">ON</span> <span class="n">UPDATE</span> <span class="n">NO</span> <span class="n">ACTION</span> <span class="n">ON</span> <span class="n">DELETE</span> <span class="n">CASCADE</span>
+</pre></div>
+</div>
+<p>Подаци се бришу из табеле командом <strong>DELETE FROM</strong>.</p>
+<p>На пример, запослени са идентификационим бројем 5 не ради више у библиотеци па је потребно да обришемо податке о њему.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DELETE</span> <span class="n">FROM</span> <span class="n">zaposleni</span>
+<span class="n">WHERE</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Код брисања података је важно и да знамо да ли постоје нека ограничења дефинисана приликом креирања табеле.</p>
+<p>Узмимо, на пример, да је страни кључ у табели <em>knjige</em> креиран на следећи начин.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_izdavaca</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">ON</span> <span class="n">UPDATE</span> <span class="n">CASCADE</span> <span class="n">ON</span> <span class="n">DELETE</span> <span class="n">NO</span> <span class="n">ACTION</span>
+</pre></div>
+</div>
+<p>Како је на овај начин забрањено брисање реда из табеле <em>izdavaci</em> уколико постоји нека књига тог издавача, следећа команда се неће извршити.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DELETE</span> <span class="n">FROM</span> <span class="n">izdavaci</span>
+<span class="n">WHERE</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Међутим, написана команда ће сe успешно извршити уколико је страни кључ у табели <em>knjige</em> креиран на другачији начин, односно ако се дозвољава каскадно брисање.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">(</span><span class="n">id_izdavaca</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="n">izdavaci</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">ON</span> <span class="n">UPDATE</span> <span class="n">NO</span> <span class="n">ACTION</span> <span class="n">ON</span> <span class="n">DELETE</span> <span class="n">CASCADE</span>
+</pre></div>
+</div>
+<p>У том случају ће се обрисати и издавач, и све његове књиге, и сви примерци свих његових књига</p>
+<a class="reference internal image-reference" href="../_images/slika_1010b.jpg"><img alt="../_images/slika_1010b.jpg" class="align-center" src="../_images/slika_1010b.jpg" style="width: 800px;" /></a>
+<p>Уколико изоставимо WHERE део команде, команда ће обрисати све податке из табеле.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DELETE</span> <span class="n">knjige</span>
+</pre></div>
+</div>
 </section>
 
 
@@ -325,9 +444,9 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="1_9_Kreiranje%20baze%20na%20drugi%20na%C4%8Din_lekcija.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="1_9_Kreiranje%20baze%20na%20drugi%20na%C4%8Din_lekcija.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
-  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">
@@ -349,7 +468,7 @@
 
   <label class="font-size-toggle" id="fontSizeToggle">
 
-      <i class="fas fa-font"></i><label>Letters</label>
+      <i class="fas fa-font"></i><label>Слова</label>
   </label>
   <div class="font-change d-none" id="fontChangeModal">
       <span class="dec-letter-icon" id="decLetterIcon">A-</span>

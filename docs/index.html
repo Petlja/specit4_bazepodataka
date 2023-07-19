@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="_static/associations.css" />
     <link rel="stylesheet" type="text/css" href="_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dbDirective.css" />
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
@@ -44,6 +46,9 @@
     <script src="_static/skulpt.min.js"></script>
     <script src="_static/skulpt-stdlib.js"></script>
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/jquery.highlight.js"></script>
@@ -127,6 +132,11 @@
     <script src="_static/jszip.js"></script>
     <script src="_static/editor-i18n.en.js"></script>
     <script src="_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="_static/dbDirective.js"></script>
+    <script src="_static/sql.js"></script>
+    <script src="_static/translations.js"></script>
     <script src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="_static/jquery-fix.js"></script>
     <script src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -182,7 +192,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <div class="links-title"> Useful links</div>
+          <div class="links-title"> Корисни линкови</div>
           <div class="useful-link">
             <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
           <div class="useful-link">
@@ -221,7 +231,7 @@
             <img class="course-logo-img" src="_static/images/logo.svg">
         </div>
                     <a class="course-start " id="startCourseAnonymously" href="./1_0_Relacione%20baze%20podataka/1_1_Tabele_lekcija.html">
-                        Go to course
+                        Погледај курс одмах
                     </a>
     </div>
     <div class="course-shortdescription">
@@ -243,58 +253,56 @@
 <div class="studio-course-content">
     <div class="course-requirements homepage-content">
         <div class="mb-3">
-            <h3> What you will learn </h3>
+            <h3> Шта ћеш научити </h3>
                 <ul class="simple" style="max-height: 298px;">
                     <li> Preview of Petljadoc course</li>
                     
                 </ul>
-        <div class="see-more-reqs" id="seeMoreReqs">More</div><div class="see-less-reqs" id="seeLessReqs">Less</div></div>
+        <div class="see-more-reqs" id="seeMoreReqs">прикажи више</div><div class="see-less-reqs" id="seeLessReqs">мање</div></div>
         <div class="section">
-            <h3>Course requires</h3>
+            <h3>Потребне ствари за курс</h3>
             <ul class="simple">
-                <li> Petljadoc</li>
-                <li> Runestone</li>
-                <li> Sphinx</li>
+                <li> SQL Server Management Studio (SSMS)</li>
                 
             </ul>
         </div>
     </div>
 <div class="course-tableofcontent">
-    <h3> Table of content </h3>
+    <h3> Садржај </h3>
     
     <div>
     <label>Релационе базе података</label>
     <span>
     </span>     
-    <span><i class="fas fa-file-alt"></i> 10 Lecture</span> 
+    <span><i class="fas fa-file-alt"></i> 10 лекција</span> 
     </div>
     
     <div>
     <label>Претраживање података</label>
     <span>
     </span>     
-    <span><i class="fas fa-file-alt"></i> 8 Lecture</span> 
+    <span><i class="fas fa-file-alt"></i> 8 лекција</span> 
     </div>
     
     <div>
     <label>База података за библиотеку</label>
     <span>
     </span>     
-    <span><i class="fas fa-file-alt"></i> 7 Lecture</span> 
+    <span><i class="fas fa-file-alt"></i> 7 лекција</span> 
     </div>
     
     <div>
     <label>База података за возачке дозволе</label>
     <span>
     </span>     
-    <span><i class="fas fa-file-alt"></i> 4 Lecture</span> 
+    <span><i class="fas fa-file-alt"></i> 4 лекција</span> 
     </div>
     
     <div>
     <label>База података за филмове</label>
     <span>
     </span>     
-    <span><i class="fas fa-file-alt"></i> 4 Lecture</span> 
+    <span><i class="fas fa-file-alt"></i> 4 лекција</span> 
     </div>
     </div>
 
