@@ -3,7 +3,6 @@ var Corner = (function () {
         this.avenue = a;
         this.street = s;
         this.numBalls = 0;
-        this.areBallsVisible = true;
         this.wallToNorth = false;
         this.wallToEast = false;
     }
@@ -24,13 +23,8 @@ var Corner = (function () {
         this.numBalls = n;
     };
 
-    Corner.prototype.setHiddenBalls = function (n) {
-        this.numBalls = n;
-        this.areBallsVisible = false;
-    };
-
     Corner.prototype.getBalls = function () {
-        return this.numBalls
+        return this.numBalls;
     };
 
     Corner.prototype.setNorthWall = function (w) {
@@ -47,12 +41,6 @@ var Corner = (function () {
 
     Corner.prototype.hasEastWall = function () {
         return this.wallToEast;
-    };
-
-    Corner.prototype.showNumberOfBalls = function (){
-        var returnValue = this.areBallsVisible;
-        this.areBallsVisible = false;
-        return returnValue;
     };
 
     return Corner;
