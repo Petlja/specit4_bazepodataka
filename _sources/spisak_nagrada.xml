@@ -1,0 +1,67 @@
+<spisak>
+  <nagradjena_knjiga>
+    <id>1</id>
+    <knjiga>Kandze</knjiga>
+    <autor>Marko Vidojkovic</autor>
+    <nagrada>Nagrada Kocicevo pero</nagrada>
+    <godina>2005</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>2</id>
+    <knjiga>Unutrasnje more</knjiga>
+    <autor>Danica Vukicevic</autor>
+    <nagrada>NIN-ova nagrada</nagrada>
+    <godina>2023</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>3</id>
+    <knjiga>Deca</knjiga>
+    <autor>Milena Markovic</autor>
+    <nagrada>NIN-ova nagrada</nagrada>
+    <godina>2021</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>4</id>
+    <knjiga>Estoril: Ratni roman</knjiga>
+    <autor>Dejan Tiago-Stankovic</autor>
+    <nagrada>Nagrada Brakno Copic</nagrada>
+    <godina>2015</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>5</id>
+    <knjiga>Estoril: Ratni roman</knjiga>
+    <autor>Dejan Tiago-Stankovic</autor>
+    <nagrada>HWA Crowns Literary Award</nagrada>
+    <godina>2018</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>6</id>
+    <knjiga>Veliki pad</knjiga>
+    <autor>Peter Handke</autor>
+    <nagrada>Nobelova nagrada za knjizevnost</nagrada>
+    <godina>2019</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>7</id>
+    <knjiga>Sve crvenkape su iste</knjiga>
+    <autor>Marko Vidojkovic</autor>
+    <nagrada>Vitalova nagrada</nagrada>
+    <godina>2006</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>8</id>
+    <knjiga>Kandze</knjiga>
+    <autor>Marko Vidojkovic</autor>
+    <nagrada>Zlatni bestseler</nagrada>
+    <godina>2005</godina>
+  </nagradjena_knjiga> 
+  <nagradjena_knjiga>
+    <id>9</id>
+    <knjiga>Estoril: Ratni roman</knjiga>
+    <autor>Dejan Tiago-Stankovic</autor>
+    <nagrada>Nagrada Evropske unije za književnost</nagrada>
+    <godina>2020</godina>
+  </nagradjena_knjiga>
+</spisak>
+
+
