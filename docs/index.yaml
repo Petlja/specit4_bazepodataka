@@ -9,38 +9,88 @@ description:
     text: Runestone Interactive
   longDescription: '<div class="document">
 
-    <p>Овај курс је намењен за предмет Базе података у четвртом разреду гимназија
-    за ученика са посебним способностима за рачунарство и информатику.
+    <p>Овај курс је намењен предмету Базе података у четвртом разреду гимназија за
+    ученике са посебним способностима за рачунарство и информатику. Курс прати одговарајући
+    програм наставе и учења. Поред рада у школи, курс се може пролазити и самостално</p>
 
-    Курс прати одговарајући програм наставе и учења. Поред рада у школи, курс може
-    да се пролази и самостално.</p>
-
-    <p>&lt;p&gt;
-
-    &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
-
+    <p>&lt;p&gt; &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external"
+    href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
     &lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot;
     src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
-
     &lt;br /&gt;Овај курс Фондација Петља објавила je под лиценцом &lt;a rel=&quot;license&quot;
     href=&quot;https://creativecommons.org/licenses/by/4.0/deed.sr_LATN&quot;&gt;Creative
-    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;.
-
-    &lt;/p&gt;</p>
+    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;. &lt;/p&gt;</p>
 
     </div>
 
     '
   requirements:
-  - SQL Server Management Studio (SSMS)
+  - Инсталиран алат за пројектовање база података Oracle SQL Developer Data Modeler
+    (упутство за инсталацију је дато у склопу курса);
+  - Инсталиран систем за управљање базама података Microsoft SQL Server Management
+    Studio (упутство за инсталацију је дато у склопу курса);
+  - Инсталирано развојно окружење Visual Studio (упутство за инсталацију је дато у
+    склопу курса);
+  - Креиран онлајн налог за приступ систему за управљање базама података Oracle Apex
+    (упутство за креирање налога је дато у склопу курса).
   shortDescription: Базе података за четврти разред гимназија за ученике са посебним
     способностима за рачунарство и информатику.
   toc:
   - Intro to Petljadoc INDEX.yaml
   willLearn:
-  - Preview of Petljadoc course
+  - Како се разматра и решава сложенији проблем разбијајући га на мање потпроблеме;
+  - Како се конструише решење проблема креирањем базе података и рачунарског програма;
+  - Како се развија дијаграм ентитета и веза као пројекат за креирање базе података
+    која ће се користити у рачунарском програму;
+  - Како се креира релациона база података која ће се користити у рачунарском програму
+    на основу креираног дијаграма ентитета и веза;
+  - Како се користе команде упитног језика SQL унутар програмског кода писаног другим
+    програмским језиком;
+  - Кроз много практичног рада креираћеш у изабраним окружењима рачунарске програме
+    који издвајају податке из једне или више табела креираних база података употребом
+    угњежденог упита SELECT;
+  - Кроз много практичног рада креираћеш у изабраним окружењима једноставне рачунарске
+    програме који извршавају основне анализе и обраду података употребом различитих
+    могућности упита SELECT;
+  - Израдићеш дијаграм ентитета и веза као пројекат за креирање базе података, а затим
+    и саму базу података и рачунарски програм у којем се та база користи.
 lang: sr-Cyrl
 lessons:
+- activities:
+  - description: ''
+    file: 0_1_Osnovne informacije o kursu.html
+    guid: bd98af64-e7ed-41b4-a51b-41229b1d855b
+    normalized_title: Основне информације о курсу
+    src: 0_1_Osnovne informacije o kursu.rst
+    title: Основне информације о курсу
+    type: reading
+  - description: ''
+    file: 0_2_Primeri baza podataka.html
+    guid: 6707107c-25b7-41b8-bebd-e45bd2fd570a
+    normalized_title: Примери релационих база података
+    src: 0_2_Primeri baza podataka.rst
+    title: Примери релационих база података
+    type: reading
+  - description: ''
+    file: 0_3_Praktičan i projektni rad.html
+    guid: 3f40aafe-c977-4a8b-b2b7-4fac5462dc0d
+    normalized_title: Практичан и пројектни рад
+    src: 0_3_Praktičan i projektni rad.rst
+    title: Практичан и пројектни рад
+    type: reading
+  - description: ''
+    file: 0_4_Uputstvo za nastavnike.html
+    guid: 60c9fa11-5609-42b7-b32d-7d7f9dc0bf86
+    normalized_title: Упутство за наставнике
+    src: 0_4_Uputstvo za nastavnike.rst
+    title: Упутство за наставнике
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 0_0_Uputstvo
+  guid: 17f50e8a-1f7e-48bd-9d6c-78190f553223
+  normalized_title: Упутство
+  title: Упутство
 - activities:
   - description: ''
     file: 1_1_Tabele_lekcija.html
@@ -307,4 +357,407 @@ lessons:
   guid: 7a78dfc0-698c-4fb9-b3b5-92e05f46cc76
   normalized_title: База података за филмове
   title: База података за филмове
-title: Базе података за четврти разред специјализованих ИТ одељења
+- activities:
+  - description: ''
+    file: 6_1_Oracle Apex i PL SQL.html
+    guid: e59c4e84-c604-4a3f-8e7b-457c467c6860
+    normalized_title: Oracle Apex и језик PLSQL
+    src: 6_1_Oracle Apex i PL SQL.rst
+    title: Oracle Apex и језик PL/SQL
+    type: reading
+  - description: ''
+    file: 6_2_Jezik PLSQL zadaci.html
+    guid: 4660f592-9824-47bc-86ba-474dcd862c97
+    normalized_title: Језик PLSQL - задаци
+    src: 6_2_Jezik PLSQL zadaci.rst
+    title: Језик PL/SQL - задаци
+    type: reading
+  - description: ''
+    file: 6_3_Jezik PLSQL kviz.html
+    guid: aca993d7-13b7-4cf4-9b72-260e0943d57e
+    normalized_title: Језик PLSQL - квиз
+    src: 6_3_Jezik PLSQL kviz.rst
+    title: Језик PL/SQL - квиз
+    type: quiz
+  - description: ''
+    file: 6_4_Јеzik PLSQL nerešeni zadaci.html
+    guid: 9f5892a4-a327-4dbe-b1b6-972226d5110f
+    normalized_title: Језик PLSQL – нерешени задаци
+    src: 6_4_Јеzik PLSQL nerešeni zadaci.rst
+    title: Језик PL/SQL – нерешени задаци
+    type: reading
+  - description: ''
+    file: 6_5_Jezik PLSQL grananje.html
+    guid: d4aba1e8-cab1-477f-b259-ff0e66a48d42
+    normalized_title: Наредбе гранања
+    src: 6_5_Jezik PLSQL grananje.rst
+    title: Наредбе гранања
+    type: reading
+  - description: ''
+    file: 6_6_Jezik PLSQL grananje nerešeni zadaci.html
+    guid: 51427918-b019-4a58-b200-8839c0012681
+    normalized_title: Наредбе гранања - нерешени задаци
+    src: 6_6_Jezik PLSQL grananje nerešeni zadaci.rst
+    title: Наредбе гранања - нерешени задаци
+    type: reading
+  - description: ''
+    file: 6_7_Јеzik PLSQL ciklusi.html
+    guid: 5d89bc30-adc9-40ae-9db5-67705943a672
+    normalized_title: Наредбе циклуса
+    src: 6_7_Јеzik PLSQL ciklusi.rst
+    title: Наредбе циклуса
+    type: reading
+  - description: ''
+    file: 6_8_Јеzik PLSQL ciklusi nerešeni zadaci.html
+    guid: aaf3aef2-af76-4e56-a5b0-22d6907f2848
+    normalized_title: Наредбе циклуса - нерешени задаци
+    src: 6_8_Јеzik PLSQL ciklusi nerešeni zadaci.rst
+    title: Наредбе циклуса - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 6_0_SUBP Oracle Apex i PL i SQL
+  guid: 216f9efb-b9c9-4efc-82c5-74c6aeee936d
+  normalized_title: СУБП Oracle Apex и језик PL  SQL
+  title: СУБП Oracle Apex и језик PL / SQL
+- activities:
+  - description: ''
+    file: 7_1_Praktičan rad.html
+    guid: b5dd700a-532a-461c-a793-f8c5c842f2bd
+    normalized_title: Практичан рад
+    src: 7_1_Praktičan rad.rst
+    title: Практичан рад
+    type: reading
+  - description: ''
+    file: 7_2_SELECT INTO.html
+    guid: a88963b6-b30f-4f7f-8d04-59ef5e09cc3f
+    normalized_title: Наредба SELECT INTO
+    src: 7_2_SELECT INTO.rst
+    title: Наредба SELECT INTO
+    type: reading
+  - description: ''
+    file: 7_3_SELECT INTO - zadaci.html
+    guid: b3b39219-10ca-444a-8392-137250762f10
+    normalized_title: Наредба SELECT INTO - zadaci
+    src: 7_3_SELECT INTO - zadaci.rst
+    title: Наредба SELECT INTO - zadaci
+    type: reading
+  - description: ''
+    file: 7_4_SELECT INTO - kviz.html
+    guid: 7d3c22d2-1b95-4424-9a4e-e59bc94b8a5b
+    normalized_title: Наредба SELECT INTO - квиз
+    src: 7_4_SELECT INTO - kviz.rst
+    title: Наредба SELECT INTO - квиз
+    type: quiz
+  - description: ''
+    file: 7_5_SELECT INTO - vežbanje.html
+    guid: dea7486f-12e0-4ba2-b4b4-ce979cd05b7b
+    normalized_title: Наредба SELECT INTO - вежбање
+    src: 7_5_SELECT INTO - vežbanje.rst
+    title: Наредба SELECT INTO - вежбање
+    type: reading
+  - description: ''
+    file: 7_6_SELECT INTO - nerešeni zadaci.html
+    guid: 6fedc9b9-ba44-4b6d-a153-d444dbc9b2c4
+    normalized_title: Наредба SELECT INTO - нерешени задаци
+    src: 7_6_SELECT INTO - nerešeni zadaci.rst
+    title: Наредба SELECT INTO - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 7_0_Baza podataka za biblioteku u SUBP-u Oracle Apex
+  guid: d04c2810-52db-4404-afd7-48e3e1b23397
+  normalized_title: База података за библиотеку у СУБП-у Oracle Apex
+  title: База података за библиотеку у СУБП-у Oracle Apex
+- activities:
+  - description: ''
+    file: 8_1_Uzimanje podataka iz više redova.html
+    guid: 4f10f317-0e85-48eb-bcab-84427bef2e14
+    normalized_title: Узимање података из више редова
+    src: 8_1_Uzimanje podataka iz više redova.rst
+    title: Узимање података из више редова
+    type: reading
+  - description: ''
+    file: 8_2_Kursori - zadaci.html
+    guid: 4fa7bc0c-ce64-4879-bc7e-aa4b924e927b
+    normalized_title: Курсори - задаци
+    src: 8_2_Kursori - zadaci.rst
+    title: Курсори - задаци
+    type: reading
+  - description: ''
+    file: 8_3_Različiti načini da se reši problem.html
+    guid: a873e6fc-e944-4818-ba28-c5b966f9d612
+    normalized_title: Различити начини да се реши проблем
+    src: 8_3_Različiti načini da se reši problem.rst
+    title: Различити начини да се реши проблем
+    type: reading
+  - description: ''
+    file: 8_4_Kursori - nerešeni zadaci.html
+    guid: 06784426-0637-4572-984b-a5b8b4ee0090
+    normalized_title: Курсори - нерешени задаци
+    src: 8_4_Kursori - nerešeni zadaci.rst
+    title: Курсори - нерешени задаци
+    type: reading
+  - description: ''
+    file: 8_5_Kursori sa parametrom.html
+    guid: 28566866-1ebd-4998-984e-f4f27b3ba4d7
+    normalized_title: Курсор са параметром
+    src: 8_5_Kursori sa parametrom.rst
+    title: Курсор са параметром
+    type: reading
+  - description: ''
+    file: 8_6_Kursori sa parametrom - zadaci.html
+    guid: 5fbc2dec-900a-4deb-89bc-fb033289f871
+    normalized_title: Курсор са параметром - задаци
+    src: 8_6_Kursori sa parametrom - zadaci.rst
+    title: Курсор са параметром - задаци
+    type: reading
+  - description: ''
+    file: 8_7_Kursori sa parametrom - nerešeni zadaci.html
+    guid: efa49df5-cfbd-4ea1-b0cb-9e8cc52a0b4f
+    normalized_title: Курсор са параметром - нерешени задаци
+    src: 8_7_Kursori sa parametrom - nerešeni zadaci.rst
+    title: Курсор са параметром - нерешени задаци
+    type: reading
+  - description: ''
+    file: 8_8_Kursori - kviz.html
+    guid: c324caa2-0eee-4ac5-acea-1a318f3e29b3
+    normalized_title: Курсори - квиз
+    src: 8_8_Kursori - kviz.rst
+    title: Курсори - квиз
+    type: quiz
+  - description: ''
+    file: 8_9_Kursori i grananje - zadaci.html
+    guid: f2f9b6f8-ffa5-4dac-aefb-30a3df506660
+    normalized_title: Курсори и гранање - задаци
+    src: 8_9_Kursori i grananje - zadaci.rst
+    title: Курсори и гранање - задаци
+    type: reading
+  - description: ''
+    file: 8_10_Kursori - vežbanje.html
+    guid: 5807e2c9-6d8f-41fd-bcb7-7aaaf8dbb9ab
+    normalized_title: Курсори - вежбање
+    src: 8_10_Kursori - vežbanje.rst
+    title: Курсори - вежбање
+    type: reading
+  - description: ''
+    file: 8_11_Trenutne pozajmice člana primer.html
+    guid: aad3944d-4990-43ad-8ec2-45e79077c582
+    normalized_title: Тренутне позајмице члана - пример
+    src: 8_11_Trenutne pozajmice člana primer.rst
+    title: Тренутне позајмице члана - пример
+    type: reading
+  - description: ''
+    file: 8_12_Spiskovi knjiga primer.html
+    guid: f20b4c98-c0aa-4b09-9a2b-095c2309fdc4
+    normalized_title: Спискови књига - пример
+    src: 8_12_Spiskovi knjiga primer.rst
+    title: Спискови књига - пример
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 8_0_Kursori
+  guid: fcf2b628-be65-4fe3-9bcb-9c937f10ba94
+  normalized_title: Курсори
+  title: Курсори
+- activities:
+  - description: ''
+    file: 9_1_Procedure i funkcije.html
+    guid: d6e78299-e5fd-4245-b834-76c076578e3e
+    normalized_title: Процедуре и функције
+    src: 9_1_Procedure i funkcije.rst
+    title: Процедуре и функције
+    type: reading
+  - description: ''
+    file: 9_2_Procedure i funkcije - zadaci.html
+    guid: c5053a1c-587d-4c8e-9026-8cba4ee36693
+    normalized_title: Процедуре и функције - задаци
+    src: 9_2_Procedure i funkcije - zadaci.rst
+    title: Процедуре и функције - задаци
+    type: reading
+  - description: ''
+    file: 9_3_Procedure i funkcije - nerešeni zadaci.html
+    guid: 146a6798-a455-4229-aeb1-e9266ff68238
+    normalized_title: Процедуре и функције - нерешени задаци
+    src: 9_3_Procedure i funkcije - nerešeni zadaci.rst
+    title: Процедуре и функције - нерешени задаци
+    type: reading
+  - description: ''
+    file: 9_4_Pozajmice jedne knjige - primer.html
+    guid: 99d207a8-8f7c-47fa-8739-3f916ef7c4dc
+    normalized_title: Позајмице једне књиге - пример
+    src: 9_4_Pozajmice jedne knjige - primer.rst
+    title: Позајмице једне књиге - пример
+    type: reading
+  - description: ''
+    file: 9_5_Тrenutne pozajmice - primer.html
+    guid: 6f470efa-d555-41cc-881b-1192d6886f35
+    normalized_title: Тренутне позајмице - пример
+    src: 9_5_Тrenutne pozajmice - primer.rst
+    title: Тренутне позајмице - пример
+    type: reading
+  - description: ''
+    file: 9_6_Procedure i druge SQL komande.html
+    guid: 1adf6efb-388e-4689-bf9a-276d88b6f6a0
+    normalized_title: Процедуре и друге SQL команде
+    src: 9_6_Procedure i druge SQL komande.rst
+    title: Процедуре и друге SQL команде
+    type: reading
+  - description: ''
+    file: 9_7_Trigeri.html
+    guid: c3637a2c-a527-485e-977e-af399ac1cfaa
+    normalized_title: Тригери
+    src: 9_7_Trigeri.rst
+    title: Тригери
+    type: reading
+  - description: ''
+    file: 9_8_Spisak svih objekata.html
+    guid: e6c35360-f68b-4531-a575-51a34f3409b5
+    normalized_title: Списак свих објеката у бази података
+    src: 9_8_Spisak svih objekata.rst
+    title: Списак свих објеката у бази података
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 9_0_Procedure i funkcije
+  guid: 668d6d81-7168-47c5-a043-46f4873cc872
+  normalized_title: Процедуре и функције
+  title: Процедуре и функције
+- activities:
+  - description: ''
+    file: 10_1_App builder.html
+    guid: 3f88024b-f074-40ee-bc2e-9dbb998ea519
+    normalized_title: Алат App Builder
+    src: 10_1_App builder.rst
+    title: Алат App Builder
+    type: reading
+  - description: ''
+    file: 10_2_Dodatne opcije App Buildera.html
+    guid: 76b7bdad-124b-48ea-98dd-14ab947ee30b
+    normalized_title: Додатне опције App Builder алата
+    src: 10_2_Dodatne opcije App Buildera.rst
+    title: Додатне опције App Builder алата
+    type: reading
+  - description: ''
+    file: 10_3_Pokretanje aplikacije.html
+    guid: 823419a1-cad1-4086-bfcf-87d8219312ce
+    normalized_title: Покретање апликације
+    src: 10_3_Pokretanje aplikacije.rst
+    title: Покретање апликације
+    type: reading
+  - description: ''
+    file: 10_4_Kreiranje novih stranica.html
+    guid: 397605f1-327e-4ec2-a3ca-7322456630c2
+    normalized_title: Креирање нових страница у апликацији
+    src: 10_4_Kreiranje novih stranica.rst
+    title: Креирање нових страница у апликацији
+    type: reading
+  - description: ''
+    file: 10_5_Pokretanje ranije kreirane procedure.html
+    guid: 9365fa0c-d34f-49fa-9938-d09aa8369d2a
+    normalized_title: Покретање раније креиране процедуре
+    src: 10_5_Pokretanje ranije kreirane procedure.rst
+    title: Покретање раније креиране процедуре
+    type: reading
+  - description: ''
+    file: 10_6_Alat App Builder i XML.html
+    guid: 4751c001-cf3c-427f-8937-80da7559cb1f
+    normalized_title: Алат App Builder и XML
+    src: 10_6_Alat App Builder i XML.rst
+    title: Алат App Builder и XML
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 10_0_Kreiranje aplikacije
+  guid: d7fc9ad0-10cc-4427-acb9-bb0121b11cb6
+  normalized_title: Креирање апликације помоћу алата App Builder
+  title: Креирање апликације помоћу алата App Builder
+- activities:
+  - description: ''
+    file: 11_1_Baza podataka za salon automobila.html
+    guid: 5ee1415a-8179-402d-848b-2ff505a88fda
+    normalized_title: База података за салон аутомобила у СУБП-у Oracle Apex - 1.
+      део
+    src: 11_1_Baza podataka za salon automobila.rst
+    title: База података за салон аутомобила у СУБП-у Oracle Apex - 1. део
+    type: reading
+  - description: ''
+    file: 11_2_Baza podataka za salon automobila 2.html
+    guid: 05d0c58d-7f56-41e7-ae54-007df2ad8463
+    normalized_title: База података за салон аутомобила у СУБП-у Oracle Apex - 2.
+      део
+    src: 11_2_Baza podataka za salon automobila 2.rst
+    title: База података за салон аутомобила у СУБП-у Oracle Apex - 2. део
+    type: reading
+  - description: ''
+    file: 11_3_Baza podataka za salon automobila 3.html
+    guid: 7e01ae48-a447-47c4-a33f-0c5d3e7c2286
+    normalized_title: База података за салон аутомобила у СУБП-у Oracle Apex - 3.
+      део
+    src: 11_3_Baza podataka za salon automobila 3.rst
+    title: База података за салон аутомобила у СУБП-у Oracle Apex - 3. део
+    type: reading
+  - description: ''
+    file: 11_4_Baza podakaza za prodavnicu.html
+    guid: 5d6eab95-9159-4f81-ba41-07a9ec96cc5e
+    normalized_title: База података за продавницу - нерешени пројектни рад
+    src: 11_4_Baza podakaza za prodavnicu.rst
+    title: База података за продавницу - нерешени пројектни рад
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 11_0_Baza podataka za salon automobila
+  guid: aefcbeea-9715-401d-b848-eb8b3f943489
+  normalized_title: База података за салон аутомобила
+  title: База података за салон аутомобила
+- activities:
+  - description: ''
+    file: 12_1_Predlog za čitanje.html
+    guid: 30c27703-54a2-420e-aed6-aa5a8938b110
+    normalized_title: Предлог за читање
+    src: 12_1_Predlog za čitanje.rst
+    title: Предлог за читање
+    type: reading
+  - description: ''
+    file: 12_2_Predlog za praktičan rad.html
+    guid: 2991a2e2-c984-4e4c-88ab-db2a4a9deec3
+    normalized_title: Предлог за практичан рад
+    src: 12_2_Predlog za praktičan rad.rst
+    title: Предлог за практичан рад
+    type: reading
+  - description: ''
+    file: 12_3_Veb-programiranje.html
+    guid: 33d4ac31-dc96-42c0-b319-5a48ffdcf5f7
+    normalized_title: Веб-програмирање
+    src: 12_3_Veb-programiranje.rst
+    title: Веб-програмирање
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 12_0_Druge aktuelne tehnologije
+  guid: d80f0b56-ccad-4110-aeb3-00f1c6ec7482
+  normalized_title: Друге актуелне технологије
+  title: Друге актуелне технологије
+- activities:
+  - description: ''
+    file: 13_1_Priprema.html
+    guid: 04306698-83f2-4867-b84b-9b2396170f8f
+    normalized_title: Припрема за пројектни задатак
+    src: 13_1_Priprema.rst
+    title: Припрема за пројектни задатак
+    type: reading
+  - description: ''
+    file: 13_2_Projektni zadatak.html
+    guid: 4c8c8b99-f73d-4695-90d8-04241f4a31be
+    normalized_title: Пројектни задатак
+    src: 13_2_Projektni zadatak.rst
+    title: Пројектни задатак
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 13_0_Projektni zadatak
+  guid: 0d434b2a-71a7-4a1d-9021-d0ff44b45bc0
+  normalized_title: Пројектни задатак
+  title: Пројектни задатак
+title: Базе података за четврти разред гимназија за ученике са посебним способностима
+  за рачунарство и информатику

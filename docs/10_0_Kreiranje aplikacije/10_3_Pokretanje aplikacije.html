@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Покретање апликације</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dbDirective.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/simanim.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script src="../_static/dbDirective.js"></script>
+    <script src="../_static/sql.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit4_bazepodataka';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit4_bazepodataka';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Корисни линкови</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Базе података за четврти разред гимназија за ученике са посебним способностима за рачунарство и информатику.</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-0_0_Uputstvo>
+                    <h5>Упутство</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../0_0_Uputstvo/0_1_Osnovne%20informacije%20o%20kursu.html><div class="studioLecture" id=activity-0_1_Osnovne%20informacije%20o%20kursu><i class="fas fa-file-alt activity-icon"></i>Основне информације о курсу</div></a>
+                <a href=../0_0_Uputstvo/0_2_Primeri%20baza%20podataka.html><div class="studioLecture" id=activity-0_2_Primeri%20baza%20podataka><i class="fas fa-file-alt activity-icon"></i>Примери релационих база података</div></a>
+                <a href=../0_0_Uputstvo/0_3_Praktičan%20i%20projektni%20rad.html><div class="studioLecture" id=activity-0_3_Praktičan%20i%20projektni%20rad><i class="fas fa-file-alt activity-icon"></i>Практичан и пројектни рад</div></a>
+                <a href=../0_0_Uputstvo/0_4_Uputstvo%20za%20nastavnike.html><div class="studioLecture" id=activity-0_4_Uputstvo%20za%20nastavnike><i class="fas fa-file-alt activity-icon"></i>Упутство за наставнике</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_0_Relacione%20baze%20podataka>
+                    <h5>Релационе базе података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_0_Relacione%20baze%20podataka/1_1_Tabele_lekcija.html><div class="studioLecture" id=activity-1_1_Tabele_lekcija><i class="fas fa-file-alt activity-icon"></i>Релационе базе података</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_2_Tabele_kviz.html><div class="studioLecture" id=activity-1_2_Tabele_kviz><i class="far fa-question-circle activity-icon"></i>Релационе базе података - квиз</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_3_Veza%201-M_lekcija.html><div class="studioLecture" id=activity-1_3_Veza%201-M_lekcija><i class="fas fa-file-alt activity-icon"></i>Веза један према више</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_4_Veza%201-M_kviz.html><div class="studioLecture" id=activity-1_4_Veza%201-M_kviz><i class="far fa-question-circle activity-icon"></i>Веза један према више - квиз</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_5_Veza%20M-M_lekcija.html><div class="studioLecture" id=activity-1_5_Veza%20M-M_lekcija><i class="fas fa-file-alt activity-icon"></i>Веза више према више</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_6_Veza%20M-M_kviz.html><div class="studioLecture" id=activity-1_6_Veza%20M-M_kviz><i class="far fa-question-circle activity-icon"></i>Веза више према више - квиз</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_7_Alat%20za%20projektovanje_lekcija.html><div class="studioLecture" id=activity-1_7_Alat%20za%20projektovanje_lekcija><i class="fas fa-file-alt activity-icon"></i>Алат за пројектовање</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_8_SUBP_lekcija.html><div class="studioLecture" id=activity-1_8_SUBP_lekcija><i class="fas fa-file-alt activity-icon"></i>СУБП</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_9_Kreiranje%20baze%20na%20drugi%20način_lekcija.html><div class="studioLecture" id=activity-1_9_Kreiranje%20baze%20na%20drugi%20način_lekcija><i class="fas fa-file-alt activity-icon"></i>Креирање базе на други начин</div></a>
+                <a href=../1_0_Relacione%20baze%20podataka/1_10_Još%20neke%20SQL%20komande_lekcija.html><div class="studioLecture" id=activity-1_10_Još%20neke%20SQL%20komande_lekcija><i class="fas fa-file-alt activity-icon"></i>Још неке SQL команде</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_0_Pretraživanje%20podataka>
+                    <h5>Претраживање података</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_0_Pretraživanje%20podataka/2_1_Upit%20SELECT_lekcija.html><div class="studioLecture" id=activity-2_1_Upit%20SELECT_lekcija><i class="fas fa-file-alt activity-icon"></i>Упит SELECT</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-2_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упиз SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz.html><div class="studioLecture" id=activity-2_3_Upit%20SELECT%20iz%20jedne%20tabele_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - упит из једне табеле - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_4_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-2_4_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_5_Upit%20SELECT%20fje%20podupiti_kviz.html><div class="studioLecture" id=activity-2_5_Upit%20SELECT%20fje%20podupiti_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - фунцкије и подупити - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_6_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-2_6_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_7_Upit%20SELECT%20spajanje_kviz.html><div class="studioLecture" id=activity-2_7_Upit%20SELECT%20spajanje_kviz><i class="far fa-question-circle activity-icon"></i>Упит SELECT - спајање - квиз</div></a>
+                <a href=../2_0_Pretraživanje%20podataka/2_8_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-2_8_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_0_Baza%20podataka%20za%20biblioteku>
+                    <h5>База података за библиотеку</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_0_Baza%20podataka%20za%20biblioteku/3_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-3_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci.html><div class="studioLecture" id=activity-3_2_Upit%20SELECT%20iz%20jedne%20tabele_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_3_Upit%20SELECT%20iz%20jedne%20tabele_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - упит из једне табеле - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_4_Upit%20SELECT%20spajanje_zadaci.html><div class="studioLecture" id=activity-3_4_Upit%20SELECT%20spajanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_5_Upit%20SELECT%20spajanje_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - спајање - нерешени задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_6_Upit%20SELECT%20fje%20podupiti_zadaci.html><div class="studioLecture" id=activity-3_6_Upit%20SELECT%20fje%20podupiti_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - задаци</div></a>
+                <a href=../3_0_Baza%20podataka%20za%20biblioteku/3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci.html><div class="studioLecture" id=activity-3_7_Upit%20SELECT%20fje%20podupiti_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - функције и подупити - нерешени задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_0_Baza%20podataka%20za%20vozačke%20dozvole>
+                    <h5>База података за возачке дозволе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_0_Baza%20podataka%20za%20vozačke%20dozvole/4_1_Kreiranje%20baze_praktičan_rad.html><div class="studioLecture" id=activity-4_1_Kreiranje%20baze_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практичан рад</div></a>
+                <a href=../4_0_Baza%20podataka%20za%20vozačke%20dozvole/4_2_Dijagram%20i%20podaci_praktičan_rad.html><div class="studioLecture" id=activity-4_2_Dijagram%20i%20podaci_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Дијаграм и подаци - практичан рад</div></a>
+                <a href=../4_0_Baza%20podataka%20za%20vozačke%20dozvole/4_3_Upit%20SELECT_zadaci.html><div class="studioLecture" id=activity-4_3_Upit%20SELECT_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - задаци</div></a>
+                <a href=../4_0_Baza%20podataka%20za%20vozačke%20dozvole/4_4_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-4_4_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-5_0_Baza%20podataka%20za%20filmove>
+                    <h5>База података за филмове</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../5_0_Baza%20podataka%20za%20filmove/5_1_Kreiranje%20baze_praktični_rad.html><div class="studioLecture" id=activity-5_1_Kreiranje%20baze_praktični_rad><i class="fas fa-file-alt activity-icon"></i>Креирање базе - практични рад</div></a>
+                <a href=../5_0_Baza%20podataka%20za%20filmove/5_2_Dijagram%20i%20podaci_praktičan_rad.html><div class="studioLecture" id=activity-5_2_Dijagram%20i%20podaci_praktičan_rad><i class="fas fa-file-alt activity-icon"></i>Дијаграм и подаци - практични рад</div></a>
+                <a href=../5_0_Baza%20podataka%20za%20filmove/5_3_Upit%20SELECT_zadaci.html><div class="studioLecture" id=activity-5_3_Upit%20SELECT_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - задаци</div></a>
+                <a href=../5_0_Baza%20podataka%20za%20filmove/5_4_Upit%20SELECT_nerešeni_zadaci.html><div class="studioLecture" id=activity-5_4_Upit%20SELECT_nerešeni_zadaci><i class="fas fa-file-alt activity-icon"></i>Упит SELECT - нерешени задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL>
+                    <h5>СУБП Oracle Apex и језик PL / SQL</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_1_Oracle%20Apex%20i%20PL%20SQL.html><div class="studioLecture" id=activity-6_1_Oracle%20Apex%20i%20PL%20SQL><i class="fas fa-file-alt activity-icon"></i>Oracle Apex и језик PL/SQL</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_2_Jezik%20PLSQL%20zadaci.html><div class="studioLecture" id=activity-6_2_Jezik%20PLSQL%20zadaci><i class="fas fa-file-alt activity-icon"></i>Језик PL/SQL - задаци</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_3_Jezik%20PLSQL%20kviz.html><div class="studioLecture" id=activity-6_3_Jezik%20PLSQL%20kviz><i class="far fa-question-circle activity-icon"></i>Језик PL/SQL - квиз</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_4_Јеzik%20PLSQL%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-6_4_Јеzik%20PLSQL%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Језик PL/SQL – нерешени задаци</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_5_Jezik%20PLSQL%20grananje.html><div class="studioLecture" id=activity-6_5_Jezik%20PLSQL%20grananje><i class="fas fa-file-alt activity-icon"></i>Наредбе гранања</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_6_Jezik%20PLSQL%20grananje%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-6_6_Jezik%20PLSQL%20grananje%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Наредбе гранања - нерешени задаци</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_7_Јеzik%20PLSQL%20ciklusi.html><div class="studioLecture" id=activity-6_7_Јеzik%20PLSQL%20ciklusi><i class="fas fa-file-alt activity-icon"></i>Наредбе циклуса</div></a>
+                <a href=../6_0_SUBP%20Oracle%20Apex%20i%20PL%20i%20SQL/6_8_Јеzik%20PLSQL%20ciklusi%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-6_8_Јеzik%20PLSQL%20ciklusi%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Наредбе циклуса - нерешени задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex>
+                    <h5>База података за библиотеку у СУБП-у Oracle Apex</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex/7_1_Praktičan%20rad.html><div class="studioLecture" id=activity-7_1_Praktičan%20rad><i class="fas fa-file-alt activity-icon"></i>Практичан рад</div></a>
+                <a href=../7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex/7_2_SELECT%20INTO.html><div class="studioLecture" id=activity-7_2_SELECT%20INTO><i class="fas fa-file-alt activity-icon"></i>Наредба SELECT INTO</div></a>
+                <a href=../7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex/7_3_SELECT%20INTO%20-%20zadaci.html><div class="studioLecture" id=activity-7_3_SELECT%20INTO%20-%20zadaci><i class="fas fa-file-alt activity-icon"></i>Наредба SELECT INTO - zadaci</div></a>
+                <a href=../7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex/7_4_SELECT%20INTO%20-%20kviz.html><div class="studioLecture" id=activity-7_4_SELECT%20INTO%20-%20kviz><i class="far fa-question-circle activity-icon"></i>Наредба SELECT INTO - квиз</div></a>
+                <a href=../7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex/7_5_SELECT%20INTO%20-%20vežbanje.html><div class="studioLecture" id=activity-7_5_SELECT%20INTO%20-%20vežbanje><i class="fas fa-file-alt activity-icon"></i>Наредба SELECT INTO - вежбање</div></a>
+                <a href=../7_0_Baza%20podataka%20za%20biblioteku%20u%20SUBP-u%20Oracle%20Apex/7_6_SELECT%20INTO%20-%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-7_6_SELECT%20INTO%20-%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Наредба SELECT INTO - нерешени задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-8_0_Kursori>
+                    <h5>Курсори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../8_0_Kursori/8_1_Uzimanje%20podataka%20iz%20više%20redova.html><div class="studioLecture" id=activity-8_1_Uzimanje%20podataka%20iz%20više%20redova><i class="fas fa-file-alt activity-icon"></i>Узимање података из више редова</div></a>
+                <a href=../8_0_Kursori/8_2_Kursori%20-%20zadaci.html><div class="studioLecture" id=activity-8_2_Kursori%20-%20zadaci><i class="fas fa-file-alt activity-icon"></i>Курсори - задаци</div></a>
+                <a href=../8_0_Kursori/8_3_Različiti%20načini%20da%20se%20reši%20problem.html><div class="studioLecture" id=activity-8_3_Različiti%20načini%20da%20se%20reši%20problem><i class="fas fa-file-alt activity-icon"></i>Различити начини да се реши проблем</div></a>
+                <a href=../8_0_Kursori/8_4_Kursori%20-%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-8_4_Kursori%20-%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Курсори - нерешени задаци</div></a>
+                <a href=../8_0_Kursori/8_5_Kursori%20sa%20parametrom.html><div class="studioLecture" id=activity-8_5_Kursori%20sa%20parametrom><i class="fas fa-file-alt activity-icon"></i>Курсор са параметром</div></a>
+                <a href=../8_0_Kursori/8_6_Kursori%20sa%20parametrom%20-%20zadaci.html><div class="studioLecture" id=activity-8_6_Kursori%20sa%20parametrom%20-%20zadaci><i class="fas fa-file-alt activity-icon"></i>Курсор са параметром - задаци</div></a>
+                <a href=../8_0_Kursori/8_7_Kursori%20sa%20parametrom%20-%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-8_7_Kursori%20sa%20parametrom%20-%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Курсор са параметром - нерешени задаци</div></a>
+                <a href=../8_0_Kursori/8_8_Kursori%20-%20kviz.html><div class="studioLecture" id=activity-8_8_Kursori%20-%20kviz><i class="far fa-question-circle activity-icon"></i>Курсори - квиз</div></a>
+                <a href=../8_0_Kursori/8_9_Kursori%20i%20grananje%20-%20zadaci.html><div class="studioLecture" id=activity-8_9_Kursori%20i%20grananje%20-%20zadaci><i class="fas fa-file-alt activity-icon"></i>Курсори и гранање - задаци</div></a>
+                <a href=../8_0_Kursori/8_10_Kursori%20-%20vežbanje.html><div class="studioLecture" id=activity-8_10_Kursori%20-%20vežbanje><i class="fas fa-file-alt activity-icon"></i>Курсори - вежбање</div></a>
+                <a href=../8_0_Kursori/8_11_Trenutne%20pozajmice%20člana%20primer.html><div class="studioLecture" id=activity-8_11_Trenutne%20pozajmice%20člana%20primer><i class="fas fa-file-alt activity-icon"></i>Тренутне позајмице члана - пример</div></a>
+                <a href=../8_0_Kursori/8_12_Spiskovi%20knjiga%20primer.html><div class="studioLecture" id=activity-8_12_Spiskovi%20knjiga%20primer><i class="fas fa-file-alt activity-icon"></i>Спискови књига - пример</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-9_0_Procedure%20i%20funkcije>
+                    <h5>Процедуре и функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../9_0_Procedure%20i%20funkcije/9_1_Procedure%20i%20funkcije.html><div class="studioLecture" id=activity-9_1_Procedure%20i%20funkcije><i class="fas fa-file-alt activity-icon"></i>Процедуре и функције</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_2_Procedure%20i%20funkcije%20-%20zadaci.html><div class="studioLecture" id=activity-9_2_Procedure%20i%20funkcije%20-%20zadaci><i class="fas fa-file-alt activity-icon"></i>Процедуре и функције - задаци</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_3_Procedure%20i%20funkcije%20-%20nerešeni%20zadaci.html><div class="studioLecture" id=activity-9_3_Procedure%20i%20funkcije%20-%20nerešeni%20zadaci><i class="fas fa-file-alt activity-icon"></i>Процедуре и функције - нерешени задаци</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_4_Pozajmice%20jedne%20knjige%20-%20primer.html><div class="studioLecture" id=activity-9_4_Pozajmice%20jedne%20knjige%20-%20primer><i class="fas fa-file-alt activity-icon"></i>Позајмице једне књиге - пример</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_5_Тrenutne%20pozajmice%20-%20primer.html><div class="studioLecture" id=activity-9_5_Тrenutne%20pozajmice%20-%20primer><i class="fas fa-file-alt activity-icon"></i>Тренутне позајмице - пример</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_6_Procedure%20i%20druge%20SQL%20komande.html><div class="studioLecture" id=activity-9_6_Procedure%20i%20druge%20SQL%20komande><i class="fas fa-file-alt activity-icon"></i>Процедуре и друге SQL команде</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_7_Trigeri.html><div class="studioLecture" id=activity-9_7_Trigeri><i class="fas fa-file-alt activity-icon"></i>Тригери</div></a>
+                <a href=../9_0_Procedure%20i%20funkcije/9_8_Spisak%20svih%20objekata.html><div class="studioLecture" id=activity-9_8_Spisak%20svih%20objekata><i class="fas fa-file-alt activity-icon"></i>Списак свих објеката у бази података</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-10_0_Kreiranje%20aplikacije>
+                    <h5>Креирање апликације помоћу алата App Builder</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../10_0_Kreiranje%20aplikacije/10_1_App%20builder.html><div class="studioLecture" id=activity-10_1_App%20builder><i class="fas fa-file-alt activity-icon"></i>Алат App Builder</div></a>
+                <a href=../10_0_Kreiranje%20aplikacije/10_2_Dodatne%20opcije%20App%20Buildera.html><div class="studioLecture" id=activity-10_2_Dodatne%20opcije%20App%20Buildera><i class="fas fa-file-alt activity-icon"></i>Додатне опције App Builder алата</div></a>
+                <a href=../10_0_Kreiranje%20aplikacije/10_3_Pokretanje%20aplikacije.html><div class="studioLecture" id=activity-10_3_Pokretanje%20aplikacije><i class="fas fa-file-alt activity-icon"></i>Покретање апликације</div></a>
+                <a href=../10_0_Kreiranje%20aplikacije/10_4_Kreiranje%20novih%20stranica.html><div class="studioLecture" id=activity-10_4_Kreiranje%20novih%20stranica><i class="fas fa-file-alt activity-icon"></i>Креирање нових страница у апликацији</div></a>
+                <a href=../10_0_Kreiranje%20aplikacije/10_5_Pokretanje%20ranije%20kreirane%20procedure.html><div class="studioLecture" id=activity-10_5_Pokretanje%20ranije%20kreirane%20procedure><i class="fas fa-file-alt activity-icon"></i>Покретање раније креиране процедуре</div></a>
+                <a href=../10_0_Kreiranje%20aplikacije/10_6_Alat%20App%20Builder%20i%20XML.html><div class="studioLecture" id=activity-10_6_Alat%20App%20Builder%20i%20XML><i class="fas fa-file-alt activity-icon"></i>Алат App Builder и XML</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-11_0_Baza%20podataka%20za%20salon%20automobila>
+                    <h5>База података за салон аутомобила</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../11_0_Baza%20podataka%20za%20salon%20automobila/11_1_Baza%20podataka%20za%20salon%20automobila.html><div class="studioLecture" id=activity-11_1_Baza%20podataka%20za%20salon%20automobila><i class="fas fa-file-alt activity-icon"></i>База података за салон аутомобила у СУБП-у Oracle Apex - 1. део</div></a>
+                <a href=../11_0_Baza%20podataka%20za%20salon%20automobila/11_2_Baza%20podataka%20za%20salon%20automobila%202.html><div class="studioLecture" id=activity-11_2_Baza%20podataka%20za%20salon%20automobila%202><i class="fas fa-file-alt activity-icon"></i>База података за салон аутомобила у СУБП-у Oracle Apex - 2. део</div></a>
+                <a href=../11_0_Baza%20podataka%20za%20salon%20automobila/11_3_Baza%20podataka%20za%20salon%20automobila%203.html><div class="studioLecture" id=activity-11_3_Baza%20podataka%20za%20salon%20automobila%203><i class="fas fa-file-alt activity-icon"></i>База података за салон аутомобила у СУБП-у Oracle Apex - 3. део</div></a>
+                <a href=../11_0_Baza%20podataka%20za%20salon%20automobila/11_4_Baza%20podakaza%20za%20prodavnicu.html><div class="studioLecture" id=activity-11_4_Baza%20podakaza%20za%20prodavnicu><i class="fas fa-file-alt activity-icon"></i>База података за продавницу - нерешени пројектни рад</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-12_0_Druge%20aktuelne%20tehnologije>
+                    <h5>Друге актуелне технологије</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../12_0_Druge%20aktuelne%20tehnologije/12_1_Predlog%20za%20čitanje.html><div class="studioLecture" id=activity-12_1_Predlog%20za%20čitanje><i class="fas fa-file-alt activity-icon"></i>Предлог за читање</div></a>
+                <a href=../12_0_Druge%20aktuelne%20tehnologije/12_2_Predlog%20za%20praktičan%20rad.html><div class="studioLecture" id=activity-12_2_Predlog%20za%20praktičan%20rad><i class="fas fa-file-alt activity-icon"></i>Предлог за практичан рад</div></a>
+                <a href=../12_0_Druge%20aktuelne%20tehnologije/12_3_Veb-programiranje.html><div class="studioLecture" id=activity-12_3_Veb-programiranje><i class="fas fa-file-alt activity-icon"></i>Веб-програмирање</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-13_0_Projektni%20zadatak>
+                    <h5>Пројектни задатак</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../13_0_Projektni%20zadatak/13_1_Priprema.html><div class="studioLecture" id=activity-13_1_Priprema><i class="fas fa-file-alt activity-icon"></i>Припрема за пројектни задатак</div></a>
+                <a href=../13_0_Projektni%20zadatak/13_2_Projektni%20zadatak.html><div class="studioLecture" id=activity-13_2_Projektni%20zadatak><i class="fas fa-file-alt activity-icon"></i>Пројектни задатак</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Покретање апликације<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Након што се заврше сви кораци за креирање апликације која приступа делу базе података за библиотеку и има обрасце и извештаје за табеле <em>knjige</em> и <em>izdavaci</em>, апликација може да се покрене.</p>
+
+    </div></div>
+<p>Алату App Builder се приступа у оквиру СУБП-а <em>Oracle APEX</em>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://apex.oracle.com/en/">https://apex.oracle.com/en/</a> (обавезно логовање на креирани налог)</p></li>
+<li><p>App Builder</p></li>
+</ul>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>НАПОМЕНА: Изглед сајта, поједини кораци и називи, као и код других ИКТ алата, могу да се временом промене, али су углавном најважније опције увек присутне и доступне.</p>
+
+    </div></div>
+<p>Након што се креира апликација, добијамо њен комплетан преглед са списком свих страница које су у нашем случају обрасци и извештаји у вези са две табеле. Као што може да се види на следећој слици, могуће је радити измене на апликацији кликом на дугме <em>Edit Application Definition</em>, а могуће је и додавати нове странице кликом на дугме <em>Create Page</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3a.jpg"><img alt="../_images/slika_10_3a.jpg" class="align-center" src="../_images/slika_10_3a.jpg" style="width: 600px;" /></a>
+<p>Апликација се покреће кликом на дугме <em>Run Application</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3b.jpg"><img alt="../_images/slika_10_3b.jpg" class="align-center" src="../_images/slika_10_3b.jpg" style="width: 600px;" /></a>
+<p>Апликација тражи логовање и за приступ се користе исто корисничко име, тј. имејл адреса, и лозинка као за логовање на онлајн систем <em>Oracle APEX</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3c.jpg"><img alt="../_images/slika_10_3c.jpg" class="align-center" src="../_images/slika_10_3c.jpg" style="width: 600px;" /></a>
+<p>Када се кликне на страницу <em>Tabela_izdavaci</em>, појављује се извештај са приказом садржаја табеле <em>izdavaci</em>. Унос података је могућ када се кликне на дугме <em>Create</em> које отвара образац.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3d.jpg"><img alt="../_images/slika_10_3d.jpg" class="align-center" src="../_images/slika_10_3d.jpg" style="width: 600px;" /></a>
+<p>Можемо да унесемо податке о још једном издавачу.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3e.jpg"><img alt="../_images/slika_10_3e.jpg" class="align-center" src="../_images/slika_10_3e.jpg" style="width: 600px;" /></a>
+<p>Након уноса података (обавезни су идентификациони број и назив) потребно је да се кликне дугме <em>Create</em>, након чега је нови ред додат у базу.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3f.jpg"><img alt="../_images/slika_10_3f.jpg" class="align-center" src="../_images/slika_10_3f.jpg" style="width: 600px;" /></a>
+<p>Помоћу навигације кроз апликацију можемо да пређемо на страницу у вези са табелом <em>knjige.</em></p>
+<a class="reference internal image-reference" href="../_images/slika_10_3g.jpg"><img alt="../_images/slika_10_3g.jpg" class="align-center" src="../_images/slika_10_3g.jpg" style="width: 600px;" /></a>
+<p>Додаћемо још једну књигу у табелу. Нова књига коју додајемо је у издању издавача којег смо управо унели у базу. Како је ова књига збирка прича великог броја аутора, за сада у базу података не морамо да додајемо њене ауторе и да их повезујемо са овом књигом.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3h.jpg"><img alt="../_images/slika_10_3h.jpg" class="align-center" src="../_images/slika_10_3h.jpg" style="width: 600px;" /></a>
+<p>Нову књигу додајемо након што се отвори образац за унос података кликом на дугме <em>Create</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_10_3i.jpg"><img alt="../_images/slika_10_3i.jpg" class="align-center" src="../_images/slika_10_3i.jpg" style="width: 600px;" /></a>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="10_2_Dodatne%20opcije%20App%20Buildera.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
