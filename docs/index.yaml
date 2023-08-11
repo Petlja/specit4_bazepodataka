@@ -359,6 +359,198 @@ lessons:
   title: База података за филмове
 - activities:
   - description: ''
+    file: 5_1_0_Procedura i komanda INSERT.html
+    guid: 99236d26-bb87-4e5d-8a09-3edec4ea4ae1
+    normalized_title: Процедуре и команда INSERT
+    src: 5_1_0_Procedura i komanda INSERT.rst
+    title: Процедуре и команда INSERT
+    type: reading
+  - description: ''
+    file: 5_1_2_Procedura i komande UPDATE i DELETE.html
+    guid: db1d69bf-4537-4e28-b61f-514c858b87a6
+    normalized_title: Процедуре и команде UPDATE и DELETE
+    src: 5_1_2_Procedura i komande UPDATE i DELETE.rst
+    title: Процедуре и команде UPDATE и DELETE
+    type: reading
+  - description: ''
+    file: 5_1_3_Procedura i komande INSERT, UPDATE i DELETE_kviz.html
+    guid: 51bdeb44-add0-4341-8420-4667269ac435
+    normalized_title: Процедуре и команде INSERT, UPDATE, и DELETE - квиз
+    src: 5_1_3_Procedura i komande INSERT, UPDATE i DELETE_kviz.rst
+    title: Процедуре и команде INSERT, UPDATE, и DELETE - квиз
+    type: quiz
+  - description: ''
+    file: 5_1_4_Procedure i testiranje programa.html
+    guid: efd2f930-3519-4ecd-8544-81bf431aeb53
+    normalized_title: Процедуре и тестирање програма
+    src: 5_1_4_Procedure i testiranje programa.rst
+    title: Процедуре и тестирање програма
+    type: reading
+  - description: ''
+    file: 5_1_5_Procedure i upit SELECT.html
+    guid: e6b6ae37-5a68-4fb6-827b-f220e2edd767
+    normalized_title: Процедуре и упит SELECT
+    src: 5_1_5_Procedure i upit SELECT.rst
+    title: Процедуре и упит SELECT
+    type: reading
+  - description: ''
+    file: 5_1_6_Procedure i kursor upit SELECT.html
+    guid: 848c7fc2-1af9-4af8-a1c3-afeaf51b22e8
+    normalized_title: Процедуре и курсор за упит SELECT
+    src: 5_1_6_Procedure i kursor upit SELECT.rst
+    title: Процедуре и курсор за упит SELECT
+    type: reading
+  - description: ''
+    file: 5_1_7_Funkcije i upit SELECT.html
+    guid: a7e32363-10a8-41d1-8b57-7337a3c62fb7
+    normalized_title: Функције и упит SELECT
+    src: 5_1_7_Funkcije i upit SELECT.rst
+    title: Функције и упит SELECT
+    type: reading
+  - description: ''
+    file: 5_1_8_Procedure i funkcije upit SELECT_kviz.html
+    guid: 503e5e69-dc3a-441a-b2d0-090a55d1ecba
+    normalized_title: Процедуре и функције са упитом SELECT - квиз
+    src: 5_1_8_Procedure i funkcije upit SELECT_kviz.rst
+    title: Процедуре и функције са упитом SELECT - квиз
+    type: quiz
+  - description: ''
+    file: 5_1_9_Procedure i funkcije upit SELECT jedna tabela_zadaci.html
+    guid: 10c66362-04cf-4eb0-bc55-a14c75269cc6
+    normalized_title: Процедуре и функције са упитом SELECT из једне табеле - задаци
+    src: 5_1_9_Procedure i funkcije upit SELECT jedna tabela_zadaci.rst
+    title: Процедуре и функције са упитом SELECT из једне табеле - задаци
+    type: reading
+  - description: ''
+    file: 5_1_10_Procedure i funkcije upit grupne funkcije_zadaci.html
+    guid: ce7d75b8-f1e4-4391-bd54-14171e6fd109
+    normalized_title: Процедуре и функције са упитом и групним функцијама - задаци
+    src: 5_1_10_Procedure i funkcije upit grupne funkcije_zadaci.rst
+    title: Процедуре и функције са упитом и групним функцијама - задаци
+    type: reading
+  - description: ''
+    file: 5_1_11_Procedure i funkcije upit SELECT spajanje_zadaci.html
+    guid: b65f4e03-b38f-4f9a-8cd1-2e5fd47b452f
+    normalized_title: Процедуре и функције са упитом SELECT са спајањем табела - задаци
+    src: 5_1_11_Procedure i funkcije upit SELECT spajanje_zadaci.rst
+    title: Процедуре и функције са упитом SELECT са спајањем табела - задаци
+    type: reading
+  - description: ''
+    file: 5_1_12_Procedure i funkcije upit_nerešeni zadaci.html
+    guid: 3d3237ad-cbf9-4e01-a99e-ee98b28fdf40
+    normalized_title: Процедуре и функције са упитом - нерешени задаци
+    src: 5_1_12_Procedure i funkcije upit_nerešeni zadaci.rst
+    title: Процедуре и функције са упитом - нерешени задаци
+    type: reading
+  - description: ''
+    file: 5_1_13_Format XML.html
+    guid: fc752f68-4190-4eaa-b138-3bfa321cfe49
+    normalized_title: Формат XML
+    src: 5_1_13_Format XML.rst
+    title: Формат XML
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 5_1_Procedure i funkcije
+  guid: 4ae2d35b-5206-49a6-93cd-367460be2ce2
+  normalized_title: Процедуре и функције
+  title: Процедуре и функције
+- activities:
+  - description: ''
+    file: 5_2_1_Procedure funkcije i poredjenje različitih rešenja.html
+    guid: 1b27acc3-75f2-4edb-8e8d-979f9deb178a
+    normalized_title: База података за библиотеку - Процедуре, функције и поређење
+      различитих решења
+    src: 5_2_1_Procedure funkcije i poredjenje različitih rešenja.rst
+    title: База података за библиотеку - Процедуре, функције и поређење различитих
+      решења
+    type: reading
+  - description: ''
+    file: 5_2_2_Procedure funkcije i poredjenje različitih rešenja_zadaci.html
+    guid: 8186cd48-ec87-43a3-b071-2f13b923656c
+    normalized_title: Процедуре, функције и поређење различитих решења
+    src: 5_2_2_Procedure funkcije i poredjenje različitih rešenja_zadaci.rst
+    title: Процедуре, функције и поређење различитих решења
+    type: reading
+  - description: ''
+    file: 5_2_3_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.html
+    guid: b6196046-5c9a-4771-84e2-7815f2d8451d
+    normalized_title: Процедуре и функције са упитом SELECT из једне табеле - вежбање
+    src: 5_2_3_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.rst
+    title: Процедуре и функције са упитом SELECT из једне табеле - вежбање
+    type: reading
+  - description: ''
+    file: 5_2_4_Procedure, fje, poredenje, SELECT spajanje_vežbanje.html
+    guid: 57a09375-6127-4d86-b860-478f96db98c2
+    normalized_title: Процедуре и функције са упитом SELECT са спајањем табела - вежбање
+    src: 5_2_4_Procedure, fje, poredenje, SELECT spajanje_vežbanje.rst
+    title: Процедуре и функције са упитом SELECT са спајањем табела - вежбање
+    type: reading
+  - description: ''
+    file: 5_2_5_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.html
+    guid: 5a03d538-eb51-4f9a-afa6-47b556ad7084
+    normalized_title: Процедуре и функције са упитом и групним функцијама и подупитима
+      - вежбање
+    src: 5_2_5_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.rst
+    title: Процедуре и функције са упитом и групним функцијама и подупитима - вежбање
+    type: reading
+  - description: ''
+    file: 5_2_6_Procedure, fje, poredenje, SELECT_nerešeni zadaci.html
+    guid: c4ba3408-91b1-46fb-9c07-971d4ba9f443
+    normalized_title: Процедуре и функције са упитом SELECT - нерешени задаци
+    src: 5_2_6_Procedure, fje, poredenje, SELECT_nerešeni zadaci.rst
+    title: Процедуре и функције са упитом SELECT - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 5_2_Baza podataka za bibioteku - procedure fje poredjenje
+  guid: 18d762b3-8bf9-4497-ab98-4151fbb1453b
+  normalized_title: База података за библиотеку - процедуре, функције
+  title: База података за библиотеку - процедуре, функције
+- activities:
+  - description: ''
+    file: 5_3_1_Procedure i funkcije SELECT_vežbanje.html
+    guid: 2a4eabb2-d795-496b-b1df-5b01c2cb238b
+    normalized_title: Процедуре и функције са упитом SELECT - вежбање
+    src: 5_3_1_Procedure i funkcije SELECT_vežbanje.rst
+    title: Процедуре и функције са упитом SELECT - вежбање
+    type: reading
+  - description: ''
+    file: 5_3_2_Procedure i funkcije_nerešeni zadaci.html
+    guid: 20e1d337-9cf4-4220-a470-4845dfaa590a
+    normalized_title: Процедуре и функције - нерешени задаци
+    src: 5_3_2_Procedure i funkcije_nerešeni zadaci.rst
+    title: Процедуре и функције - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 5_3_Baza podataka za vozačke dozvole - procedure fje
+  guid: eb124694-4e11-4d6c-be79-78072bef9bfe
+  normalized_title: База података за возачке дозволе - процедуре и функције
+  title: База података за возачке дозволе - процедуре и функције
+- activities:
+  - description: ''
+    file: 5_4_1_Procedure i funkcije SELECT_vežbanje.html
+    guid: b79d661d-5ccb-462e-aa2b-9ec6d8fe7384
+    normalized_title: Процедуре и функције са упитом SELECT - вежбање
+    src: 5_4_1_Procedure i funkcije SELECT_vežbanje.rst
+    title: Процедуре и функције са упитом SELECT - вежбање
+    type: reading
+  - description: ''
+    file: 5_4_2_Procedure i funkcije_ nerešeni zadaci.html
+    guid: ed93d34a-7eb3-44cf-9401-ba2fc479e102
+    normalized_title: Процедуре и функције - нерешени задаци
+    src: 5_4_2_Procedure i funkcije_ nerešeni zadaci.rst
+    title: Процедуре и функције - нерешени задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 5_4_Baza podataka za filmove
+  guid: 63efe83b-04d9-4932-9b2a-b964d6396ebd
+  normalized_title: База података за филмове - процедуре и функције
+  title: База података за филмове - процедуре и функције
+- activities:
+  - description: ''
     file: 6_1_Oracle Apex i PL SQL.html
     guid: e59c4e84-c604-4a3f-8e7b-457c467c6860
     normalized_title: Oracle Apex и језик PLSQL
@@ -619,10 +811,10 @@ lessons:
     type: reading
   archived-activities: []
   description: ''
-  folder: 9_0_Procedure i funkcije
+  folder: 9_0_Procedure i funkcije u SUBP-u Oracle Apex
   guid: 668d6d81-7168-47c5-a043-46f4873cc872
-  normalized_title: Процедуре и функције
-  title: Процедуре и функције
+  normalized_title: Процедуре и функције у СУБП-у Oracle Apex
+  title: Процедуре и функције у СУБП-у Oracle Apex
 - activities:
   - description: ''
     file: 10_1_App builder.html

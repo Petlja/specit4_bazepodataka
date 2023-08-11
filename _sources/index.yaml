@@ -225,6 +225,141 @@ lessons:
         title: Упит SELECT - нерешени задаци
         file: 5_4_Upit SELECT_nerešeni_zadaci.rst
         guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
+  - title: Процедуре и функције
+    guid: 4ae2d35b-5206-49a6-93cd-367460be2ce2
+    description: 
+    folder: 5_1_Procedure i funkcije
+    activities:
+      - type: reading
+        title: Процедуре и команда INSERT
+        file: 5_1_0_Procedura i komanda INSERT.rst
+        description: #Optional
+        guid: 99236d26-bb87-4e5d-8a09-3edec4ea4ae1
+      - type: reading
+        title: Процедуре и команде UPDATE и DELETE
+        file: 5_1_2_Procedura i komande UPDATE i DELETE.rst
+        description: #Optional
+        guid: db1d69bf-4537-4e28-b61f-514c858b87a6
+      - type: quiz
+        title: Процедуре и команде INSERT, UPDATE, и DELETE - квиз
+        file: 5_1_3_Procedura i komande INSERT, UPDATE i DELETE_kviz.rst
+        description: #Optional
+        guid: 51bdeb44-add0-4341-8420-4667269ac435
+      - type: reading
+        title: Процедуре и тестирање програма
+        file: 5_1_4_Procedure i testiranje programa.rst
+        description: #Optional
+        guid: efd2f930-3519-4ecd-8544-81bf431aeb53
+      - type: reading
+        title: Процедуре и упит SELECT
+        file: 5_1_5_Procedure i upit SELECT.rst
+        description: #Optional
+        guid: e6b6ae37-5a68-4fb6-827b-f220e2edd767
+      - type: reading
+        title: Процедуре и курсор за упит SELECT
+        file: 5_1_6_Procedure i kursor upit SELECT.rst
+        description: #Optional
+        guid: 848c7fc2-1af9-4af8-a1c3-afeaf51b22e8
+      - type: reading
+        title: Функције и упит SELECT
+        file: 5_1_7_Funkcije i upit SELECT.rst
+        description: #Optional
+        guid: a7e32363-10a8-41d1-8b57-7337a3c62fb7
+      - type: quiz
+        title: Процедуре и функције са упитом SELECT - квиз
+        file: 5_1_8_Procedure i funkcije upit SELECT_kviz.rst
+        description: #Optional
+        guid: 503e5e69-dc3a-441a-b2d0-090a55d1ecba
+      - type: reading
+        title: Процедуре и функције са упитом SELECT из једне табеле - задаци
+        file: 5_1_9_Procedure i funkcije upit SELECT jedna tabela_zadaci.rst
+        description: #Optional
+        guid: 10c66362-04cf-4eb0-bc55-a14c75269cc6
+      - type: reading
+        title: Процедуре и функције са упитом и групним функцијама - задаци
+        file: 5_1_10_Procedure i funkcije upit grupne funkcije_zadaci.rst
+        description: #Optional
+        guid: ce7d75b8-f1e4-4391-bd54-14171e6fd109
+      - type: reading
+        title: Процедуре и функције са упитом SELECT са спајањем табела - задаци
+        file: 5_1_11_Procedure i funkcije upit SELECT spajanje_zadaci.rst
+        description: #Optional
+        guid: b65f4e03-b38f-4f9a-8cd1-2e5fd47b452f
+      - type: reading
+        title: Процедуре и функције са упитом - нерешени задаци
+        file: 5_1_12_Procedure i funkcije upit_nerešeni zadaci.rst
+        description: #Optional
+        guid: 3d3237ad-cbf9-4e01-a99e-ee98b28fdf40
+      - type: reading
+        title: Формат XML
+        file: 5_1_13_Format XML.rst
+        description: #Optional
+        guid: fc752f68-4190-4eaa-b138-3bfa321cfe49
+  - title: База података за библиотеку - процедуре, функције
+    guid: 18d762b3-8bf9-4497-ab98-4151fbb1453b
+    description: 
+    folder: 5_2_Baza podataka za bibioteku - procedure fje poredjenje
+    activities:
+      - type: reading
+        title: База података за библиотеку - Процедуре, функције и поређење различитих решења
+        file: 5_2_1_Procedure funkcije i poredjenje različitih rešenja.rst
+        description: #Optional
+        guid: 1b27acc3-75f2-4edb-8e8d-979f9deb178a
+      - type: reading
+        title: Процедуре, функције и поређење различитих решења
+        file: 5_2_2_Procedure funkcije i poredjenje različitih rešenja_zadaci.rst
+        description: #Optional
+        guid: 8186cd48-ec87-43a3-b071-2f13b923656c
+      - type: reading
+        title: Процедуре и функције са упитом SELECT из једне табеле - вежбање
+        file: 5_2_3_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.rst
+        description: #Optional
+        guid: b6196046-5c9a-4771-84e2-7815f2d8451d
+      - type: reading
+        title: Процедуре и функције са упитом SELECT са спајањем табела - вежбање
+        file: 5_2_4_Procedure, fje, poredenje, SELECT spajanje_vežbanje.rst
+        description: #Optional
+        guid: 57a09375-6127-4d86-b860-478f96db98c2
+      - type: reading
+        title: Процедуре и функције са упитом и групним функцијама и подупитима - вежбање
+        file: 5_2_5_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.rst
+        description: #Optional
+        guid: 5a03d538-eb51-4f9a-afa6-47b556ad7084
+      - type: reading
+        title: Процедуре и функције са упитом SELECT - нерешени задаци
+        file: 5_2_6_Procedure, fje, poredenje, SELECT_nerešeni zadaci.rst
+        description: #Optional
+        guid: c4ba3408-91b1-46fb-9c07-971d4ba9f443
+  - title: База података за возачке дозволе - процедуре и функције
+    guid: eb124694-4e11-4d6c-be79-78072bef9bfe
+    description: 
+    folder: 5_3_Baza podataka za vozačke dozvole - procedure fje
+    activities:
+      - type: reading
+        title: Процедуре и функције са упитом SELECT - вежбање
+        file: 5_3_1_Procedure i funkcije SELECT_vežbanje.rst
+        description: #Optional
+        guid: 2a4eabb2-d795-496b-b1df-5b01c2cb238b
+      - type: reading
+        title: Процедуре и функције - нерешени задаци
+        file: 5_3_2_Procedure i funkcije_nerešeni zadaci.rst
+        description: #Optional
+        guid: 20e1d337-9cf4-4220-a470-4845dfaa590a
+  - title: База података за филмове - процедуре и функције
+    guid: 63efe83b-04d9-4932-9b2a-b964d6396ebd
+    description: 
+    folder: 5_4_Baza podataka za filmove
+    activities:   
+      - type: reading
+        title: Процедуре и функције са упитом SELECT - вежбање
+        file: 5_4_1_Procedure i funkcije SELECT_vežbanje.rst
+        description: #Optional
+        guid: b79d661d-5ccb-462e-aa2b-9ec6d8fe7384
+      - type: reading
+        title: Процедуре и функције - нерешени задаци
+        file: 5_4_2_Procedure i funkcije_ nerešeni zadaci.rst
+        description: #Optional
+        guid: ed93d34a-7eb3-44cf-9401-ba2fc479e102
   - title: СУБП Oracle Apex и језик PL / SQL
     guid: 216f9efb-b9c9-4efc-82c5-74c6aeee936d
     description: 
@@ -370,10 +505,10 @@ lessons:
         file: 8_12_Spiskovi knjiga primer.rst
         description: #Optional
         guid: f20b4c98-c0aa-4b09-9a2b-095c2309fdc4
-  - title: Процедуре и функције
+  - title: Процедуре и функције у СУБП-у Oracle Apex
     guid: 668d6d81-7168-47c5-a043-46f4873cc872
     description: 
-    folder: 9_0_Procedure i funkcije
+    folder: 9_0_Procedure i funkcije u SUBP-u Oracle Apex
     activities:
       - type: reading
         title: Процедуре и функције
