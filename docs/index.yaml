@@ -60,896 +60,1003 @@ lessons:
   - description: ''
     file: 0_1_Osnovne informacije o kursu.html
     guid: bd98af64-e7ed-41b4-a51b-41229b1d855b
-    normalized_title: Основне информације о курсу
+    normalized_title: 0.1 Основне информације о курсу
     src: 0_1_Osnovne informacije o kursu.rst
-    title: Основне информације о курсу
+    title: 0.1 Основне информације о курсу
     type: reading
   - description: ''
     file: 0_2_Primeri baza podataka.html
     guid: 6707107c-25b7-41b8-bebd-e45bd2fd570a
-    normalized_title: Примери релационих база података
+    normalized_title: 0.2 Примери релационих база података
     src: 0_2_Primeri baza podataka.rst
-    title: Примери релационих база података
+    title: 0.2 Примери релационих база података
     type: reading
   - description: ''
     file: 0_3_Praktičan i projektni rad.html
     guid: 3f40aafe-c977-4a8b-b2b7-4fac5462dc0d
-    normalized_title: Практичан и пројектни рад
+    normalized_title: 0.3 Практичан и пројектни рад
     src: 0_3_Praktičan i projektni rad.rst
-    title: Практичан и пројектни рад
+    title: 0.3 Практичан и пројектни рад
     type: reading
   - description: ''
     file: 0_4_Uputstvo za nastavnike.html
     guid: 60c9fa11-5609-42b7-b32d-7d7f9dc0bf86
-    normalized_title: Упутство за наставнике
+    normalized_title: 0.4 Упутство за наставнике
     src: 0_4_Uputstvo za nastavnike.rst
-    title: Упутство за наставнике
+    title: 0.4 Упутство за наставнике
     type: reading
   archived-activities: []
   description: ''
   folder: 0_0_Uputstvo
   guid: 17f50e8a-1f7e-48bd-9d6c-78190f553223
-  normalized_title: Упутство
-  title: Упутство
+  normalized_title: 0.0 Упутство
+  title: 0.0 Упутство
 - activities:
   - description: ''
     file: 1_1_Tabele_lekcija.html
     guid: d03e073c-d503-4ad5-9caa-40a744245350
-    normalized_title: Релационе базе података
+    normalized_title: 1.1 Релационе базе података
     src: 1_1_Tabele_lekcija.rst
-    title: Релационе базе података
+    title: 1.1 Релационе базе података
     type: reading
   - description: ''
     file: 1_2_Tabele_kviz.html
     guid: b757c42c-74fd-4ec6-9867-3726ae60c5b7
-    normalized_title: Релационе базе података - квиз
+    normalized_title: 1.2 Релационе базе података - квиз
     src: 1_2_Tabele_kviz.rst
-    title: Релационе базе података - квиз
+    title: 1.2 Релационе базе података - квиз
     type: quiz
   - description: ''
     file: 1_3_Veza 1-M_lekcija.html
     guid: 1a699f1c-589a-4087-84e4-e2b9a473c0ec
-    normalized_title: Веза један према више
+    normalized_title: 1.3 Веза један према више
     src: 1_3_Veza 1-M_lekcija.rst
-    title: Веза један према више
+    title: 1.3 Веза један према више
     type: reading
   - description: ''
     file: 1_4_Veza 1-M_kviz.html
     guid: 8f722c8f-32a2-4c42-a02e-bfbd157ad2f5
-    normalized_title: Веза један према више - квиз
+    normalized_title: 1.4 Веза један према више - квиз
     src: 1_4_Veza 1-M_kviz.rst
-    title: Веза један према више - квиз
+    title: 1.4 Веза један према више - квиз
     type: quiz
   - description: ''
     file: 1_5_Veza M-M_lekcija.html
     guid: 4d02c8f1-0a34-497f-9b14-dfa3292ca8c8
-    normalized_title: Веза више према више
+    normalized_title: 1.5 Веза више према више
     src: 1_5_Veza M-M_lekcija.rst
-    title: Веза више према више
+    title: 1.5 Веза више према више
     type: reading
   - description: ''
     file: 1_6_Veza M-M_kviz.html
     guid: fdb18b95-0d83-49db-9dda-b9406df4a0ad
-    normalized_title: Веза више према више - квиз
+    normalized_title: 1.6 Веза више према више - квиз
     src: 1_6_Veza M-M_kviz.rst
-    title: Веза више према више - квиз
+    title: 1.6 Веза више према више - квиз
     type: quiz
   - description: ''
     file: 1_7_Alat za projektovanje_lekcija.html
     guid: 915cd9a5-8819-46cc-a63a-d73a239b0f67
-    normalized_title: Алат за пројектовање
+    normalized_title: 1.7 Алат за пројектовање
     src: 1_7_Alat za projektovanje_lekcija.rst
-    title: Алат за пројектовање
+    title: 1.7 Алат за пројектовање
     type: reading
   - description: ''
-    file: 1_8_SUBP_lekcija.html
-    guid: 16a8d056-23e9-41a0-93b7-653fb4a30845
-    normalized_title: СУБП
-    src: 1_8_SUBP_lekcija.rst
-    title: СУБП
+    file: 1_8_Kreiranje baze_praktičan_rad.html
+    guid: 12f9c1fd-2f28-47c1-9f68-e533dc1f551c
+    normalized_title: 1.8 База података за библиотеку - креирање базе
+    src: 1_8_Kreiranje baze_praktičan_rad.rst
+    title: 1.8 База података за библиотеку - креирање базе
     type: reading
   - description: ''
-    file: 1_9_Kreiranje baze na drugi način_lekcija.html
-    guid: 30c24b62-9d1c-4869-8048-e56b3d9df79c
-    normalized_title: Креирање базе на други начин
-    src: 1_9_Kreiranje baze na drugi način_lekcija.rst
-    title: Креирање базе на други начин
+    file: 1_9_Upit SELECT iz jedne tabele_zadaci.html
+    guid: 17e14b5a-7f17-4a24-9a80-c733a6225f44
+    normalized_title: 1.9 Упит SELECT - упит из једне табеле - задаци
+    src: 1_9_Upit SELECT iz jedne tabele_zadaci.rst
+    title: 1.9 Упит SELECT - упит из једне табеле - задаци
     type: reading
   - description: ''
-    file: 1_10_Još neke SQL komande_lekcija.html
-    guid: 4c8b49fc-9bc7-46e9-933c-461c429496d4
-    normalized_title: Још неке SQL команде
-    src: 1_10_Još neke SQL komande_lekcija.rst
-    title: Још неке SQL команде
+    file: 1_10_Upit SELECT iz jedne tabele_nerešeni_zadaci.html
+    guid: 9bf2343a-4765-4ddd-a760-56d4c4b9d3eb
+    normalized_title: 1.10 Упит SELECT - упит из једне табеле - нерешени задаци
+    src: 1_10_Upit SELECT iz jedne tabele_nerešeni_zadaci.rst
+    title: 1.10 Упит SELECT - упит из једне табеле - нерешени задаци
+    type: reading
+  - description: ''
+    file: 1_11_Upit SELECT spajanje_zadaci.html
+    guid: f99b19c3-b47a-4b72-a121-1561abd27046
+    normalized_title: 1.11 Упит SELECT - спајање - задаци
+    src: 1_11_Upit SELECT spajanje_zadaci.rst
+    title: 1.11 Упит SELECT - спајање - задаци
+    type: reading
+  - description: ''
+    file: 1_12_Upit SELECT spajanje_nerešeni_zadaci.html
+    guid: c3c8f646-b325-4cd9-a5d9-060d9aeb2a19
+    normalized_title: 1.12 Упит SELECT - спајање - нерешени задаци
+    src: 1_12_Upit SELECT spajanje_nerešeni_zadaci.rst
+    title: 1.12 Упит SELECT - спајање - нерешени задаци
+    type: reading
+  - description: ''
+    file: 1_13_Upit SELECT fje podupiti_zadaci.html
+    guid: b348ac4d-2293-43c5-b8e0-47b475fd5bcb
+    normalized_title: 1.13 Упит SELECT - функције и подупити - задаци
+    src: 1_13_Upit SELECT fje podupiti_zadaci.rst
+    title: 1.13 Упит SELECT - функције и подупити - задаци
+    type: reading
+  - description: ''
+    file: 1_14_Upit SELECT fje podupiti_nerešeni_zadaci.html
+    guid: 7a385f42-e22d-4f78-85bc-bc38ea5e8235
+    normalized_title: 1.14 Упит SELECT - функције и подупити - нерешени задаци
+    src: 1_14_Upit SELECT fje podupiti_nerešeni_zadaci.rst
+    title: 1.14 Упит SELECT - функције и подупити - нерешени задаци
+    type: reading
+  - description: ''
+    file: 1_15_Kreiranje baze_praktičan_rad.html
+    guid: 3ac582a6-d4fd-4a15-b9bc-2faf59c5bd16
+    normalized_title: 1.15 База података за возачке дозволе - креирање базе
+    src: 1_15_Kreiranje baze_praktičan_rad.rst
+    title: 1.15 База података за возачке дозволе - креирање базе
+    type: reading
+  - description: ''
+    file: 1_16_Dijagram i podaci_praktičan_rad.html
+    guid: acf2e7ef-7aa3-4944-914b-6503ccaa3e21
+    normalized_title: 1.16 Дијаграм и подаци - практичан рад
+    src: 1_16_Dijagram i podaci_praktičan_rad.rst
+    title: 1.16 Дијаграм и подаци - практичан рад
+    type: reading
+  - description: ''
+    file: 1_17_Upit SELECT_zadaci.html
+    guid: b01d6933-e760-438a-9662-c7f2dc222416
+    normalized_title: 1.17 Упит SELECT - задаци
+    src: 1_17_Upit SELECT_zadaci.rst
+    title: 1.17 Упит SELECT - задаци
+    type: reading
+  - description: ''
+    file: 1_18_Upit SELECT_nerešeni_zadaci.html
+    guid: 6226f8d5-28b0-46d7-9a18-2b2fbc2ef0a6
+    normalized_title: 1.18 Упит SELECT - нерешени задаци
+    src: 1_18_Upit SELECT_nerešeni_zadaci.rst
+    title: 1.18 Упит SELECT - нерешени задаци
+    type: reading
+  - description: ''
+    file: 1_19_Kreiranje baze_praktični_rad.html
+    guid: a457fd5c-1331-4143-9a55-62921dc1185f
+    normalized_title: 1.19 Креирање базе - практични рад
+    src: 1_19_Kreiranje baze_praktični_rad.rst
+    title: 1.19 Креирање базе - практични рад
+    type: reading
+  - description: ''
+    file: 1_20_Dijagram i podaci_praktičan_rad.html
+    guid: 1130b1c5-620f-422b-9e28-7fe1c0b2bcaa
+    normalized_title: 1.20 Дијаграм и подаци - практични рад
+    src: 1_20_Dijagram i podaci_praktičan_rad.rst
+    title: 1.20 Дијаграм и подаци - практични рад
+    type: reading
+  - description: ''
+    file: 1_21_Upit SELECT_zadaci.html
+    guid: 6b055203-6723-42e2-9781-954a879d076b
+    normalized_title: 1.21 Упит SELECT - задаци
+    src: 1_21_Upit SELECT_zadaci.rst
+    title: 1.21 Упит SELECT - задаци
+    type: reading
+  - description: ''
+    file: 1_22_Upit SELECT_nerešeni_zadaci.html
+    guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
+    normalized_title: 1.22 Упит SELECT - нерешени задаци
+    src: 1_22_Upit SELECT_nerešeni_zadaci.rst
+    title: 1.22 Упит SELECT - нерешени задаци
     type: reading
   archived-activities: []
   description: ''
   folder: 1_0_Relacione baze podataka
   guid: 01e84981-a1e7-4daf-b2f6-c557f73ffb03
-  normalized_title: Релационе базе података
-  title: Релационе базе података
+  normalized_title: 1.0 Релационе базе података
+  title: 1.0 Релационе базе података
 - activities:
   - description: ''
-    file: 2_1_Upit SELECT_lekcija.html
+    file: 2_1_SUBP_lekcija.html
+    guid: 16a8d056-23e9-41a0-93b7-653fb4a30845
+    normalized_title: 2.1 СУБП
+    src: 2_1_SUBP_lekcija.rst
+    title: 2.1 СУБП
+    type: reading
+  - description: ''
+    file: 2_2_Kreiranje baze na drugi način_lekcija.html
+    guid: 30c24b62-9d1c-4869-8048-e56b3d9df79c
+    normalized_title: 2.2 Креирање базе на други начин
+    src: 2_2_Kreiranje baze na drugi način_lekcija.rst
+    title: 2.2 Креирање базе на други начин
+    type: reading
+  - description: ''
+    file: 2_3_Još neke SQL komande_lekcija.html
+    guid: 4c8b49fc-9bc7-46e9-933c-461c429496d4
+    normalized_title: 2.3 Још неке SQL команде
+    src: 2_3_Još neke SQL komande_lekcija.rst
+    title: 2.3 Још неке SQL команде
+    type: reading
+  - description: ''
+    file: 2_4_Upit SELECT_lekcija.html
     guid: fa108c92-aefb-4c25-9c5f-b0192c33d2aa
-    normalized_title: Упит SELECT
-    src: 2_1_Upit SELECT_lekcija.rst
-    title: Упит SELECT
+    normalized_title: 2.4 Упит SELECT
+    src: 2_4_Upit SELECT_lekcija.rst
+    title: 2.4 Упит SELECT
     type: reading
   - description: ''
-    file: 2_2_Upit SELECT iz jedne tabele_zadaci.html
+    file: 2_5_Upit SELECT iz jedne tabele_zadaci.html
     guid: 0d2ffd35-f74b-4164-97be-e53a2e0e2049
-    normalized_title: Упиз SELECT - упит из једне табеле - задаци
-    src: 2_2_Upit SELECT iz jedne tabele_zadaci.rst
-    title: Упиз SELECT - упит из једне табеле - задаци
+    normalized_title: 2.5 Упиз SELECT - упит из једне табеле - задаци
+    src: 2_5_Upit SELECT iz jedne tabele_zadaci.rst
+    title: 2.5 Упиз SELECT - упит из једне табеле - задаци
     type: reading
   - description: ''
-    file: 2_3_Upit SELECT iz jedne tabele_kviz.html
+    file: 2_6_Upit SELECT iz jedne tabele_kviz.html
     guid: c7f9a305-cd55-4dd1-a3f8-b685e9c58ba0
-    normalized_title: Упит SELECT - упит из једне табеле - квиз
-    src: 2_3_Upit SELECT iz jedne tabele_kviz.rst
-    title: Упит SELECT - упит из једне табеле - квиз
+    normalized_title: 2.6 Упит SELECT - упит из једне табеле - квиз
+    src: 2_6_Upit SELECT iz jedne tabele_kviz.rst
+    title: 2.6 Упит SELECT - упит из једне табеле - квиз
     type: quiz
   - description: ''
-    file: 2_4_Upit SELECT fje podupiti_zadaci.html
+    file: 2_7_Upit SELECT fje podupiti_zadaci.html
     guid: 2a9f3334-fba6-4448-a0ca-1e4c7e6a0f3b
-    normalized_title: Упит SELECT - функције и подупити - задаци
-    src: 2_4_Upit SELECT fje podupiti_zadaci.rst
-    title: Упит SELECT - функције и подупити - задаци
+    normalized_title: 2.7 Упит SELECT - функције и подупити - задаци
+    src: 2_7_Upit SELECT fje podupiti_zadaci.rst
+    title: 2.7 Упит SELECT - функције и подупити - задаци
     type: reading
   - description: ''
-    file: 2_5_Upit SELECT fje podupiti_kviz.html
+    file: 2_8_Upit SELECT fje podupiti_kviz.html
     guid: 89599bb3-32be-4391-a962-9836143404ad
-    normalized_title: Упит SELECT - фунцкије и подупити - квиз
-    src: 2_5_Upit SELECT fje podupiti_kviz.rst
-    title: Упит SELECT - фунцкије и подупити - квиз
+    normalized_title: 2.8 Упит SELECT - фунцкије и подупити - квиз
+    src: 2_8_Upit SELECT fje podupiti_kviz.rst
+    title: 2.8 Упит SELECT - фунцкије и подупити - квиз
     type: quiz
   - description: ''
-    file: 2_6_Upit SELECT spajanje_zadaci.html
+    file: 2_9_Upit SELECT spajanje_zadaci.html
     guid: 39ec2d6f-153f-4cac-9169-642b8f813d4
-    normalized_title: Упит SELECT - спајање - задаци
-    src: 2_6_Upit SELECT spajanje_zadaci.rst
-    title: Упит SELECT - спајање - задаци
+    normalized_title: 2.9 Упит SELECT - спајање - задаци
+    src: 2_9_Upit SELECT spajanje_zadaci.rst
+    title: 2.9 Упит SELECT - спајање - задаци
     type: reading
   - description: ''
-    file: 2_7_Upit SELECT spajanje_kviz.html
+    file: 2_10_Upit SELECT spajanje_kviz.html
     guid: 730479a2-278f-439c-8449-e6bc477db383
-    normalized_title: Упит SELECT - спајање - квиз
-    src: 2_7_Upit SELECT spajanje_kviz.rst
-    title: Упит SELECT - спајање - квиз
+    normalized_title: 2.10 Упит SELECT - спајање - квиз
+    src: 2_10_Upit SELECT spajanje_kviz.rst
+    title: 2.10 Упит SELECT - спајање - квиз
     type: quiz
   - description: ''
-    file: 2_8_Upit SELECT_nerešeni_zadaci.html
+    file: 2_11_Upit SELECT_nerešeni_zadaci.html
     guid: 6940cc0b-3375-4511-9169-92f2b02e20bb
-    normalized_title: Упит SELECT - нерешени задаци
-    src: 2_8_Upit SELECT_nerešeni_zadaci.rst
-    title: Упит SELECT - нерешени задаци
-    type: reading
-  archived-activities: []
-  description: ''
-  folder: 2_0_Pretraživanje podataka
-  guid: 9505294d-d907-4609-94bb-3fae45e7af05
-  normalized_title: Претраживање података
-  title: Претраживање података
-- activities:
-  - description: ''
-    file: 3_1_Kreiranje baze_praktičan_rad.html
-    guid: 12f9c1fd-2f28-47c1-9f68-e533dc1f551c
-    normalized_title: Креирање базе - практичан рад
-    src: 3_1_Kreiranje baze_praktičan_rad.rst
-    title: Креирање базе - практичан рад
+    normalized_title: 2.11 Упит SELECT - нерешени задаци
+    src: 2_11_Upit SELECT_nerešeni_zadaci.rst
+    title: 2.11 Упит SELECT - нерешени задаци
     type: reading
   - description: ''
-    file: 3_2_Upit SELECT iz jedne tabele_zadaci.html
-    guid: 17e14b5a-7f17-4a24-9a80-c733a6225f44
-    normalized_title: Упит SELECT - упит из једне табеле - задаци
-    src: 3_2_Upit SELECT iz jedne tabele_zadaci.rst
-    title: Упит SELECT - упит из једне табеле - задаци
-    type: reading
-  - description: ''
-    file: 3_3_Upit SELECT iz jedne tabele_nerešeni_zadaci.html
-    guid: 9bf2343a-4765-4ddd-a760-56d4c4b9d3eb
-    normalized_title: Упит SELECT - упит из једне табеле - нерешени задаци
-    src: 3_3_Upit SELECT iz jedne tabele_nerešeni_zadaci.rst
-    title: Упит SELECT - упит из једне табеле - нерешени задаци
-    type: reading
-  - description: ''
-    file: 3_4_Upit SELECT spajanje_zadaci.html
-    guid: f99b19c3-b47a-4b72-a121-1561abd27046
-    normalized_title: Упит SELECT - спајање - задаци
-    src: 3_4_Upit SELECT spajanje_zadaci.rst
-    title: Упит SELECT - спајање - задаци
-    type: reading
-  - description: ''
-    file: 3_5_Upit SELECT spajanje_nerešeni_zadaci.html
-    guid: c3c8f646-b325-4cd9-a5d9-060d9aeb2a19
-    normalized_title: Упит SELECT - спајање - нерешени задаци
-    src: 3_5_Upit SELECT spajanje_nerešeni_zadaci.rst
-    title: Упит SELECT - спајање - нерешени задаци
-    type: reading
-  - description: ''
-    file: 3_6_Upit SELECT fje podupiti_zadaci.html
-    guid: b348ac4d-2293-43c5-b8e0-47b475fd5bcb
-    normalized_title: Упит SELECT - функције и подупити - задаци
-    src: 3_6_Upit SELECT fje podupiti_zadaci.rst
-    title: Упит SELECT - функције и подупити - задаци
-    type: reading
-  - description: ''
-    file: 3_7_Upit SELECT fje podupiti_nerešeni_zadaci.html
-    guid: 7a385f42-e22d-4f78-85bc-bc38ea5e8235
-    normalized_title: Упит SELECT - функције и подупити - нерешени задаци
-    src: 3_7_Upit SELECT fje podupiti_nerešeni_zadaci.rst
-    title: Упит SELECT - функције и подупити - нерешени задаци
-    type: reading
-  archived-activities: []
-  description: ''
-  folder: 3_0_Baza podataka za biblioteku
-  guid: 3c5bc666-d8bc-4a73-8bdb-2ab01d37fa4d
-  normalized_title: База података за библиотеку
-  title: База података за библиотеку
-- activities:
-  - description: ''
-    file: 4_1_Kreiranje baze_praktičan_rad.html
-    guid: 3ac582a6-d4fd-4a15-b9bc-2faf59c5bd16
-    normalized_title: Креирање базе - практичан рад
-    src: 4_1_Kreiranje baze_praktičan_rad.rst
-    title: Креирање базе - практичан рад
-    type: reading
-  - description: ''
-    file: 4_2_Dijagram i podaci_praktičan_rad.html
-    guid: acf2e7ef-7aa3-4944-914b-6503ccaa3e21
-    normalized_title: Дијаграм и подаци - практичан рад
-    src: 4_2_Dijagram i podaci_praktičan_rad.rst
-    title: Дијаграм и подаци - практичан рад
-    type: reading
-  - description: ''
-    file: 4_3_Upit SELECT_zadaci.html
-    guid: b01d6933-e760-438a-9662-c7f2dc222416
-    normalized_title: Упит SELECT - задаци
-    src: 4_3_Upit SELECT_zadaci.rst
-    title: Упит SELECT - задаци
-    type: reading
-  - description: ''
-    file: 4_4_Upit SELECT_nerešeni_zadaci.html
-    guid: 6226f8d5-28b0-46d7-9a18-2b2fbc2ef0a6
-    normalized_title: Упит SELECT - нерешени задаци
-    src: 4_4_Upit SELECT_nerešeni_zadaci.rst
-    title: Упит SELECT - нерешени задаци
-    type: reading
-  archived-activities: []
-  description: ''
-  folder: 4_0_Baza podataka za vozačke dozvole
-  guid: d2625714-f7a5-483b-9c65-51818773fa79
-  normalized_title: База података за возачке дозволе
-  title: База података за возачке дозволе
-- activities:
-  - description: ''
-    file: 5_1_Kreiranje baze_praktični_rad.html
-    guid: a457fd5c-1331-4143-9a55-62921dc1185f
-    normalized_title: Креирање базе - практични рад
-    src: 5_1_Kreiranje baze_praktični_rad.rst
-    title: Креирање базе - практични рад
-    type: reading
-  - description: ''
-    file: 5_2_Dijagram i podaci_praktičan_rad.html
-    guid: 1130b1c5-620f-422b-9e28-7fe1c0b2bcaa
-    normalized_title: Дијаграм и подаци - практични рад
-    src: 5_2_Dijagram i podaci_praktičan_rad.rst
-    title: Дијаграм и подаци - практични рад
-    type: reading
-  - description: ''
-    file: 5_3_Upit SELECT_zadaci.html
-    guid: 6b055203-6723-42e2-9781-954a879d076b
-    normalized_title: Упит SELECT - задаци
-    src: 5_3_Upit SELECT_zadaci.rst
-    title: Упит SELECT - задаци
-    type: reading
-  - description: ''
-    file: 5_4_Upit SELECT_nerešeni_zadaci.html
-    guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
-    normalized_title: Упит SELECT - нерешени задаци
-    src: 5_4_Upit SELECT_nerešeni_zadaci.rst
-    title: Упит SELECT - нерешени задаци
-    type: reading
-  archived-activities: []
-  description: ''
-  folder: 5_0_Baza podataka za filmove
-  guid: 7a78dfc0-698c-4fb9-b3b5-92e05f46cc76
-  normalized_title: База података за филмове
-  title: База података за филмове
-- activities:
-  - description: ''
-    file: 5_1_0_Procedura i komanda INSERT.html
+    file: 2_12_Procedura i komanda INSERT.html
     guid: 99236d26-bb87-4e5d-8a09-3edec4ea4ae1
-    normalized_title: Процедуре и команда INSERT
-    src: 5_1_0_Procedura i komanda INSERT.rst
-    title: Процедуре и команда INSERT
+    normalized_title: 2.12 Процедуре и команда INSERT
+    src: 2_12_Procedura i komanda INSERT.rst
+    title: 2.12 Процедуре и команда INSERT
     type: reading
   - description: ''
-    file: 5_1_2_Procedura i komande UPDATE i DELETE.html
+    file: 2_13_Procedura i komande UPDATE i DELETE.html
     guid: db1d69bf-4537-4e28-b61f-514c858b87a6
-    normalized_title: Процедуре и команде UPDATE и DELETE
-    src: 5_1_2_Procedura i komande UPDATE i DELETE.rst
-    title: Процедуре и команде UPDATE и DELETE
+    normalized_title: 2.13 Процедуре и команде UPDATE и DELETE
+    src: 2_13_Procedura i komande UPDATE i DELETE.rst
+    title: 2.13 Процедуре и команде UPDATE и DELETE
     type: reading
   - description: ''
-    file: 5_1_3_Procedura i komande INSERT, UPDATE i DELETE_kviz.html
+    file: 2_14_Procedura i komande INSERT, UPDATE i DELETE_kviz.html
     guid: 51bdeb44-add0-4341-8420-4667269ac435
-    normalized_title: Процедуре и команде INSERT, UPDATE, и DELETE - квиз
-    src: 5_1_3_Procedura i komande INSERT, UPDATE i DELETE_kviz.rst
-    title: Процедуре и команде INSERT, UPDATE, и DELETE - квиз
+    normalized_title: 2.14 Процедуре и команде INSERT, UPDATE, и DELETE - квиз
+    src: 2_14_Procedura i komande INSERT, UPDATE i DELETE_kviz.rst
+    title: 2.14 Процедуре и команде INSERT, UPDATE, и DELETE - квиз
     type: quiz
   - description: ''
-    file: 5_1_4_Procedure i testiranje programa.html
+    file: 2_15_Procedure i testiranje programa.html
     guid: efd2f930-3519-4ecd-8544-81bf431aeb53
-    normalized_title: Процедуре и тестирање програма
-    src: 5_1_4_Procedure i testiranje programa.rst
-    title: Процедуре и тестирање програма
+    normalized_title: 2.15 Процедуре и тестирање програма
+    src: 2_15_Procedure i testiranje programa.rst
+    title: 2.15 Процедуре и тестирање програма
     type: reading
   - description: ''
-    file: 5_1_5_Procedure i upit SELECT.html
+    file: 2_16_Procedure i upit SELECT.html
     guid: e6b6ae37-5a68-4fb6-827b-f220e2edd767
-    normalized_title: Процедуре и упит SELECT
-    src: 5_1_5_Procedure i upit SELECT.rst
-    title: Процедуре и упит SELECT
+    normalized_title: 2.16 Процедуре и упит SELECT
+    src: 2_16_Procedure i upit SELECT.rst
+    title: 2.16 Процедуре и упит SELECT
     type: reading
   - description: ''
-    file: 5_1_6_Procedure i kursor upit SELECT.html
+    file: 2_17_Procedure i kursor upit SELECT.html
     guid: 848c7fc2-1af9-4af8-a1c3-afeaf51b22e8
-    normalized_title: Процедуре и курсор за упит SELECT
-    src: 5_1_6_Procedure i kursor upit SELECT.rst
-    title: Процедуре и курсор за упит SELECT
+    normalized_title: 2.17 Процедуре и курсор за упит SELECT
+    src: 2_17_Procedure i kursor upit SELECT.rst
+    title: 2.17 Процедуре и курсор за упит SELECT
     type: reading
   - description: ''
-    file: 5_1_7_Funkcije i upit SELECT.html
+    file: 2_18_Funkcije i upit SELECT.html
     guid: a7e32363-10a8-41d1-8b57-7337a3c62fb7
-    normalized_title: Функције и упит SELECT
-    src: 5_1_7_Funkcije i upit SELECT.rst
-    title: Функције и упит SELECT
+    normalized_title: 2.18 Функције и упит SELECT
+    src: 2_18_Funkcije i upit SELECT.rst
+    title: 2.18 Функције и упит SELECT
     type: reading
   - description: ''
-    file: 5_1_8_Procedure i funkcije upit SELECT_kviz.html
+    file: 2_19_Procedure i funkcije upit SELECT_kviz.html
     guid: 503e5e69-dc3a-441a-b2d0-090a55d1ecba
-    normalized_title: Процедуре и функције са упитом SELECT - квиз
-    src: 5_1_8_Procedure i funkcije upit SELECT_kviz.rst
-    title: Процедуре и функције са упитом SELECT - квиз
+    normalized_title: 2.19 Процедуре и функције са упитом SELECT - квиз
+    src: 2_19_Procedure i funkcije upit SELECT_kviz.rst
+    title: 2.19 Процедуре и функције са упитом SELECT - квиз
     type: quiz
   - description: ''
-    file: 5_1_9_Procedure i funkcije upit SELECT jedna tabela_zadaci.html
+    file: 2_20_Procedure i funkcije upit SELECT jedna tabela_zadaci.html
     guid: 10c66362-04cf-4eb0-bc55-a14c75269cc6
-    normalized_title: Процедуре и функције са упитом SELECT из једне табеле - задаци
-    src: 5_1_9_Procedure i funkcije upit SELECT jedna tabela_zadaci.rst
-    title: Процедуре и функције са упитом SELECT из једне табеле - задаци
+    normalized_title: 2.20 Процедуре и функције са упитом SELECT из једне табеле -
+      задаци
+    src: 2_20_Procedure i funkcije upit SELECT jedna tabela_zadaci.rst
+    title: 2.20 Процедуре и функције са упитом SELECT из једне табеле - задаци
     type: reading
   - description: ''
-    file: 5_1_10_Procedure i funkcije upit grupne funkcije_zadaci.html
+    file: 2_21_Procedure i funkcije upit grupne funkcije_zadaci.html
     guid: ce7d75b8-f1e4-4391-bd54-14171e6fd109
-    normalized_title: Процедуре и функције са упитом и групним функцијама - задаци
-    src: 5_1_10_Procedure i funkcije upit grupne funkcije_zadaci.rst
-    title: Процедуре и функције са упитом и групним функцијама - задаци
+    normalized_title: 2.21 Процедуре и функције са упитом и групним функцијама - задаци
+    src: 2_21_Procedure i funkcije upit grupne funkcije_zadaci.rst
+    title: 2.21 Процедуре и функције са упитом и групним функцијама - задаци
     type: reading
   - description: ''
-    file: 5_1_11_Procedure i funkcije upit SELECT spajanje_zadaci.html
+    file: 2_22_Procedure i funkcije upit SELECT spajanje_zadaci.html
     guid: b65f4e03-b38f-4f9a-8cd1-2e5fd47b452f
-    normalized_title: Процедуре и функције са упитом SELECT са спајањем табела - задаци
-    src: 5_1_11_Procedure i funkcije upit SELECT spajanje_zadaci.rst
-    title: Процедуре и функције са упитом SELECT са спајањем табела - задаци
+    normalized_title: 2.22 Процедуре и функције са упитом SELECT са спајањем табела
+      - задаци
+    src: 2_22_Procedure i funkcije upit SELECT spajanje_zadaci.rst
+    title: 2.22 Процедуре и функције са упитом SELECT са спајањем табела - задаци
     type: reading
   - description: ''
-    file: 5_1_12_Procedure i funkcije upit_nerešeni zadaci.html
+    file: 2_23_Procedure i funkcije upit_nerešeni zadaci.html
     guid: 3d3237ad-cbf9-4e01-a99e-ee98b28fdf40
-    normalized_title: Процедуре и функције са упитом - нерешени задаци
-    src: 5_1_12_Procedure i funkcije upit_nerešeni zadaci.rst
-    title: Процедуре и функције са упитом - нерешени задаци
+    normalized_title: 2.23 Процедуре и функције са упитом - нерешени задаци
+    src: 2_23_Procedure i funkcije upit_nerešeni zadaci.rst
+    title: 2.23 Процедуре и функције са упитом - нерешени задаци
     type: reading
   - description: ''
-    file: 5_1_13_Format XML.html
+    file: 2_24_Format XML.html
     guid: fc752f68-4190-4eaa-b138-3bfa321cfe49
-    normalized_title: Формат XML
-    src: 5_1_13_Format XML.rst
-    title: Формат XML
+    normalized_title: 2.24 Формат XML
+    src: 2_24_Format XML.rst
+    title: 2.24 Формат XML
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 5_1_Procedure i funkcije
-  guid: 4ae2d35b-5206-49a6-93cd-367460be2ce2
-  normalized_title: Процедуре и функције
-  title: Процедуре и функције
-- activities:
   - description: ''
-    file: 5_2_1_Procedure funkcije i poredjenje različitih rešenja.html
+    file: 2_25_Procedure funkcije i poredjenje različitih rešenja.html
     guid: 1b27acc3-75f2-4edb-8e8d-979f9deb178a
-    normalized_title: База података за библиотеку - Процедуре, функције и поређење
+    normalized_title: 2.25 База података за библиотеку - Процедуре, функције и поређење
       различитих решења
-    src: 5_2_1_Procedure funkcije i poredjenje različitih rešenja.rst
-    title: База података за библиотеку - Процедуре, функције и поређење различитих
+    src: 2_25_Procedure funkcije i poredjenje različitih rešenja.rst
+    title: 2.25 База података за библиотеку - Процедуре, функције и поређење различитих
       решења
     type: reading
   - description: ''
-    file: 5_2_2_Procedure funkcije i poredjenje različitih rešenja_zadaci.html
+    file: 2_26_Procedure funkcije i poredjenje različitih rešenja_zadaci.html
     guid: 8186cd48-ec87-43a3-b071-2f13b923656c
-    normalized_title: Процедуре, функције и поређење различитих решења
-    src: 5_2_2_Procedure funkcije i poredjenje različitih rešenja_zadaci.rst
-    title: Процедуре, функције и поређење различитих решења
+    normalized_title: 2.26 Процедуре, функције и поређење различитих решења
+    src: 2_26_Procedure funkcije i poredjenje različitih rešenja_zadaci.rst
+    title: 2.26 Процедуре, функције и поређење различитих решења
     type: reading
   - description: ''
-    file: 5_2_3_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.html
+    file: 2_27_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.html
     guid: b6196046-5c9a-4771-84e2-7815f2d8451d
-    normalized_title: Процедуре и функције са упитом SELECT из једне табеле - вежбање
-    src: 5_2_3_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.rst
-    title: Процедуре и функције са упитом SELECT из једне табеле - вежбање
+    normalized_title: 2.27 Процедуре и функције са упитом SELECT из једне табеле -
+      вежбање
+    src: 2_27_Procedure, fje, poredenje, SELECT iz jedne tabele_vežbanje.rst
+    title: 2.27 Процедуре и функције са упитом SELECT из једне табеле - вежбање
     type: reading
   - description: ''
-    file: 5_2_4_Procedure, fje, poredenje, SELECT spajanje_vežbanje.html
+    file: 2_28_Procedure, fje, poredenje, SELECT spajanje_vežbanje.html
     guid: 57a09375-6127-4d86-b860-478f96db98c2
-    normalized_title: Процедуре и функције са упитом SELECT са спајањем табела - вежбање
-    src: 5_2_4_Procedure, fje, poredenje, SELECT spajanje_vežbanje.rst
-    title: Процедуре и функције са упитом SELECT са спајањем табела - вежбање
-    type: reading
-  - description: ''
-    file: 5_2_5_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.html
-    guid: 5a03d538-eb51-4f9a-afa6-47b556ad7084
-    normalized_title: Процедуре и функције са упитом и групним функцијама и подупитима
+    normalized_title: 2.28 Процедуре и функције са упитом SELECT са спајањем табела
       - вежбање
-    src: 5_2_5_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.rst
-    title: Процедуре и функције са упитом и групним функцијама и подупитима - вежбање
+    src: 2_28_Procedure, fje, poredenje, SELECT spajanje_vežbanje.rst
+    title: 2.28 Процедуре и функције са упитом SELECT са спајањем табела - вежбање
     type: reading
   - description: ''
-    file: 5_2_6_Procedure, fje, poredenje, SELECT_nerešeni zadaci.html
+    file: 2_29_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.html
+    guid: 5a03d538-eb51-4f9a-afa6-47b556ad7084
+    normalized_title: 2.29 Процедуре и функције са упитом и групним функцијама и подупитима
+      - вежбање
+    src: 2_29_Procedure, fje, poredenje, grupne fje i podupiti_vežbanje.rst
+    title: 2.29 Процедуре и функције са упитом и групним функцијама и подупитима -
+      вежбање
+    type: reading
+  - description: ''
+    file: 2_30_Procedure, fje, poredenje, SELECT_nerešeni zadaci.html
     guid: c4ba3408-91b1-46fb-9c07-971d4ba9f443
-    normalized_title: Процедуре и функције са упитом SELECT - нерешени задаци
-    src: 5_2_6_Procedure, fje, poredenje, SELECT_nerešeni zadaci.rst
-    title: Процедуре и функције са упитом SELECT - нерешени задаци
+    normalized_title: 2.30 Процедуре и функције са упитом SELECT - нерешени задаци
+    src: 2_30_Procedure, fje, poredenje, SELECT_nerešeni zadaci.rst
+    title: 2.30 Процедуре и функције са упитом SELECT - нерешени задаци
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 5_2_Baza podataka za bibioteku - procedure fje poredjenje
-  guid: 18d762b3-8bf9-4497-ab98-4151fbb1453b
-  normalized_title: База података за библиотеку - процедуре, функције
-  title: База података за библиотеку - процедуре, функције
-- activities:
   - description: ''
-    file: 5_3_1_Procedure i funkcije SELECT_vežbanje.html
+    file: 2_31_Procedure i funkcije SELECT_vežbanje.html
     guid: 2a4eabb2-d795-496b-b1df-5b01c2cb238b
-    normalized_title: Процедуре и функције са упитом SELECT - вежбање
-    src: 5_3_1_Procedure i funkcije SELECT_vežbanje.rst
-    title: Процедуре и функције са упитом SELECT - вежбање
+    normalized_title: 2.31 База података за возачке дозволе - процедуре и функције
+      са упитом SELECT - вежбање
+    src: 2_31_Procedure i funkcije SELECT_vežbanje.rst
+    title: 2.31 База података за возачке дозволе - процедуре и функције са упитом
+      SELECT - вежбање
     type: reading
   - description: ''
-    file: 5_3_2_Procedure i funkcije_nerešeni zadaci.html
+    file: 2_32_Procedure i funkcije_nerešeni zadaci.html
     guid: 20e1d337-9cf4-4220-a470-4845dfaa590a
-    normalized_title: Процедуре и функције - нерешени задаци
-    src: 5_3_2_Procedure i funkcije_nerešeni zadaci.rst
-    title: Процедуре и функције - нерешени задаци
+    normalized_title: 2.32 База података за возачке дозволе - процедуре и функције
+      - нерешени задаци
+    src: 2_32_Procedure i funkcije_nerešeni zadaci.rst
+    title: 2.32 База података за возачке дозволе - процедуре и функције - нерешени
+      задаци
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 5_3_Baza podataka za vozačke dozvole - procedure fje
-  guid: eb124694-4e11-4d6c-be79-78072bef9bfe
-  normalized_title: База података за возачке дозволе - процедуре и функције
-  title: База података за возачке дозволе - процедуре и функције
-- activities:
   - description: ''
-    file: 5_4_1_Procedure i funkcije SELECT_vežbanje.html
+    file: 2_33_Procedure i funkcije SELECT_vežbanje.html
     guid: b79d661d-5ccb-462e-aa2b-9ec6d8fe7384
-    normalized_title: Процедуре и функције са упитом SELECT - вежбање
-    src: 5_4_1_Procedure i funkcije SELECT_vežbanje.rst
-    title: Процедуре и функције са упитом SELECT - вежбање
+    normalized_title: 2.33 База података за филмове - процедуре и функције са упитом
+      SELECT - вежбање
+    src: 2_33_Procedure i funkcije SELECT_vežbanje.rst
+    title: 2.33 База података за филмове - процедуре и функције са упитом SELECT -
+      вежбање
     type: reading
   - description: ''
-    file: 5_4_2_Procedure i funkcije_ nerešeni zadaci.html
+    file: 2_34_Procedure i funkcije_ nerešeni zadaci.html
     guid: ed93d34a-7eb3-44cf-9401-ba2fc479e102
-    normalized_title: Процедуре и функције - нерешени задаци
-    src: 5_4_2_Procedure i funkcije_ nerešeni zadaci.rst
-    title: Процедуре и функције - нерешени задаци
+    normalized_title: 2.34 База података за филмове - процедуре и функције - нерешени
+      задаци
+    src: 2_34_Procedure i funkcije_ nerešeni zadaci.rst
+    title: 2.34 База података за филмове - процедуре и функције - нерешени задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 5_4_Baza podataka za filmove
-  guid: 63efe83b-04d9-4932-9b2a-b964d6396ebd
-  normalized_title: База података за филмове - процедуре и функције
-  title: База података за филмове - процедуре и функције
+  folder: 2_0_SUBP
+  guid: d6b51134-774a-4f90-9cbb-582a3eb032a5
+  normalized_title: 2.0 Писање програма унутар система за управљање базама података
+  title: 2.0 Писање програма унутар система за управљање базама података
 - activities:
   - description: ''
-    file: 6_1_Oracle Apex i PL SQL.html
+    file: 3_1_Visual Studio.html
+    guid: 2c107af7-12fe-4c63-afab-ee63f9a940fc
+    normalized_title: 3.1 Писање програма у развојном окружењу Visual Studio
+    src: 3_1_Visual Studio.rst
+    title: 3.1 Писање програма у развојном окружењу Visual Studio
+    type: reading
+  - description: ''
+    file: 3_2_Visual Studio - praktičan rad.html
+    guid: 78149668-5251-476d-83c4-83245d288467
+    normalized_title: 3.2 Писање програма у развојном окружењу Visual Studio - практичан
+      рад
+    src: 3_2_Visual Studio - praktičan rad.rst
+    title: 3.2 Писање програма у развојном окружењу Visual Studio - практичан рад
+    type: reading
+  - description: ''
+    file: 3_3_Visual Studio - stored procedure.html
+    guid: 81e19c58-fbc7-4ae2-ac44-32ac90feac06
+    normalized_title: 3.3 Писање програма у развојном окружењу Visual Studio - stored
+      procedure
+    src: 3_3_Visual Studio - stored procedure.rst
+    title: 3.3 Писање програма у развојном окружењу Visual Studio - stored procedure
+    type: reading
+  - description: ''
+    file: 3_4_Visual studio - kviz.html
+    guid: dae9f347-f22b-4cb8-8416-959d5e07dd8a
+    normalized_title: 3.4 Писање програма у развојном окружењу Visual Studio - квиз
+    src: 3_4_Visual studio - kviz.rst
+    title: 3.4 Писање програма у развојном окружењу Visual Studio - квиз
+    type: quiz
+  - description: ''
+    file: 3_5_Visual Studio - ugnežđeni SELECT.html
+    guid: 70be542f-a488-41f7-a68e-dceb26592b8f
+    normalized_title: 3.5 Угнежђени упит SELECT унутар програма
+    src: 3_5_Visual Studio - ugnežđeni SELECT.rst
+    title: 3.5 Угнежђени упит SELECT унутар програма
+    type: reading
+  - description: ''
+    file: 3_6_Visual Studio - ugnežđeni SELECT - zadaci.html
+    guid: f0aa8e7f-f607-4cc8-888e-a3d3c74d6df8
+    normalized_title: 3.6 Угнежђени упит SELECT унутар програма - задаци
+    src: 3_6_Visual Studio - ugnežđeni SELECT - zadaci.rst
+    title: 3.6 Угнежђени упит SELECT унутар програма - задаци
+    type: reading
+  - description: ''
+    file: 3_7_Procedura unutar programa.html
+    guid: e4fbbfd9-bec2-407e-af41-931006287a6d
+    normalized_title: 3.7 Позив процедуре унутар програма
+    src: 3_7_Procedura unutar programa.rst
+    title: 3.7 Позив процедуре унутар програма
+    type: reading
+  - description: ''
+    file: 3_8_Kreirana procedura unutar programa.html
+    guid: 36a42dd2-1d64-4253-810e-c881c9310236
+    normalized_title: 3.8 Позив креиране процедуре унутар програма
+    src: 3_8_Kreirana procedura unutar programa.rst
+    title: 3.8 Позив креиране процедуре унутар програма
+    type: reading
+  - description: ''
+    file: 3_9_Visual studio program sa ugnežđenim komandama_kviz.html
+    guid: 082c36c9-f840-4050-99f8-3e10b0281ec5
+    normalized_title: 3.9 Програм са угнежђеним командама у развојном окружењу Visual
+      Studio - квиз
+    src: 3_9_Visual studio program sa ugnežđenim komandama_kviz.rst
+    title: 3.9 Програм са угнежђеним командама у развојном окружењу Visual Studio
+      - квиз
+    type: quiz
+  - description: ''
+    file: 3_10_Ugnežđeni SELECT iz jedne tabele - vežbanje.html
+    guid: 7246db78-c323-4f2e-9b66-505b50125f5d
+    normalized_title: 3.10 Програм са угнежђеним упитом SELECT из једне табеле - вежбање
+    src: 3_10_Ugnežđeni SELECT iz jedne tabele - vežbanje.rst
+    title: 3.10 Програм са угнежђеним упитом SELECT из једне табеле - вежбање
+    type: reading
+  - description: ''
+    file: 3_11_Program sa ugnežđenim upitom i gr fjama.html
+    guid: e28c6ade-871c-423d-b5b5-28392405e396
+    normalized_title: 3.11 Програм са угњежђеним упитом и групним фунцкијама - вежбање
+    src: 3_11_Program sa ugnežđenim upitom i gr fjama.rst
+    title: 3.11 Програм са угњежђеним упитом и групним фунцкијама - вежбање
+    type: reading
+  - description: ''
+    file: 3_12_Program sa ugnežđenim upitom i spajanjem.html
+    guid: 90346c15-dc65-4439-874a-d22f851a2b54
+    normalized_title: 3.12 Програм са угнежђеним упитом SELECT са спајањем табела
+      - вежбање
+    src: 3_12_Program sa ugnežđenim upitom i spajanjem.rst
+    title: 3.12 Програм са угнежђеним упитом SELECT са спајањем табела - вежбање
+    type: reading
+  - description: ''
+    file: 3_13_Program sa ugnežđenim upitom - nerešeni zadaci.html
+    guid: 6cdbaf0d-9a97-44e6-aa09-687e6f841aaf
+    normalized_title: 3.13 Програм са угнежђеним упитом - нерешени задаци
+    src: 3_13_Program sa ugnežđenim upitom - nerešeni zadaci.rst
+    title: 3.13 Програм са угнежђеним упитом - нерешени задаци
+    type: reading
+  - description: ''
+    file: 3_14_Program sa ugnežđenim komandama INSTERT, UPDATE, DELETE.html
+    guid: 6ba6eae4-7b77-46f6-bb71-23af43b1aef8
+    normalized_title: 3.14 Програм са угнежђеним командама INSERT, UPDATE, и DELETE
+    src: 3_14_Program sa ugnežđenim komandama INSTERT, UPDATE, DELETE.rst
+    title: 3.14 Програм са угнежђеним командама INSERT, UPDATE, и DELETE
+    type: reading
+  - description: ''
+    file: 3_15_Program sa klasom.html
+    guid: 277f09c4-4231-469d-a932-566d9b9870bd
+    normalized_title: 3.15 Програм са класом
+    src: 3_15_Program sa klasom.rst
+    title: 3.15 Програм са класом
+    type: reading
+  - description: ''
+    file: 3_16_Biblioteka - ugnežđeni upit select - zadaci.html
+    guid: d0c42abd-c40b-4d03-9022-5dd63183d84d
+    normalized_title: 3.16 База података за библиотеку - програм са угнежђеним упитом
+      SELECT из једне табеле - задаци
+    src: 3_16_Biblioteka - ugnežđeni upit select - zadaci.rst
+    title: 3.16 База података за библиотеку - програм са угнежђеним упитом SELECT
+      из једне табеле - задаци
+    type: reading
+  - description: ''
+    file: 3_17_Biblioteka ugnežđeni upit_vežbanje.html
+    guid: 4e09e454-ddbb-45c2-b02e-f88e38c2e450
+    normalized_title: 3.17 База података за библиотеку - програм са угнежђеним упитом
+      SELECT - вежбање
+    src: 3_17_Biblioteka ugnežđeni upit_vežbanje.rst
+    title: 3.17 База података за библиотеку - програм са угнежђеним упитом SELECT
+      - вежбање
+    type: reading
+  - description: ''
+    file: 3_18_Biblioteka ugnežđeni upit_nerešeni zadaci.html
+    guid: 5bb0cb75-e526-4251-9ddd-73aae393dc0a
+    normalized_title: 3.18 База података за библиотеку - програм са угнежђеним упитом
+      - нерешени задаци
+    src: 3_18_Biblioteka ugnežđeni upit_nerešeni zadaci.rst
+    title: 3.18 База података за библиотеку - програм са угнежђеним упитом - нерешени
+      задаци
+    type: reading
+  - description: ''
+    file: 3_19_Dozvole - ugnežđeni upit SELECT - vežbanje.html
+    guid: 98f1cf76-c5f5-46aa-9ad8-e9b15f372fb4
+    normalized_title: 3.19 База података за возачке дозволе - програм са угнежђеним
+      упитом SELECT - вежбање
+    src: 3_19_Dozvole - ugnežđeni upit SELECT - vežbanje.rst
+    title: 3.19 База података за возачке дозволе - програм са угнежђеним упитом SELECT
+      - вежбање
+    type: reading
+  - description: ''
+    file: 3_20_Dozvole - ugnežđeni upit  - nerešeni zadaci.html
+    guid: 2f8f3001-f199-4715-aaa6-c34112d63a5d
+    normalized_title: 3.20 База података за возачке дозволе - програм са угнежђеним
+      упитом - нерешени задаци
+    src: 3_20_Dozvole - ugnežđeni upit  - nerešeni zadaci.rst
+    title: 3.20 База података за возачке дозволе - програм са угнежђеним упитом -
+      нерешени задаци
+    type: reading
+  - description: ''
+    file: 3_21_Filmovi - ugnežđeni SELECT - vežbanje.html
+    guid: b92952c0-f02b-4b65-af8b-a7321936345b
+    normalized_title: 3.21 База података за филмове - програм са угнежђеним упитом
+      SELECT - вежбање
+    src: 3_21_Filmovi - ugnežđeni SELECT - vežbanje.rst
+    title: 3.21 База података за филмове - програм са угнежђеним упитом SELECT - вежбање
+    type: reading
+  - description: ''
+    file: 3_22_Filmovi - ugnežđeni upit  - nerešeni zadaci.html
+    guid: 941394a3-9b81-4b35-9736-2f9d0c1223ae
+    normalized_title: 3.22 База података за филмове - програм са угнежђеним упитом
+      - нерешени задаци
+    src: 3_22_Filmovi - ugnežđeni upit  - nerešeni zadaci.rst
+    title: 3.22 База података за филмове - програм са угнежђеним упитом - нерешени
+      задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 3_0_Programski jezici višeg nivoa
+  guid: 6a0bb8ff-44a4-45b0-9fdd-76807d2ded8e
+  normalized_title: 3.0 Писање програма у програмским језицима вишег нивоа
+  title: 3.0 Писање програма у програмским језицима вишег нивоа
+- activities:
+  - description: ''
+    file: 4_1_Oracle Apex i PL SQL.html
     guid: e59c4e84-c604-4a3f-8e7b-457c467c6860
-    normalized_title: Oracle Apex и језик PLSQL
-    src: 6_1_Oracle Apex i PL SQL.rst
-    title: Oracle Apex и језик PL/SQL
+    normalized_title: 4.1 Oracle Apex и језик PLSQL
+    src: 4_1_Oracle Apex i PL SQL.rst
+    title: 4.1 Oracle Apex и језик PL/SQL
     type: reading
   - description: ''
-    file: 6_2_Jezik PLSQL zadaci.html
+    file: 4_2_Jezik PLSQL zadaci.html
     guid: 4660f592-9824-47bc-86ba-474dcd862c97
-    normalized_title: Језик PLSQL - задаци
-    src: 6_2_Jezik PLSQL zadaci.rst
-    title: Језик PL/SQL - задаци
+    normalized_title: 4.2 Језик PLSQL - задаци
+    src: 4_2_Jezik PLSQL zadaci.rst
+    title: 4.2 Језик PL/SQL - задаци
     type: reading
   - description: ''
-    file: 6_3_Jezik PLSQL kviz.html
+    file: 4_3_Jezik PLSQL kviz.html
     guid: aca993d7-13b7-4cf4-9b72-260e0943d57e
-    normalized_title: Језик PLSQL - квиз
-    src: 6_3_Jezik PLSQL kviz.rst
-    title: Језик PL/SQL - квиз
+    normalized_title: 4.3 Језик PLSQL - квиз
+    src: 4_3_Jezik PLSQL kviz.rst
+    title: 4.3 Језик PL/SQL - квиз
     type: quiz
   - description: ''
-    file: 6_4_Јеzik PLSQL nerešeni zadaci.html
+    file: 4_4_Јеzik PLSQL nerešeni zadaci.html
     guid: 9f5892a4-a327-4dbe-b1b6-972226d5110f
-    normalized_title: Језик PLSQL – нерешени задаци
-    src: 6_4_Јеzik PLSQL nerešeni zadaci.rst
-    title: Језик PL/SQL – нерешени задаци
+    normalized_title: 4.4 Језик PLSQL – нерешени задаци
+    src: 4_4_Јеzik PLSQL nerešeni zadaci.rst
+    title: 4.4 Језик PL/SQL – нерешени задаци
     type: reading
   - description: ''
-    file: 6_5_Jezik PLSQL grananje.html
+    file: 4_5_Jezik PLSQL grananje.html
     guid: d4aba1e8-cab1-477f-b259-ff0e66a48d42
-    normalized_title: Наредбе гранања
-    src: 6_5_Jezik PLSQL grananje.rst
-    title: Наредбе гранања
+    normalized_title: 4.5 Наредбе гранања
+    src: 4_5_Jezik PLSQL grananje.rst
+    title: 4.5 Наредбе гранања
     type: reading
   - description: ''
-    file: 6_6_Jezik PLSQL grananje nerešeni zadaci.html
+    file: 4_6_Jezik PLSQL grananje nerešeni zadaci.html
     guid: 51427918-b019-4a58-b200-8839c0012681
-    normalized_title: Наредбе гранања - нерешени задаци
-    src: 6_6_Jezik PLSQL grananje nerešeni zadaci.rst
-    title: Наредбе гранања - нерешени задаци
+    normalized_title: 4.6 Наредбе гранања - нерешени задаци
+    src: 4_6_Jezik PLSQL grananje nerešeni zadaci.rst
+    title: 4.6 Наредбе гранања - нерешени задаци
     type: reading
   - description: ''
-    file: 6_7_Јеzik PLSQL ciklusi.html
+    file: 4_7_Јеzik PLSQL ciklusi.html
     guid: 5d89bc30-adc9-40ae-9db5-67705943a672
-    normalized_title: Наредбе циклуса
-    src: 6_7_Јеzik PLSQL ciklusi.rst
-    title: Наредбе циклуса
+    normalized_title: 4.7 Наредбе циклуса
+    src: 4_7_Јеzik PLSQL ciklusi.rst
+    title: 4.7 Наредбе циклуса
     type: reading
   - description: ''
-    file: 6_8_Јеzik PLSQL ciklusi nerešeni zadaci.html
+    file: 4_8_Јеzik PLSQL ciklusi nerešeni zadaci.html
     guid: aaf3aef2-af76-4e56-a5b0-22d6907f2848
-    normalized_title: Наредбе циклуса - нерешени задаци
-    src: 6_8_Јеzik PLSQL ciklusi nerešeni zadaci.rst
-    title: Наредбе циклуса - нерешени задаци
+    normalized_title: 4.8 Наредбе циклуса - нерешени задаци
+    src: 4_8_Јеzik PLSQL ciklusi nerešeni zadaci.rst
+    title: 4.8 Наредбе циклуса - нерешени задаци
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 6_0_SUBP Oracle Apex i PL i SQL
-  guid: 216f9efb-b9c9-4efc-82c5-74c6aeee936d
-  normalized_title: СУБП Oracle Apex и језик PL  SQL
-  title: СУБП Oracle Apex и језик PL / SQL
-- activities:
   - description: ''
-    file: 7_1_Praktičan rad.html
+    file: 4_9_Praktičan rad.html
     guid: b5dd700a-532a-461c-a793-f8c5c842f2bd
-    normalized_title: Практичан рад
-    src: 7_1_Praktičan rad.rst
-    title: Практичан рад
+    normalized_title: 4.9 База података за библиотеку - практичан рад
+    src: 4_9_Praktičan rad.rst
+    title: 4.9 База података за библиотеку - практичан рад
     type: reading
   - description: ''
-    file: 7_2_SELECT INTO.html
+    file: 4_10_SELECT INTO.html
     guid: a88963b6-b30f-4f7f-8d04-59ef5e09cc3f
-    normalized_title: Наредба SELECT INTO
-    src: 7_2_SELECT INTO.rst
-    title: Наредба SELECT INTO
+    normalized_title: 4.10 Наредба SELECT INTO
+    src: 4_10_SELECT INTO.rst
+    title: 4.10 Наредба SELECT INTO
     type: reading
   - description: ''
-    file: 7_3_SELECT INTO - zadaci.html
+    file: 4_11_SELECT INTO - zadaci.html
     guid: b3b39219-10ca-444a-8392-137250762f10
-    normalized_title: Наредба SELECT INTO - zadaci
-    src: 7_3_SELECT INTO - zadaci.rst
-    title: Наредба SELECT INTO - zadaci
+    normalized_title: 4.11 Наредба SELECT INTO - zadaci
+    src: 4_11_SELECT INTO - zadaci.rst
+    title: 4.11 Наредба SELECT INTO - zadaci
     type: reading
   - description: ''
-    file: 7_4_SELECT INTO - kviz.html
+    file: 4_12_SELECT INTO - kviz.html
     guid: 7d3c22d2-1b95-4424-9a4e-e59bc94b8a5b
-    normalized_title: Наредба SELECT INTO - квиз
-    src: 7_4_SELECT INTO - kviz.rst
-    title: Наредба SELECT INTO - квиз
+    normalized_title: 4.12 Наредба SELECT INTO - квиз
+    src: 4_12_SELECT INTO - kviz.rst
+    title: 4.12 Наредба SELECT INTO - квиз
     type: quiz
   - description: ''
-    file: 7_5_SELECT INTO - vežbanje.html
+    file: 4_13_SELECT INTO - vežbanje.html
     guid: dea7486f-12e0-4ba2-b4b4-ce979cd05b7b
-    normalized_title: Наредба SELECT INTO - вежбање
-    src: 7_5_SELECT INTO - vežbanje.rst
-    title: Наредба SELECT INTO - вежбање
+    normalized_title: 4.13 Наредба SELECT INTO - вежбање
+    src: 4_13_SELECT INTO - vežbanje.rst
+    title: 4.13 Наредба SELECT INTO - вежбање
     type: reading
   - description: ''
-    file: 7_6_SELECT INTO - nerešeni zadaci.html
+    file: 4_14_SELECT INTO - nerešeni zadaci.html
     guid: 6fedc9b9-ba44-4b6d-a153-d444dbc9b2c4
-    normalized_title: Наредба SELECT INTO - нерешени задаци
-    src: 7_6_SELECT INTO - nerešeni zadaci.rst
-    title: Наредба SELECT INTO - нерешени задаци
+    normalized_title: 4.14 Наредба SELECT INTO - нерешени задаци
+    src: 4_14_SELECT INTO - nerešeni zadaci.rst
+    title: 4.14 Наредба SELECT INTO - нерешени задаци
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 7_0_Baza podataka za biblioteku u SUBP-u Oracle Apex
-  guid: d04c2810-52db-4404-afd7-48e3e1b23397
-  normalized_title: База података за библиотеку у СУБП-у Oracle Apex
-  title: База података за библиотеку у СУБП-у Oracle Apex
-- activities:
   - description: ''
-    file: 8_1_Uzimanje podataka iz više redova.html
+    file: 4_15_Uzimanje podataka iz više redova.html
     guid: 4f10f317-0e85-48eb-bcab-84427bef2e14
-    normalized_title: Узимање података из више редова
-    src: 8_1_Uzimanje podataka iz više redova.rst
-    title: Узимање података из више редова
+    normalized_title: 4.15 Курсори - Узимање података из више редова
+    src: 4_15_Uzimanje podataka iz više redova.rst
+    title: 4.15 Курсори - Узимање података из више редова
     type: reading
   - description: ''
-    file: 8_2_Kursori - zadaci.html
+    file: 4_16_Kursori - zadaci.html
     guid: 4fa7bc0c-ce64-4879-bc7e-aa4b924e927b
-    normalized_title: Курсори - задаци
-    src: 8_2_Kursori - zadaci.rst
-    title: Курсори - задаци
+    normalized_title: 4.16 Курсори - задаци
+    src: 4_16_Kursori - zadaci.rst
+    title: 4.16 Курсори - задаци
     type: reading
   - description: ''
-    file: 8_3_Različiti načini da se reši problem.html
+    file: 4_17_Različiti načini da se reši problem.html
     guid: a873e6fc-e944-4818-ba28-c5b966f9d612
-    normalized_title: Различити начини да се реши проблем
-    src: 8_3_Različiti načini da se reši problem.rst
-    title: Различити начини да се реши проблем
+    normalized_title: 4.17 Различити начини да се реши проблем
+    src: 4_17_Različiti načini da se reši problem.rst
+    title: 4.17 Различити начини да се реши проблем
     type: reading
   - description: ''
-    file: 8_4_Kursori - nerešeni zadaci.html
+    file: 4_18_Kursori - nerešeni zadaci.html
     guid: 06784426-0637-4572-984b-a5b8b4ee0090
-    normalized_title: Курсори - нерешени задаци
-    src: 8_4_Kursori - nerešeni zadaci.rst
-    title: Курсори - нерешени задаци
+    normalized_title: 4.18 Курсори - нерешени задаци
+    src: 4_18_Kursori - nerešeni zadaci.rst
+    title: 4.18 Курсори - нерешени задаци
     type: reading
   - description: ''
-    file: 8_5_Kursori sa parametrom.html
+    file: 4_19_Kursori sa parametrom.html
     guid: 28566866-1ebd-4998-984e-f4f27b3ba4d7
-    normalized_title: Курсор са параметром
-    src: 8_5_Kursori sa parametrom.rst
-    title: Курсор са параметром
+    normalized_title: 4.19 Курсор са параметром
+    src: 4_19_Kursori sa parametrom.rst
+    title: 4.19 Курсор са параметром
     type: reading
   - description: ''
-    file: 8_6_Kursori sa parametrom - zadaci.html
+    file: 4_20_Kursori sa parametrom - zadaci.html
     guid: 5fbc2dec-900a-4deb-89bc-fb033289f871
-    normalized_title: Курсор са параметром - задаци
-    src: 8_6_Kursori sa parametrom - zadaci.rst
-    title: Курсор са параметром - задаци
+    normalized_title: 4.20 Курсор са параметром - задаци
+    src: 4_20_Kursori sa parametrom - zadaci.rst
+    title: 4.20 Курсор са параметром - задаци
     type: reading
   - description: ''
-    file: 8_7_Kursori sa parametrom - nerešeni zadaci.html
+    file: 4_21_Kursori sa parametrom - nerešeni zadaci.html
     guid: efa49df5-cfbd-4ea1-b0cb-9e8cc52a0b4f
-    normalized_title: Курсор са параметром - нерешени задаци
-    src: 8_7_Kursori sa parametrom - nerešeni zadaci.rst
-    title: Курсор са параметром - нерешени задаци
+    normalized_title: 4.21 Курсор са параметром - нерешени задаци
+    src: 4_21_Kursori sa parametrom - nerešeni zadaci.rst
+    title: 4.21 Курсор са параметром - нерешени задаци
     type: reading
   - description: ''
-    file: 8_8_Kursori - kviz.html
+    file: 4_22_Kursori - kviz.html
     guid: c324caa2-0eee-4ac5-acea-1a318f3e29b3
-    normalized_title: Курсори - квиз
-    src: 8_8_Kursori - kviz.rst
-    title: Курсори - квиз
+    normalized_title: 4.22 Курсори - квиз
+    src: 4_22_Kursori - kviz.rst
+    title: 4.22 Курсори - квиз
     type: quiz
   - description: ''
-    file: 8_9_Kursori i grananje - zadaci.html
+    file: 4_23_Kursori i grananje - zadaci.html
     guid: f2f9b6f8-ffa5-4dac-aefb-30a3df506660
-    normalized_title: Курсори и гранање - задаци
-    src: 8_9_Kursori i grananje - zadaci.rst
-    title: Курсори и гранање - задаци
+    normalized_title: 4.23 Курсори и гранање - задаци
+    src: 4_23_Kursori i grananje - zadaci.rst
+    title: 4.23 Курсори и гранање - задаци
     type: reading
   - description: ''
-    file: 8_10_Kursori - vežbanje.html
+    file: 4_24_Kursori - vežbanje.html
     guid: 5807e2c9-6d8f-41fd-bcb7-7aaaf8dbb9ab
-    normalized_title: Курсори - вежбање
-    src: 8_10_Kursori - vežbanje.rst
-    title: Курсори - вежбање
+    normalized_title: 4.24 Курсори - вежбање
+    src: 4_24_Kursori - vežbanje.rst
+    title: 4.24 Курсори - вежбање
     type: reading
   - description: ''
-    file: 8_11_Trenutne pozajmice člana primer.html
+    file: 4_25_Trenutne pozajmice člana primer.html
     guid: aad3944d-4990-43ad-8ec2-45e79077c582
-    normalized_title: Тренутне позајмице члана - пример
-    src: 8_11_Trenutne pozajmice člana primer.rst
-    title: Тренутне позајмице члана - пример
+    normalized_title: 4.25 Тренутне позајмице члана - пример
+    src: 4_25_Trenutne pozajmice člana primer.rst
+    title: 4.25 Тренутне позајмице члана - пример
     type: reading
   - description: ''
-    file: 8_12_Spiskovi knjiga primer.html
+    file: 4_26_Spiskovi knjiga primer.html
     guid: f20b4c98-c0aa-4b09-9a2b-095c2309fdc4
-    normalized_title: Спискови књига - пример
-    src: 8_12_Spiskovi knjiga primer.rst
-    title: Спискови књига - пример
+    normalized_title: 4.26 Спискови књига - пример
+    src: 4_26_Spiskovi knjiga primer.rst
+    title: 4.26 Спискови књига - пример
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 8_0_Kursori
-  guid: fcf2b628-be65-4fe3-9bcb-9c937f10ba94
-  normalized_title: Курсори
-  title: Курсори
-- activities:
   - description: ''
-    file: 9_1_Procedure i funkcije.html
+    file: 4_27_Procedure i funkcije.html
     guid: d6e78299-e5fd-4245-b834-76c076578e3e
-    normalized_title: Процедуре и функције
-    src: 9_1_Procedure i funkcije.rst
-    title: Процедуре и функције
+    normalized_title: 4.27 Процедуре и функције у СУБП-у Oracle Apex
+    src: 4_27_Procedure i funkcije.rst
+    title: 4.27 Процедуре и функције у СУБП-у Oracle Apex
     type: reading
   - description: ''
-    file: 9_2_Procedure i funkcije - zadaci.html
+    file: 4_28_Procedure i funkcije - zadaci.html
     guid: c5053a1c-587d-4c8e-9026-8cba4ee36693
-    normalized_title: Процедуре и функције - задаци
-    src: 9_2_Procedure i funkcije - zadaci.rst
-    title: Процедуре и функције - задаци
+    normalized_title: 4.28 Процедуре и функције - задаци
+    src: 4_28_Procedure i funkcije - zadaci.rst
+    title: 4.28 Процедуре и функције - задаци
     type: reading
   - description: ''
-    file: 9_3_Procedure i funkcije - nerešeni zadaci.html
+    file: 4_29_Procedure i funkcije - nerešeni zadaci.html
     guid: 146a6798-a455-4229-aeb1-e9266ff68238
-    normalized_title: Процедуре и функције - нерешени задаци
-    src: 9_3_Procedure i funkcije - nerešeni zadaci.rst
-    title: Процедуре и функције - нерешени задаци
+    normalized_title: 4.29 Процедуре и функције - нерешени задаци
+    src: 4_29_Procedure i funkcije - nerešeni zadaci.rst
+    title: 4.29 Процедуре и функције - нерешени задаци
     type: reading
   - description: ''
-    file: 9_4_Pozajmice jedne knjige - primer.html
+    file: 4_30_Pozajmice jedne knjige - primer.html
     guid: 99d207a8-8f7c-47fa-8739-3f916ef7c4dc
-    normalized_title: Позајмице једне књиге - пример
-    src: 9_4_Pozajmice jedne knjige - primer.rst
-    title: Позајмице једне књиге - пример
+    normalized_title: 4.30 Позајмице једне књиге - пример
+    src: 4_30_Pozajmice jedne knjige - primer.rst
+    title: 4.30 Позајмице једне књиге - пример
     type: reading
   - description: ''
-    file: 9_5_Тrenutne pozajmice - primer.html
+    file: 4_31_Тrenutne pozajmice - primer.html
     guid: 6f470efa-d555-41cc-881b-1192d6886f35
-    normalized_title: Тренутне позајмице - пример
-    src: 9_5_Тrenutne pozajmice - primer.rst
-    title: Тренутне позајмице - пример
+    normalized_title: 4.31 Тренутне позајмице - пример
+    src: 4_31_Тrenutne pozajmice - primer.rst
+    title: 4.31 Тренутне позајмице - пример
     type: reading
   - description: ''
-    file: 9_6_Procedure i druge SQL komande.html
+    file: 4_32_Procedure i druge SQL komande.html
     guid: 1adf6efb-388e-4689-bf9a-276d88b6f6a0
-    normalized_title: Процедуре и друге SQL команде
-    src: 9_6_Procedure i druge SQL komande.rst
-    title: Процедуре и друге SQL команде
+    normalized_title: 4.32 Процедуре и друге SQL команде
+    src: 4_32_Procedure i druge SQL komande.rst
+    title: 4.32 Процедуре и друге SQL команде
     type: reading
   - description: ''
-    file: 9_7_Trigeri.html
+    file: 4_33_Trigeri.html
     guid: c3637a2c-a527-485e-977e-af399ac1cfaa
-    normalized_title: Тригери
-    src: 9_7_Trigeri.rst
-    title: Тригери
+    normalized_title: 4.33 Тригери
+    src: 4_33_Trigeri.rst
+    title: 4.33 Тригери
     type: reading
   - description: ''
-    file: 9_8_Spisak svih objekata.html
+    file: 4_34_Spisak svih objekata.html
     guid: e6c35360-f68b-4531-a575-51a34f3409b5
-    normalized_title: Списак свих објеката у бази података
-    src: 9_8_Spisak svih objekata.rst
-    title: Списак свих објеката у бази података
+    normalized_title: 4.34 Списак свих објеката у бази података
+    src: 4_34_Spisak svih objekata.rst
+    title: 4.34 Списак свих објеката у бази података
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 9_0_Procedure i funkcije u SUBP-u Oracle Apex
-  guid: 668d6d81-7168-47c5-a043-46f4873cc872
-  normalized_title: Процедуре и функције у СУБП-у Oracle Apex
-  title: Процедуре и функције у СУБП-у Oracle Apex
-- activities:
   - description: ''
-    file: 10_1_App builder.html
+    file: 4_35_App builder.html
     guid: 3f88024b-f074-40ee-bc2e-9dbb998ea519
-    normalized_title: Алат App Builder
-    src: 10_1_App builder.rst
-    title: Алат App Builder
+    normalized_title: 4.35 Креирање апликације помоћу алата App Builder
+    src: 4_35_App builder.rst
+    title: 4.35 Креирање апликације помоћу алата App Builder
     type: reading
   - description: ''
-    file: 10_2_Dodatne opcije App Buildera.html
+    file: 4_36_Dodatne opcije App Buildera.html
     guid: 76b7bdad-124b-48ea-98dd-14ab947ee30b
-    normalized_title: Додатне опције App Builder алата
-    src: 10_2_Dodatne opcije App Buildera.rst
-    title: Додатне опције App Builder алата
+    normalized_title: 4.36 Додатне опције App Builder алата
+    src: 4_36_Dodatne opcije App Buildera.rst
+    title: 4.36 Додатне опције App Builder алата
     type: reading
   - description: ''
-    file: 10_3_Pokretanje aplikacije.html
+    file: 4_37_Pokretanje aplikacije.html
     guid: 823419a1-cad1-4086-bfcf-87d8219312ce
-    normalized_title: Покретање апликације
-    src: 10_3_Pokretanje aplikacije.rst
-    title: Покретање апликације
+    normalized_title: 4.37 Покретање апликације
+    src: 4_37_Pokretanje aplikacije.rst
+    title: 4.37 Покретање апликације
     type: reading
   - description: ''
-    file: 10_4_Kreiranje novih stranica.html
+    file: 4_38_Kreiranje novih stranica.html
     guid: 397605f1-327e-4ec2-a3ca-7322456630c2
-    normalized_title: Креирање нових страница у апликацији
-    src: 10_4_Kreiranje novih stranica.rst
-    title: Креирање нових страница у апликацији
+    normalized_title: 4.38 Креирање нових страница у апликацији
+    src: 4_38_Kreiranje novih stranica.rst
+    title: 4.38 Креирање нових страница у апликацији
     type: reading
   - description: ''
-    file: 10_5_Pokretanje ranije kreirane procedure.html
+    file: 4_39_Pokretanje ranije kreirane procedure.html
     guid: 9365fa0c-d34f-49fa-9938-d09aa8369d2a
-    normalized_title: Покретање раније креиране процедуре
-    src: 10_5_Pokretanje ranije kreirane procedure.rst
-    title: Покретање раније креиране процедуре
+    normalized_title: 4.39 Покретање раније креиране процедуре
+    src: 4_39_Pokretanje ranije kreirane procedure.rst
+    title: 4.39 Покретање раније креиране процедуре
     type: reading
   - description: ''
-    file: 10_6_Alat App Builder i XML.html
+    file: 4_40_Alat App Builder i XML.html
     guid: 4751c001-cf3c-427f-8937-80da7559cb1f
-    normalized_title: Алат App Builder и XML
-    src: 10_6_Alat App Builder i XML.rst
-    title: Алат App Builder и XML
+    normalized_title: 4.40 Алат App Builder и XML
+    src: 4_40_Alat App Builder i XML.rst
+    title: 4.40 Алат App Builder и XML
     type: reading
-  archived-activities: []
-  description: ''
-  folder: 10_0_Kreiranje aplikacije
-  guid: d7fc9ad0-10cc-4427-acb9-bb0121b11cb6
-  normalized_title: Креирање апликације помоћу алата App Builder
-  title: Креирање апликације помоћу алата App Builder
-- activities:
   - description: ''
-    file: 11_1_Baza podataka za salon automobila.html
+    file: 4_41_Baza podataka za salon automobila.html
     guid: 5ee1415a-8179-402d-848b-2ff505a88fda
-    normalized_title: База података за салон аутомобила у СУБП-у Oracle Apex - 1.
-      део
-    src: 11_1_Baza podataka za salon automobila.rst
-    title: База података за салон аутомобила у СУБП-у Oracle Apex - 1. део
+    normalized_title: 4.41 База података за салон аутомобила у СУБП-у Oracle Apex
+      - 1. део
+    src: 4_41_Baza podataka za salon automobila.rst
+    title: 4.41 База података за салон аутомобила у СУБП-у Oracle Apex - 1. део
     type: reading
   - description: ''
-    file: 11_2_Baza podataka za salon automobila 2.html
+    file: 4_42_Baza podataka za salon automobila 2.html
     guid: 05d0c58d-7f56-41e7-ae54-007df2ad8463
-    normalized_title: База података за салон аутомобила у СУБП-у Oracle Apex - 2.
-      део
-    src: 11_2_Baza podataka za salon automobila 2.rst
-    title: База података за салон аутомобила у СУБП-у Oracle Apex - 2. део
+    normalized_title: 4.42 База података за салон аутомобила у СУБП-у Oracle Apex
+      - 2. део
+    src: 4_42_Baza podataka za salon automobila 2.rst
+    title: 4.42 База података за салон аутомобила у СУБП-у Oracle Apex - 2. део
     type: reading
   - description: ''
-    file: 11_3_Baza podataka za salon automobila 3.html
+    file: 4_43_Baza podataka za salon automobila 3.html
     guid: 7e01ae48-a447-47c4-a33f-0c5d3e7c2286
-    normalized_title: База података за салон аутомобила у СУБП-у Oracle Apex - 3.
-      део
-    src: 11_3_Baza podataka za salon automobila 3.rst
-    title: База података за салон аутомобила у СУБП-у Oracle Apex - 3. део
+    normalized_title: 4.43 База података за салон аутомобила у СУБП-у Oracle Apex
+      - 3. део
+    src: 4_43_Baza podataka za salon automobila 3.rst
+    title: 4.43 База података за салон аутомобила у СУБП-у Oracle Apex - 3. део
     type: reading
   - description: ''
-    file: 11_4_Baza podakaza za prodavnicu.html
+    file: 4_44_Baza podakaza za prodavnicu.html
     guid: 5d6eab95-9159-4f81-ba41-07a9ec96cc5e
-    normalized_title: База података за продавницу - нерешени пројектни рад
-    src: 11_4_Baza podakaza za prodavnicu.rst
-    title: База података за продавницу - нерешени пројектни рад
+    normalized_title: 4.44 База података за продавницу - нерешени пројектни рад
+    src: 4_44_Baza podakaza za prodavnicu.rst
+    title: 4.44 База података за продавницу - нерешени пројектни рад
     type: reading
   archived-activities: []
   description: ''
-  folder: 11_0_Baza podataka za salon automobila
-  guid: aefcbeea-9715-401d-b848-eb8b3f943489
-  normalized_title: База података за салон аутомобила
-  title: База података за салон аутомобила
+  folder: 4_0_SUBP Oracle Apex i PL i SQL
+  guid: 216f9efb-b9c9-4efc-82c5-74c6aeee936d
+  normalized_title: 4.0 СУБП Oracle Apex и језик PL  SQL
+  title: 4.0 СУБП Oracle Apex и језик PL / SQL
 - activities:
   - description: ''
-    file: 12_1_Predlog za čitanje.html
+    file: 5_1_Predlog za čitanje.html
     guid: 30c27703-54a2-420e-aed6-aa5a8938b110
-    normalized_title: Предлог за читање
-    src: 12_1_Predlog za čitanje.rst
-    title: Предлог за читање
+    normalized_title: 5.1 Предлог за читање
+    src: 5_1_Predlog za čitanje.rst
+    title: 5.1 Предлог за читање
     type: reading
   - description: ''
-    file: 12_2_Predlog za praktičan rad.html
+    file: 5_2_Predlog za praktičan rad.html
     guid: 2991a2e2-c984-4e4c-88ab-db2a4a9deec3
-    normalized_title: Предлог за практичан рад
-    src: 12_2_Predlog za praktičan rad.rst
-    title: Предлог за практичан рад
+    normalized_title: 5.2 Предлог за практичан рад
+    src: 5_2_Predlog za praktičan rad.rst
+    title: 5.2 Предлог за практичан рад
     type: reading
   - description: ''
-    file: 12_3_Veb-programiranje.html
+    file: 5_3_Veb-programiranje.html
     guid: 33d4ac31-dc96-42c0-b319-5a48ffdcf5f7
-    normalized_title: Веб-програмирање
-    src: 12_3_Veb-programiranje.rst
-    title: Веб-програмирање
+    normalized_title: 5.3 Веб-програмирање
+    src: 5_3_Veb-programiranje.rst
+    title: 5.3 Веб-програмирање
     type: reading
   archived-activities: []
   description: ''
-  folder: 12_0_Druge aktuelne tehnologije
+  folder: 5_0_Druge aktuelne tehnologije
   guid: d80f0b56-ccad-4110-aeb3-00f1c6ec7482
-  normalized_title: Друге актуелне технологије
-  title: Друге актуелне технологије
+  normalized_title: 5.0 Друге актуелне технологије
+  title: 5.0 Друге актуелне технологије
 - activities:
   - description: ''
-    file: 13_1_Priprema.html
+    file: 6_1_Priprema.html
     guid: 04306698-83f2-4867-b84b-9b2396170f8f
     normalized_title: Припрема за пројектни задатак
-    src: 13_1_Priprema.rst
+    src: 6_1_Priprema.rst
     title: Припрема за пројектни задатак
     type: reading
   - description: ''
-    file: 13_2_Projektni zadatak.html
+    file: 6_2_Projektni zadatak.html
     guid: 4c8c8b99-f73d-4695-90d8-04241f4a31be
     normalized_title: Пројектни задатак
-    src: 13_2_Projektni zadatak.rst
+    src: 6_2_Projektni zadatak.rst
     title: Пројектни задатак
     type: reading
   archived-activities: []
   description: ''
-  folder: 13_0_Projektni zadatak
+  folder: 6_0_Projektni rad
   guid: 0d434b2a-71a7-4a1d-9021-d0ff44b45bc0
-  normalized_title: Пројектни задатак
-  title: Пројектни задатак
+  normalized_title: 6.0 Пројектни рад
+  title: 6.0 Пројектни рад
 title: Базе података за четврти разред гимназија за ученике са посебним способностима
   за рачунарство и информатику
