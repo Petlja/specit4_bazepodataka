@@ -444,7 +444,393 @@
     
   <section id="select">
 <h1>База података за возачке дозволе - програм са угнежђеним упитом SELECT - вежбање<a class="headerlink" href="#select" title="Permalink to this heading">¶</a></h1>
-</section>
+<p>Решити следеће задатке писањем програма у развојном окружењу <em>Visual Studio Community</em> и употребом програмског језика C#.</p>
+<p>Приликом решавања задатака, погледајте претходно решене примере. Након што решите неки задатак па желите да проверите да ли је решење добро или видите да не можете да га решите, можете да погледате решење које ће се приказати након што кликнете на дугме.</p>
+<p>Детаљно објашњење формирања упита SELECT који треба да буде део програма је објашњен раније у материјалима и по потреби је могуће вратити се на тај део као помоћ у писању комплетног решења.</p>
+<p>Сви приказани задаци су у вези са табелама које чине базу података за евиденцију издатих возачких дозвола. Следи списак свих табела са колонама. Примарни кључеви су истакнути болд, а страни италик.</p>
+<a class="reference internal image-reference" href="../_images/slika_319a.jpg"><img alt="../_images/slika_319a.jpg" class="align-center" src="../_images/slika_319a.jpg" style="width: 780px;" /></a>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде С#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким корисничким интерфејсом.</p>
+<p>Када се креира нови пројекат, први корак је додавање раније креиране базе података. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Izdate_dozvole.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему <em>SQL Server Management Studio</em> у којем смо креирали базу.</p>
+<a class="reference internal image-reference" href="../_images/slika_319b.jpg"><img alt="../_images/slika_319b.jpg" class="align-center" src="../_images/slika_319b.jpg" style="width: 780px;" /></a>
+<p>Приликом писања програма, потребно је да се употреби конекциони стринг, а односи се на повезивање програма на базу података <em>Izdate_dozvole.mdf</em>. У решењима задатака стоји <em>KONEKCIONI_STRING</em> на местима где се очекује конекциони стринг.</p>
+<p>Можемо прво да креирамо једну једноставну апликацију и да у том процесу формирамо и конекциони стринг који ћемо надаље користити.</p>
+<p>За приказ садржаја табеле из релационе базе података је најбоље да се користи контрола <em>DataGridView</em> коју можемо да превучемо из прозора <em>Toolbox</em> у наш програм.</p>
+<p>За <em>DataGridView</em> је неопходно је да изаберемо податке који ће бити приказани у оквиру њега. У горњем десном углу постоји мала стрелица која води до падајућег менија <em>Choose Data Source</em>. Са падајућег менија изабрати <em>Add Project Data Source…</em> У наредна два корака изабрати <em>Database</em> и <em>Dataset</em>.</p>
+<p>Следећи корак је веома значајан зато што се формира конекција са базом података. Након што се кликне на дугме <em>New Connection…</em>, потребно је да се изабере опција <em>Microsoft SQL Server Database File</em>, а затим и да се на рачунару пронађе и дода фајл који садржи базу података. Када се изабере фајл, значајно је да се штиклира опција која приказује конекциони стринг (енг. <em>connection string</em>). Тај стринг треба негде запамтити ради употребе у примерима који следе.</p>
+<a class="reference internal image-reference" href="../_images/slika_319c.jpg"><img alt="../_images/slika_319c.jpg" class="align-center" src="../_images/slika_319c.jpg" style="width: 780px;" /></a>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>ВАЖНО:</strong> Стринг који добијете неће бити идентичан овоме који је овде приказан. Значајно је да запамтите конекциони стринг који ви добијете на вашем рачунару за вашу базу података. Тај стринг ће се користити у свим наредним програмима које креирамо и који се повезују на ову базу података.</p>
+
+    </div></div>
+<p>Стринг је потребно мало прилагодити. На почетак и крај се додају наводници. Наводници у средини, на почетку и крају назива фајла са путањом се бришу. Испред сваке обрнуте косе црте треба додати још по једну, зато што је то посебан карактер.</p>
+<p>Следи пример сређеног конекционог стринга на основу добијеног.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Data Source=(LocalDB)</span><span class="se">\\</span><span class="s2">MSSQLLocalDB;</span>
+<span class="n">AttachDbFilename</span><span class="o">=</span>
+<span class="n">C</span><span class="p">:</span>\\<span class="n">Users</span>\\<span class="n">Dusa</span>\\<span class="n">Documents</span>\\<span class="n">SQL</span> <span class="n">Server</span> <span class="n">Management</span> <span class="n">Studio</span>\\<span class="n">Izdate_dozvole</span><span class="o">.</span><span class="n">mdf</span><span class="p">;</span>
+<span class="n">Integrated</span> <span class="n">Security</span><span class="o">=</span><span class="kc">True</span><span class="p">;</span><span class="n">Connect</span> <span class="n">Timeout</span><span class="o">=</span><span class="mi">30</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>У последњем кораку је потребно изабрати жељену табелу са списка свих објеката који се налазе у бази података на коју смо се повезали.</p>
+<a class="reference internal image-reference" href="../_images/slika_319d.jpg"><img alt="../_images/slika_319d.jpg" class="align-center" src="../_images/slika_319d.jpg" style="width: 780px;" /></a>
+<p>Апликација се покреће кликом на дугме <em>Start</em> и можемо да тестирамо како ради.</p>
+<a class="reference internal image-reference" href="../_images/slika_319e.jpg"><img alt="../_images/slika_319e.jpg" class="align-center" src="../_images/slika_319e.jpg" style="width: 780px;" /></a>
+<p>У задацима који следе, податке из базе ћемо читати помоћу наредби. Класе које су нам потребне за читање података и њихов приказ у програму се налазе у именском простору System.Data.SqlClient који није аутоматски укључен у нови пројекат. Потребно је да додамо следећи ред на врх документа са програмским кодом.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Data.SqlClient</span><span class="p">;</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple">
+<li><p>Приказати име и презиме особе чији је број возачке дозволе дат.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319a"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT ime, prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM vozacke_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE broj_dozvole = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="2">
+<li><p>Приказати податке о возачким дозволама које обухватају категорију са датом ознаком, као и датум када су је стекли.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319b"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">oznaka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT vd.broj_dozvole, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;vd.prezime, vd.ime, vd.datum_izdavanja, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;vd.datum_prestanka, kd.datum_sticanja &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM vozacke_dozvole vd &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN kategorije_dozvole kd &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kd.id_dozvole= vd.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN kategorije k &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kd.id_kategorije= k.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE k.oznaka = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">oznaka</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="3">
+<li><p>Приказати податке о свим категоријама на дозволи са датим бројем.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319c"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT oznaka &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM vozacke_dozvole vd &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN kategorije_dozvole kd &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kd.id_dozvole = vd.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN kategorije k &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kd.id_kategorije= k.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE broj_dozvole = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/slika_319f.jpg"><img alt="../_images/slika_319f.jpg" class="align-center" src="../_images/slika_319f.jpg" style="width: 780px;" /></a>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="4">
+<li><p>Приказати списак различитих категорија (ознака) за које имамо издате возачке дозволе у датом граду.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319d"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">grad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT DISTINCT oznaka &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kategorije JOIN kategorije_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_kategorije = kategorije.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN vozacke_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_dozvole = vozacke_dozvole.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN gradovi ON(vozacke_dozvole.id_grada = gradovi.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE gradovi.naziv = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="5">
+<li><p>Приказати број различитих категорија (ознака) за које имамо издате возачке дозволе у датом граду.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319e"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">grad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(DISTINCT oznaka) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kategorije JOIN kategorije_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_kategorije = kategorije.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN vozacke_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_dozvole = vozacke_dozvole.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN gradovi ON(vozacke_dozvole.id_grada = gradovi.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE gradovi.naziv = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="6">
+<li><p>Приказати за сваку возачку дозволу број категорија које покрива.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319f"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT broj_dozvole, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;COUNT(id_kategorije) AS broj_kategorija &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kategorije_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN vozacke_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_dozvole = vozacke_dozvole.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;GROUP BY broj_dozvole&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Други начин је да се позове функција коју смо креирали и која је сачувана у бази података. Да се подсетимо како изгледа функција која враћа табелу</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">FUNCTION</span> <span class="n">broj_kategorija_po_dozvoli</span><span class="p">()</span>
+<span class="n">RETURNS</span> <span class="n">TABLE</span>
+<span class="n">AS</span>
+<span class="n">RETURN</span> <span class="n">SELECT</span> <span class="n">broj_dozvole</span><span class="p">,</span> <span class="n">COUNT</span><span class="p">(</span><span class="n">id_kategorije</span><span class="p">)</span> <span class="n">AS</span> <span class="n">broj_kategorija</span>
+<span class="n">FROM</span> <span class="n">kategorije_dozvole</span>
+<span class="n">JOIN</span> <span class="n">vozacke_dozvole</span> <span class="n">ON</span> <span class="p">(</span><span class="n">kategorije_dozvole</span><span class="o">.</span><span class="n">id_dozvole</span><span class="o">=</span><span class="n">vozacke_dozvole</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">GROUP</span> <span class="n">BY</span> <span class="n">broj_dozvole</span>
+</pre></div>
+</div>
+<p>Програмски код.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM  broj_kategorija_po_dozvoli()&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="7">
+<li><p>Приказати возачке дозволе које покривају више категорија.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319g"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT broj_dozvole, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;COUNT(id_kategorije) AS broj_kategorija &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kategorije_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN vozacke_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_dozvole = vozacke_dozvole.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;GROUP BY broj_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;HAVING COUNT(id_kategorije)&gt;1&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Можемо и да употребимо исту функцију коју смо употребили у претходном задатку.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM  broj_kategorija_po_dozvoli() &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE broj_kategorija&gt;1&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="8">
+<li><p>Приказати податке о особи или особама које су стекле дату категорију пре особе датог имена и презимена.</p></li>
+</ol>
+
+    </div></div>
+
+    <div data-component="reveal" id="pitanje_319h"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">oznaka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT broj_dozvole, ime, prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM vozacke_dozvole JOIN kategorije_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_dozvole=vozacke_dozvole.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN kategorije &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_kategorije=kategorije.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE oznaka = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">oznaka</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;AND datum_sticanja&lt; (SELECT datum_sticanja &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM vozacke_dozvole JOIN kategorije_dozvole &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON (kategorije_dozvole.id_dozvole=vozacke_dozvole.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN kategorije &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kategorije_dozvole.id_kategorije=kategorije.id)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE oznaka = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">oznaka</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;AND ime = &#39;&quot;</span><span class="o">+</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;AND prezime = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;)&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Други начин је да се позове процедура коју смо креирали и која је сачувана у бази података. Да се подсетимо како изгледа процедура.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">PROCEDURE</span> <span class="n">ranije_stecena_kategorija</span>
+<span class="nd">@oznaka</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nd">@ime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span> <span class="nd">@prezime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">AS</span>
+<span class="n">SELECT</span> <span class="n">broj_dozvole</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">prezime</span>
+<span class="n">FROM</span> <span class="n">vozacke_dozvole</span> <span class="n">JOIN</span> <span class="n">kategorije_dozvole</span>
+<span class="n">ON</span> <span class="p">(</span><span class="n">kategorije_dozvole</span><span class="o">.</span><span class="n">id_dozvole</span><span class="o">=</span><span class="n">vozacke_dozvole</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">JOIN</span> <span class="n">kategorije</span> <span class="n">ON</span> <span class="p">(</span><span class="n">kategorije_dozvole</span><span class="o">.</span><span class="n">id_kategorije</span><span class="o">=</span><span class="n">kategorije</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">WHERE</span> <span class="n">oznaka</span><span class="o">=</span><span class="nd">@oznaka</span> <span class="n">AND</span> <span class="n">datum_sticanja</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">SELECT</span> <span class="n">datum_sticanja</span>
+<span class="n">FROM</span> <span class="n">vozacke_dozvole</span> <span class="n">JOIN</span> <span class="n">kategorije_dozvole</span>
+    <span class="n">ON</span> <span class="p">(</span><span class="n">kategorije_dozvole</span><span class="o">.</span><span class="n">id_dozvole</span><span class="o">=</span><span class="n">vozacke_dozvole</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">JOIN</span> <span class="n">kategorije</span> <span class="n">ON</span> <span class="p">(</span><span class="n">kategorije_dozvole</span><span class="o">.</span><span class="n">id_kategorije</span><span class="o">=</span><span class="n">kategorije</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">WHERE</span> <span class="n">oznaka</span><span class="o">=</span><span class="nd">@oznaka</span> <span class="n">AND</span> <span class="n">ime</span><span class="o">=</span><span class="nd">@ime</span> <span class="n">AND</span> <span class="n">prezime</span><span class="o">=</span><span class="nd">@prezime</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Позив процедуре.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="n">KONEKCIONI_STRING</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">();</span>
+<span class="w">    </span><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">&quot;dbo.ranije_stecena_kategorija&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cmd</span><span class="p">.</span><span class="n">CommandType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CommandType</span><span class="p">.</span><span class="n">StoredProcedure</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlParameter</span><span class="w"> </span><span class="n">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlParameter</span><span class="p">(</span><span class="s">&quot;@ime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">Direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ParameterDirection</span><span class="p">.</span><span class="n">Input</span><span class="p">;</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">DbType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DbType</span><span class="p">.</span><span class="n">String</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">param</span><span class="p">);</span>
+<span class="w">    </span><span class="n">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlParameter</span><span class="p">(</span><span class="s">&quot;@prezime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">Direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ParameterDirection</span><span class="p">.</span><span class="n">Input</span><span class="p">;</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">DbType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DbType</span><span class="p">.</span><span class="n">String</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">param</span><span class="p">);</span>
+<span class="w">    </span><span class="n">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlParameter</span><span class="p">(</span><span class="s">&quot;@oznaka&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">Direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ParameterDirection</span><span class="p">.</span><span class="n">Input</span><span class="p">;</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">DbType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DbType</span><span class="p">.</span><span class="n">String</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">param</span><span class="p">);</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">SelectCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    </section>
 
 
     </div>

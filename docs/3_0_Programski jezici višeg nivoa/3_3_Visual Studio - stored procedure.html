@@ -444,6 +444,36 @@
     
   <section id="visual-studio-stored-procedure">
 <h1>Писање програма у развојном окружењу Visual Studio - stored procedure<a class="headerlink" href="#visual-studio-stored-procedure" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Видели смо како се у оквиру објекта <em>DataGridView</em> приказује садржај целе табеле. Могуће је приказати и резултат рада неке процедуре коју смо креирали и која је остала сачувана унатар базе података. Следи један пример.</p>
+
+    </div></div>
+<p>Програми се пишу у развојном окружењу <em>Visual Studio Community</em> и помоћу програмког језика C#. Сви приказани примери су у вези са табелама које чине део базе података за библиотеку.</p>
+<p>Написаћемо програм у којем се за сваког издавача приказује број књига. Раније смо креирали процедуру <em>broj_knjiga_svakog_izdavaca</em> која је остала сачувана у бази података и коју можемо да искористимо у нашем програму.</p>
+<p>Сетимо се како је изгледала та процедура.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">PROCEDURE</span> <span class="n">broj_knjiga_svakog_izdavaca</span>
+<span class="n">AS</span>
+<span class="n">SELECT</span> <span class="n">id_izdavaca</span><span class="p">,</span> <span class="n">COUNT</span><span class="p">(</span><span class="n">id_knjige</span><span class="p">)</span> <span class="n">AS</span> <span class="n">broj_knjiga</span>
+<span class="n">FROM</span> <span class="n">knjige</span>
+<span class="n">GROUP</span> <span class="n">BY</span> <span class="n">id_izdavaca</span>
+</pre></div>
+</div>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде С#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким коирсничким интерфејсом.</p>
+<p>У следећем кораку је потребно да се пројекат именује и да се изабере локација на којој ће се пројекат чувати. Може да остане и предложена локација. Кликнути на дугме <em>Create</em> и прелазимо у простор за креирање апликације, тј. програма.</p>
+<p>Први корак је додавање раније креиране базе података новом пројекту. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Biblioteka_knjige.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему S*QL Server Management Studio* у којем смо креирали базу.</p>
+<p>За приказ резултата позива процедуре из релационе базе података ћемо користити контролу <em>DataGridView</em> коју можемо да превучемо из прозора <em>Toolbox</em>.</p>
+<p>За додати <em>DataGridView</em> је неопходно је да изаберемо податке који ће бити приказани у оквиру њега, у овом случају да га повежемо са сачуваном процедуром. У горњем десном углу постоји мала стрелица која води до падајућег менија <em>Choose Data Source</em>. Са падајућег менија изабрати <em>Add Project Data Source…</em> У наредна два корака изабрати <em>Database</em> и <em>Dataset</em>.</p>
+<p>Следећи корак је веома значајан зато што се формира конекција са базом података. Уколико смо већ креирали апликацију која се повезује на ову базу података и означили смо да се сачува конекциони стринг, нећемо морати поново да га формирамо.</p>
+<p>Уколико треба да се формира конекција, након што се кликне на дугме <em>New Connection…</em>, потребно је да се изабере опција <em>Microsoft SQL Server Database File</em>, а затим и да се на рачунару пронађе и дода фајл који садржи базу података. Када се изабере фајл, значајно је да се штиклира опција која приказује конекциони стринг (енг. <em>connection string</em>). Тај стринг треба негде запамтити ради употребе у примерима који следе.</p>
+<p>У последњем кораку је потребно изабрати жељену процедуру са списка свих објеката који се налазе у бази података на коју смо се повезали.</p>
+<a class="reference internal image-reference" href="../_images/slika_33a.jpg"><img alt="../_images/slika_33a.jpg" class="align-center" src="../_images/slika_33a.jpg" style="width: 780px;" /></a>
+<p>Процедура коју смо изабрали је <em>broj_knjiga_svakog_izdavaca</em> и када се покрене програм кликом на дугме <em>Start</em>, биће приказан идентификациони број сваког издавача и поред њега број књига тог издавача које се налазе у библиотеци.</p>
+<a class="reference internal image-reference" href="../_images/slika_33b.jpg"><img alt="../_images/slika_33b.jpg" class="align-center" src="../_images/slika_33b.jpg" style="width: 780px;" /></a>
 </section>
 
 

@@ -444,6 +444,93 @@
     
   <section id="id1">
 <h1>Позив креиране процедуре унутар програма<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Поред процедура, у систему за управљање базама података смо могли да креирамо и функције. Функције остају запамћене у бази података и по потреби могу да се позивају. Имамо две врсте функција: скаларне функције и функције које враћају табелу. Кроз два примера ћемо приказати како се различите врсте функција позивају унутар програма.</p>
+
+    </div></div>
+<p>Програми се пишу у развојном окружењу <em>Visual Studio Community</em> и помоћу програмког језика C#.</p>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде С#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким коирсничким интерфејсом.</p>
+<p>У следећем кораку је потребно да се пројекат именује и да се изабере локација на којој ће се пројекат чувати. Може да остане и предложена локација. Кликнути на дугме <em>Create</em> и прелазимо у простор за креирање апликације, тј. програма.</p>
+<p>Први корак је додавање раније креиране базе података новом пројекту. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Biblioteka_knjige.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему <em>SQL Server Management Studio</em> у којем смо креирали базу.</p>
+<a class="reference internal image-reference" href="../_images/slika_37a.jpg"><img alt="../_images/slika_37a.jpg" class="align-center" src="../_images/slika_37a.jpg" style="width: 780px;" /></a>
+<p>Класе које су нам потребне за читање података из базе и њихов приказ у програму се налазе у именском простору <em>System.Data.SqlClient</em> који није аутоматски укључен у нови пројекат. Потребно је да додамо следећи ред на врх документа са програмским кодом.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Data.SqlClient</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Узмимо функцију која за дати назив књиге враћа број примерака. Унутар система <em>SQL Sever Management Studio</em> можемо да погледамо програмски код те функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">FUNCTION</span> <span class="n">broj_primeraka_knjige</span> <span class="p">(</span><span class="nd">@naziv_knjige</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+<span class="n">RETURNS</span> <span class="n">INT</span>
+<span class="n">AS</span>
+<span class="n">BEGIN</span>
+    <span class="n">DECLARE</span> <span class="nd">@broj</span> <span class="n">INT</span><span class="p">;</span>
+    <span class="n">SELECT</span> <span class="nd">@broj</span> <span class="o">=</span> <span class="n">COUNT</span><span class="p">(</span><span class="n">inventarski_broj</span><span class="p">)</span>
+    <span class="n">FROM</span> <span class="n">primerci</span> <span class="n">JOIN</span> <span class="n">knjige</span> <span class="n">ON</span> <span class="p">(</span><span class="n">primerci</span><span class="o">.</span><span class="n">id_knjige</span><span class="o">=</span><span class="n">knjige</span><span class="o">.</span><span class="n">id_knjige</span><span class="p">)</span>
+    <span class="n">WHERE</span> <span class="n">naziv</span> <span class="o">=</span> <span class="nd">@naziv_knjige</span><span class="p">;</span>
+    <span class="n">RETURN</span> <span class="nd">@broj</span><span class="p">;</span>
+<span class="n">END</span>
+</pre></div>
+</div>
+<p>Можемо да формирамо упит који позива ову функцију, а на месту параметра стављамо садржај поља за унос текста.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">string</span><span class="w"> </span><span class="n">cmdText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT dbo.broj_primeraka_knjige(&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;)&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Како је ова функција скаларна и враћа један број, потребна нам је целобројна променљива и да нагласимо да се ради о позиву скаларне функције <em>ExecuteScalar</em>.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteScalar</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>Што се дизајна апликације тиче, потребно нам је поље за унос назива књиге, дугме и једно поље за приказ броја књига. Следи комплетан програмски код. Уместо <em>KONEKCIONI_STRING</em> треба ставити конекциони стринг који је формиран у ранијим примерима, а односи се на повезивање програма на базу података <em>Biblioteka_knjige.mdf</em>.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="n">KONEKCIONI_STRING</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdText</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cmdText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT dbo.broj_primeraka_knjige(&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;)&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">cmdText</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">con</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">broj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteScalar</span><span class="p">());</span>
+<span class="w">        </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">broj</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Апликација се покреће кликом на дугме <em>Start</em> и можемо да тестирамо како ради.</p>
+<a class="reference internal image-reference" href="../_images/slika_38a.jpg"><img alt="../_images/slika_38a.jpg" class="align-center" src="../_images/slika_38a.jpg" style="width: 780px;" /></a>
+<p>У другом програму ћемо приказати како се позива функција која враћа табелу. Узмимо функцију која за дато име и презиме аутора враћа списак књига и за сваку књигу број примерака. Унутар система <em>SQL Sever Management Studio</em> можемо да погледамо програмски код те функције.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">FUNCTION</span> <span class="n">broj_primeraka_po_knjizi_autora</span> <span class="p">(</span><span class="nd">@ime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span> <span class="nd">@prezime</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">RETURNS</span> <span class="n">TABLE</span>
+<span class="n">AS</span>
+<span class="n">RETURN</span> <span class="n">SELECT</span> <span class="n">COUNT</span><span class="p">(</span><span class="n">inventarski_broj</span><span class="p">)</span> <span class="n">AS</span> <span class="n">broj_primeraka</span><span class="p">,</span> <span class="n">naziv</span>
+<span class="n">FROM</span> <span class="n">primerci</span> <span class="n">JOIN</span> <span class="n">knjige</span> <span class="n">ON</span> <span class="p">(</span><span class="n">primerci</span><span class="o">.</span><span class="n">id_knjige</span><span class="o">=</span><span class="n">knjige</span><span class="o">.</span><span class="n">id_knjige</span><span class="p">)</span>
+<span class="n">JOIN</span> <span class="n">autori_knjige</span> <span class="n">ON</span> <span class="p">(</span><span class="n">autori_knjige</span><span class="o">.</span><span class="n">id_knjige</span><span class="o">=</span><span class="n">knjige</span><span class="o">.</span><span class="n">id_knjige</span><span class="p">)</span>
+<span class="n">JOIN</span> <span class="n">autori</span> <span class="n">ON</span> <span class="p">(</span><span class="n">autori_knjige</span><span class="o">.</span><span class="n">id_autora</span><span class="o">=</span><span class="n">autori</span><span class="o">.</span><span class="n">id_autora</span><span class="p">)</span>
+<span class="n">WHERE</span> <span class="n">ime</span> <span class="o">=</span> <span class="nd">@ime</span> <span class="n">AND</span> <span class="n">prezime</span> <span class="o">=</span> <span class="nd">@prezime</span>
+<span class="n">GROUP</span> <span class="n">BY</span> <span class="n">naziv</span>
+</pre></div>
+</div>
+<p>За позив функције која враћа табелу нам треба угњеждени упит у којем, уместо да податке читамо из неке табле, читамо из из позива ове функције.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM broj_primeraka_po_knjizi_autora(&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cmd</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;, &quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cmd</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;)&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">        </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Апликација се покреће кликом на дугме <em>Start</em> и можемо да тестирамо како ради за различите ауторе.</p>
+<a class="reference internal image-reference" href="../_images/slika_38b.jpg"><img alt="../_images/slika_38b.jpg" class="align-center" src="../_images/slika_38b.jpg" style="width: 780px;" /></a>
+<a class="reference internal image-reference" href="../_images/slika_38c.jpg"><img alt="../_images/slika_38c.jpg" class="align-center" src="../_images/slika_38c.jpg" style="width: 780px;" /></a>
 </section>
 
 

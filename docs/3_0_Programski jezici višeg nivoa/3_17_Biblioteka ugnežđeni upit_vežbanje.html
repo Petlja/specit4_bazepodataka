@@ -444,7 +444,335 @@
     
   <section id="select">
 <h1>База података за библиотеку - програм са угнежђеним упитом SELECT - вежбање<a class="headerlink" href="#select" title="Permalink to this heading">¶</a></h1>
-</section>
+<p>Решити следеће задатке писањем програма у развојном окружењу <em>Visual Studio Community</em> и употребом програмског језика C#.</p>
+<p>Приликом решавања задатака, погледајте претходно решене примере. Након што решите неки задатак па желите да проверите да ли је решење добро или видите да не можете да га решите, можете да погледате решење које ће се приказати након што кликнете на дугме.</p>
+<p>Детаљно објашњење формирања упита SELECT који треба да буде део програма је објашњен раније у материјалима и по потреби је могуће вратити се на тај део као помоћ у писању комплетног решења.</p>
+<p>Сви приказани задаци су у вези са табелама које чине базу података за библиотеку. Следи списак свих табела са колонама. Примарни кључеви су истакнути болд, а страни италик.</p>
+<a class="reference internal image-reference" href="../_images/slika_316a.jpg"><img alt="../_images/slika_316a.jpg" class="align-center" src="../_images/slika_316a.jpg" style="width: 780px;" /></a>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде C#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким корисничким интерфејсом.</p>
+<p>Када се креира нови пројекат, први корак је додавање раније креиране базе података. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Biblioteka.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему <em>SQL Server Management Studio</em> у којем смо креирали базу.</p>
+<a class="reference internal image-reference" href="../_images/slika_316b.jpg"><img alt="../_images/slika_316b.jpg" class="align-center" src="../_images/slika_316b.jpg" style="width: 780px;" /></a>
+<p>Класе које су нам потребне за читање података из базе и њихов приказ у програму се налазе у именском простору <em>System.Data.SqlClient</em> који није аутоматски укључен у нови пројекат. Потребно је да додамо следећи ред на врх документа са програмским кодом.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Data.SqlClient</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Приликом писања програма, потребно је да се употреби конекциони стринг који је формиран у ранијим примерима, а односи се на повезивање програма на базу података <em>Biblioteka.mdf</em>. У решењима задатака стоји <em>KONEKCIONI_STRING</em> на местима где се очекује конекциони стринг.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple">
+<li><p>Разматра се могућност да се уведу одређена ограничења члановима библиотеке који нередовно враћају књиге. Једна од мера би можда била да се њима не издају ретке књиге које су често тражене, а драстичнија мера би могла да подразумева и укидање чланства. Да би се на добар начин донела одлука, библиотека је одлучила да пажљиво проучи списак чланова који касне са враћањем књига и због тога плаћају казне да би се видело колико има таквих чланова и да ли има неких међу њима који се баш истичу.</p></li>
+</ol>
+
+    </div></div>
+<p><strong>Задатак 1:</strong> Приказати имена и презимена чланова, уз датуме и износе плаћених казни. Списак уредити по члановима, тако да све казне једног члана буду приказане једна испод друге.</p>
+
+    <div data-component="reveal" id="pitanje_317a"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT ime, prezime, datum, iznos &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kazne JOIN clanovi &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kazne.broj_clanske_karte=clanovi.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ORDER BY prezime, ime&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    <p><strong>Задатак 2: Приказати број до сада плаћених казни и укупан износ.</strong></p>
+
+    <div data-component="reveal" id="pitanje_317b"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(*) broj_kazni, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;SUM(iznos) ukupan_iznos &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kazne&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    <p><strong>Задатак 3</strong>: Приказати број чланова који су до сада каснили са враћањем књига и због тога плаћали казне.</p>
+
+    <div data-component="reveal" id="pitanje_317c"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(DISTINCT broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kazne&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    <p><strong>Задатак 4</strong>: Приказати имена и презимена чланова, уз број плаћених казни. Списак уредити по члановима.</p>
+
+    <div data-component="reveal" id="pitanje_317d"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT ime, prezime, COUNT(*) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kazne JOIN clanovi &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kazne.broj_clanske_karte = clanovi.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;GROUP BY ime, prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ORDER BY ime, prezime&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    <p><strong>Задатак 5:</strong> Приказати имена и презимена чланова, уз број плаћених казни, који имају више од једне плаћене казне.</p>
+
+    <div data-component="reveal" id="pitanje_317e"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT ime, prezime, COUNT(*) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kazne JOIN clanovi &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kazne.broj_clanske_karte = clanovi.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;GROUP BY ime, prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;HAVING COUNT(*)&gt;1 &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ORDER BY ime, prezime&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    <p><strong>Задатак 6:</strong> Приказати име и презиме члана који је платио највећи износ казне до сада.</p>
+<p>Под претпоставком да висина износа казне зависи од броја дана колико се каснило са враћањем књиге, решење овог упита може да издвоји члана или чланове са неодговорним понашањем.</p>
+
+    <div data-component="reveal" id="pitanje_317f"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT DISTINCT ime, prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM kazne JOIN clanovi &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(kazne.broj_clanske_karte = clanovi.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE iznos = (SELECT MAX(iznos) FROM kazne)&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="2">
+<li><p>У току месеца маја је акција и библиотека поклања по једну књигу својим верним члановима који тог месеца дођу да позајме књиге. Тренутно је у библиотеку дошла Милица Зорановић и библиотекар жели да провери како изгледа њена историја чланства, тј. да ли је већ дужи низ година члан библиотеке.</p></li>
+</ol>
+
+    </div></div>
+<p><strong>Задатак 1:</strong> Приказати списак година када је члан датог имена и презимена био члан библиотеке, тј. за које је платио чланарину.</p>
+
+    <div data-component="reveal" id="pitanje_317g"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT god &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM clanarine JOIN clanovi &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(clanarine.broj_clanske_karte = clanovi.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE ime=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;AND prezime=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    <p><strong>Задатак 2:</strong> Приказати број година када је члан датог имена и презимена био члан библиотеке, тј. за које је платио чланарину.</p>
+
+    <div data-component="reveal" id="pitanje_317h"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT COUNT(god) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM clanarine JOIN clanovi &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(clanarine.broj_clanske_karte = clanovi.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE ime=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;AND prezime=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="3">
+<li><p>Библиотека разматра да наручи још књига Завода за уџбенике. Да би донели ту одлуку, потребно је да се види колико су књиге овог издавача тражене.</p></li>
+</ol>
+
+    </div></div>
+<p><strong>Задатак:</strong> Приказати датуме узимања и називе књиге за све позајмице књига датог издавача.</p>
+
+    <div data-component="reveal" id="pitanje_317i"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT datum_uzimanja, knjige.naziv &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM pozajmice JOIN primerci &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(pozajmice.inventarski_broj = primerci.inventarski_broj) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN knjige ON(primerci.id_knjige = knjige.id_knjige) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN izdavaci ON(knjige.id_izdavaca = izdavaci.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE izdavaci.naziv = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="4">
+<li><p>Члан библиотеке Милица Зорановић је дошла у библиотеку да позајми неку књигу, али нема идеју шта би следеће читала. Библиотекар је предложио да крену од списка аутора чије је књиге већ позајмљивала, па да виде да ли би Милица читала још неку од књига неког од тих аутора.</p></li>
+</ol>
+
+    </div></div>
+<p><strong>Задатак:</strong> Приказати без понављања имена и презимена аутора чије је књиге читао члан датог имена и презимена.</p>
+
+    <div data-component="reveal" id="pitanje_317j"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT DISTINCT a.ime, a.prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM pozajmice po JOIN clanovi c &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(po.broj_clanske_karte = c.broj_clanske_karte) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN primerci pr ON(po.inventarski_broj= pr.inventarski_broj) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN knjige k ON(pr.id_knjige= k.id_knjige) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN autori_knjige ak ON(ak.id_knjige= k.id_knjige) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN autori a ON(ak.id_autora= a.id_autora) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE c.ime = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; AND c.prezime = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">prezime</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="5">
+<li><p>Библиотека организује прославу за своје запослене и позивнице планира да пошаље мејлом, али са различитим текстом за различите тимове. Ради слања позивница, потребан је списак мејл адреса по тимовима.</p></li>
+</ol>
+
+    </div></div>
+<p><strong>Задатак:</strong> Написати упит којим се приказују мејл адреса запосленог и мејл адреса његовог менаџера. Списак уредити по менаџерима, па унутар истог тима по запосленима.</p>
+
+    <div data-component="reveal" id="pitanje_317k"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT z.mejl zaposleni, m.mejl menadzer &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM zaposleni z LEFT OUTER JOIN zaposleni m &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ON(z.id_menadzera = m.id) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ORDER BY m.mejl, z.mejl&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<ol class="arabic simple" start="6">
+<li><p>Тренутно се размишља о корекцији износа за чланарине и корекцији попуста у ситуацијама где се остварује попуст на чланарину. Да би се донела добра одлука, потребно је проучити како се кретао износ просечне чланарине до сада.</p></li>
+</ol>
+
+    </div></div>
+<p><strong>Задатак:</strong> Написати упит којим се приказује просечна висина чланарине за сваку годину.</p>
+
+    <div data-component="reveal" id="pitanje_317l"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">conText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT god, AVG(iznos) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM clanarine &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;GROUP BY god&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">conText</span><span class="p">);</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+    </div>
+    </section>
 
 
     </div>

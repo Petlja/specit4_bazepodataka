@@ -444,6 +444,228 @@
     
   <section id="id1">
 <h1>Програм са класом<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Комплетан програм најчешће има развијене класе и користи различите структуре података. Податке из базе можемо да учитамо у објекте класа које креирамо. Следе примери како се пишу такави програми.</p>
+<p>Многе од задатака који следе касније током овог поглавља можете да решите и на овај начин. Могуће је објединити и више једноставнијих задатака у већи пројекат који ће имати више класа које ће одговарати структури релационе базе. За креирање таквих великих пројеката је потребно да се примени стечено знање Објектно оријентисаног програмирања из трећег разреда гимназије за ученике са посебним способностима за рачунарство и информатику:</p>
+<ul class="simple">
+<li><p>Објектно оријентисано програмирање за трећи разред специјализованих ИТ одељења (ДОДАТИ ЛИНК КАДА БУДЕ ДОСТУПАН)</p></li>
+</ul>
+
+    </div></div>
+<p>Написаћемо програм који приказује садржај табеле <em>autori</em> употребом објеката класе <em>Autor</em> коју ћемо да напишемо.</p>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде С#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким коирсничким интерфејсом.</p>
+<p>Пројекту треба да додамо базу података. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Biblioteka_knjige.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему <em>SQL Server Management Studio</em> у којем смо креирали базу.</p>
+<p>Програму додајемо нову класу тако што изаберемо* Add/New Item…* са менија који се појави када се у прозору <em>Solution Explorer</em> кликне десни тастер миша над називом C# програма испод назива пројекта.</p>
+<a class="reference internal image-reference" href="../_images/slika_315a.jpg"><img alt="../_images/slika_315a.jpg" class="align-center" src="../_images/slika_315a.jpg" style="width: 780px;" /></a>
+<p>Класа <em>Autor</em> ће имати три приватна атрибута који редом одговарају идентификационом броју, имену и презимену. Сваки од ових приватних атрибута ће имати јавно својство које има само методу get и којом се дозвољава читање, али не и измена одговарајућег атрибута. Конструктор ће да креира објекат на основу садржаја једног реда. Поред тога ћемо имати и метору за приказ објекта. Ово је најједноставнији облик класе. Класа, за неке сложеније пројекте, ће сигурно имати још метода.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Autor</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id_autora</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">ime</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">prezime</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Id_autora</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">id_autora</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Ime</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">ime</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Prezime</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">prezime</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Autor</span><span class="p">(</span><span class="n">DataRow</span><span class="w"> </span><span class="n">dr</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">id_autora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">dr</span><span class="p">[</span><span class="s">&quot;id_autora&quot;</span><span class="p">];</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">ime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">dr</span><span class="p">[</span><span class="s">&quot;ime&quot;</span><span class="p">];</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">prezime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">dr</span><span class="p">[</span><span class="s">&quot;prezime&quot;</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0} - {1} {2}&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">id_autora</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">ime</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">prezime</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>У програму ћемо формирати листу и њен садржај ћемо приказати у контроли <em>ListBox</em> коју можемо да превучемо из прозора <em>Toolbox</em>.</p>
+<p>Класе које су нам потребне за читање података из базе и њихов приказ у програму се налазе у именском простору <em>System.Data.SqlClient</em> који није аутоматски укључен у нови пројекат. Потребно је да додамо следећи ред на врх документа са програмским кодом.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Data.SqlClient</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Приликом писања програма, потребно је да се употреби конекциони стринг који је формиран у ранијим примерима, а односи се на повезивање програма на базу података <em>Biblioteka_knjige.mdf</em>.</p>
+<p>Следи комплетан програмски код.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Form1_Load</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="n">KONEKCIONI_STRING</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM autori&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">cmdText</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">        </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Connection</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Autor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Autor</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">DataRow</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">Rows</span><span class="p">)</span>
+<span class="w">            </span><span class="n">lista</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Autor</span><span class="p">(</span><span class="n">dr</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Autor</span><span class="w"> </span><span class="n">autor</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span>
+<span class="w">            </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">autor</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Све је спремно да се покрене апликација кликом на дугме <em>Start</em> и да се тестира прва опција коју смо испрограмирали. На следећој слици може да се види покренут програм.</p>
+<a class="reference internal image-reference" href="../_images/slika_315b.jpg"><img alt="../_images/slika_315b.jpg" class="align-center" src="../_images/slika_315b.jpg" style="width: 780px;" /></a>
+<p>Програм можемо да зауставимо тако што затворимо прозор у којем је покренут и вратимо се у развојно окружење. Можемо да додамо два поља за унос текста тако да можемо да претражујемо списак по имену или по презимену. Података нема много и цео садржај табеле можемо да учитамо у листу. Претрага листе је ефикаснија од поновног читања базе за свако име или презиме које нам треба.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>ВАЖНО:</strong> Података у бази има често много више него што може да се учита у програм, тако да треба користити неке од опција које ограничавају број редова које узимамо из базе.</p>
+
+    </div></div>
+<p>Следи комплетан програмски код.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Autor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Form1_Load</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="n">KONEKCIONI_STRING</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM autori&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">cmdText</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">        </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Connection</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Autor</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">DataRow</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">Rows</span><span class="p">)</span>
+<span class="w">            </span><span class="n">lista</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Autor</span><span class="p">(</span><span class="n">dr</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Autor</span><span class="w"> </span><span class="n">autor</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span>
+<span class="w">            </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">autor</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">textBox1_TextChanged</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Empty</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+<span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Autor</span><span class="w"> </span><span class="n">autor</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">autor</span><span class="p">.</span><span class="n">Ime</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">))</span>
+<span class="w">                    </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">autor</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">textBox2_TextChanged</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Empty</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+<span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Autor</span><span class="w"> </span><span class="n">autor</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">autor</span><span class="p">.</span><span class="n">Prezime</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">))</span>
+<span class="w">                    </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">autor</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>На следећој слици може да се види како можемо да претражујемо списак након што покренемо апликацију кликом на дугме <em>Start</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_315c.jpg"><img alt="../_images/slika_315c.jpg" class="align-center" src="../_images/slika_315c.jpg" style="width: 780px;" /></a>
+<p>Креираћемо нови програм у којем ћемо направити класу Knjiga. У објекте ове класе ћемо учитати угњежденим упитом податке из неколико табела. Свака књига има назив, назив издавача и број примерака.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Knjiga</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">naziv</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">izdavac</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">brojPrimeraka</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Naziv</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">naziv</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Izdavac</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">izdavac</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BrojPrimeraka</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">brojPrimeraka</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Knjiga</span><span class="p">(</span><span class="n">DataRow</span><span class="w"> </span><span class="n">dr</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">naziv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">dr</span><span class="p">[</span><span class="s">&quot;naziv_knjige&quot;</span><span class="p">];</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">izdavac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">dr</span><span class="p">[</span><span class="s">&quot;naziv_izdavaca&quot;</span><span class="p">];</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">brojPrimeraka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">dr</span><span class="p">[</span><span class="s">&quot;broj_primeraka&quot;</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0} - {1}, broj primeraka = {2}&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">naziv</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">izdavac</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">brojPrimeraka</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>У апликацији ћемо приказати списак књига. Користићемо и објекат класе <em>Chart</em> да прикажемо графикон на којем се виде књиге и бројеви примерака.</p>
+<a class="reference internal image-reference" href="../_images/slika_315d.jpg"><img alt="../_images/slika_315d.jpg" class="align-center" src="../_images/slika_315d.jpg" style="width: 780px;" /></a>
+<p>Следи комплетан програмски код решења.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Form1_Load</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="n">KONEKCIONI_STRING</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">cmdText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT knjige.naziv naziv_knjige, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;izdavaci.naziv naziv_izdavaca, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;COUNT(inventarski_broj) broj_primeraka &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;FROM primerci JOIN knjige &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;ON(primerci.id_knjige=knjige.id_knjige) &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;JOIN izdavaci &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;ON(knjige.id_izdavaca=izdavaci.id)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;GROUP BY knjige.naziv, izdavaci.naziv&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">cmdText</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">        </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Connection</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Knjiga</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Knjiga</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">DataRow</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">Rows</span><span class="p">)</span>
+<span class="w">            </span><span class="n">lista</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Knjiga</span><span class="p">(</span><span class="n">dr</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Knjiga</span><span class="w"> </span><span class="n">knjiga</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span>
+<span class="w">            </span><span class="n">listBox1</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">knjiga</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+
+<span class="w">        </span><span class="n">chart1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="w">        </span><span class="n">chart1</span><span class="p">.</span><span class="n">Series</span><span class="p">[</span><span class="s">&quot;Series1&quot;</span><span class="p">].</span><span class="n">XValueMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;naziv_knjige&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">chart1</span><span class="p">.</span><span class="n">Series</span><span class="p">[</span><span class="s">&quot;Series1&quot;</span><span class="p">].</span><span class="n">YValueMembers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;broj_primeraka&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">chart1</span><span class="p">.</span><span class="n">Series</span><span class="p">[</span><span class="s">&quot;Series1&quot;</span><span class="p">].</span><span class="n">IsValueShownAsLabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>На следећој слици може да се види како ради програм након што га покренемо кликом на дугме <em>Start</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_315e.jpg"><img alt="../_images/slika_315e.jpg" class="align-center" src="../_images/slika_315e.jpg" style="width: 780px;" /></a>
 </section>
 
 

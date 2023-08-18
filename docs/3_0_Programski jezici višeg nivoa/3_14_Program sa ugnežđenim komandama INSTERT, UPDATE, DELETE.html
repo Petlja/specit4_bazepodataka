@@ -444,6 +444,137 @@
     
   <section id="insert-update-delete">
 <h1>Програм са угнежђеним командама INSERT, UPDATE, и DELETE<a class="headerlink" href="#insert-update-delete" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Видели смо како се креирају програми са угњежденим упитом SELECT. Унутар програма могу да се користе и команде за унос, измену и брисање података.</p>
+<p>Креираћемо програм у којем можемо да уносимо, мењамо и бришемо податке из табеле <em>autori</em>.</p>
+
+    </div></div>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде С#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким коирсничким интерфејсом.</p>
+<p>Пројекту треба да додамо базу података. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Biblioteka_knjige.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему <em>SQL Server Management Studio</em> у којем смо креирали базу.</p>
+<p>За приказ резултата позива процедуре из релационе базе података ћемо користити контролу <em>DataGridView</em> коју можемо да превучемо из прозора <em>Toolbox</em>. Потребна су нам и три поља за унос података о аутору, идентификациони број, име и презиме, као и три дугмета за унос, измену и брисање.</p>
+<p>Класе које су нам потребне за читање података из базе и њихов приказ у програму се налазе у именском простору <em>System.Data.SqlClient</em> који није аутоматски укључен у нови пројекат. Потребно је да додамо следећи ред на врх документа са програмским кодом.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Data.SqlClient</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Приликом писања програма, потребно је да се употреби конекциони стринг који је формиран у ранијим примерима, а односи се на повезивање програма на базу података <em>Biblioteka_knjige.mdf</em>. У решењу задатака стоји <em>KONEKCIONI_STRING</em> на месту где се очекује конекциони стринг.</p>
+<p>Приликом покретања програма, у <em>DataGridView</em> ће се учитати табела из базе података. Двоструки клик било где на дизајн апликације, а ван контрола које смо поставили, даје оквир за писање реакције на догађај <em>Form1_Load</em> где наводимо наредбе које ће се извршити при самом покретању програма. Ван догађаја, тако да можемо да их користимо на више места у програму, ћемо декларисати објекте класа <em>SqlDataAdapter</em>, <em>SqlConnection</em>, <em>SqlCommand</em> и <em>DataTable</em>. На следећој слици се види програмски код који је потребан да се приликом покретања програма прикаже садржај целе табеле.</p>
+<a class="reference internal image-reference" href="../_images/slika_314a.jpg"><img alt="../_images/slika_314a.jpg" class="align-center" src="../_images/slika_314a.jpg" style="width: 780px;" /></a>
+<p>Све је спремно да се покрене апликација кликом на дугме <em>Start</em> и да се тестира прва опција коју смо испрограмирали. На следећој слици може да се види покренут програм.</p>
+<a class="reference internal image-reference" href="../_images/slika_314b.jpg"><img alt="../_images/slika_314b.jpg" class="align-center" src="../_images/slika_314b.jpg" style="width: 780px;" /></a>
+<p>Програм можемо да зауставимо тако што затворимо прозор у којем је покренут и вратимо се у развојно окружење. Како приказ садржаја табеле желимо да позовемо сваки пут када се догоди нека измена са подацима, програмски код који пише унутар догађаја <em>Form1_Load</em>, можемо да издвојимо у засебну методу коју ћемо позивати на неколико места. Следи измењени програмски код.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">PrikaziTabelu</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">con</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="s">&quot;SELECT * FROM autori&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="w">        </span><span class="n">con</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Form1_Load</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PrikaziTabelu</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Програмираћемо реакције на догађај када се кликне на дугме. Потребно је да се вратимо на картицу <em>Form1.cs [Design]</em> и да урадимо двоклик на дугме. Поступак поновимо и за преостала два дугмета. Поред тога, потребан нам је догађај када корисник програма обележи један ред. У прозору <em>Properties</em> проверимо да је изабран објекта <em>dataGridView1</em>, а затим кликнемо на муњу, па урадимо двоструки клик десно од назива догађаја <em>RowHeaderMouseClick</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_314c.jpg"><img alt="../_images/slika_314c.jpg" class="align-center" src="../_images/slika_314c.jpg" style="width: 780px;" /></a>
+<p>Имамо спреман оквир за писање програмског кода.</p>
+<a class="reference internal image-reference" href="../_images/slika_314d.jpg"><img alt="../_images/slika_314d.jpg" class="align-center" src="../_images/slika_314d.jpg" style="width: 780px;" /></a>
+<p>Следи програмски код са угњежденом командом INSERT.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">&quot;INSERT INTO autori &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                </span><span class="s">&quot;VALUES(@id, @ime, @prezime)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">            </span><span class="n">con</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">            </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@ime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@prezime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteNonQuery</span><span class="p">();</span>
+<span class="w">            </span><span class="n">con</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">            </span><span class="n">PrikaziTabelu</span><span class="p">();</span>
+<span class="w">            </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Popunite sva tri polja za unos!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Можемо да апликацију покренемо кликом на дугме <em>Start</em> и да се тестирамо опцију уноса. На следећој слици може да се види покренут програм. Унећемо аутора Велимира Радловачког.</p>
+<a class="reference internal image-reference" href="../_images/slika_314e.jpg"><img alt="../_images/slika_314e.jpg" class="align-center" src="../_images/slika_314e.jpg" style="width: 780px;" /></a>
+<p>Након што се кликне на дугме, може да се види да је Велимир Радловачки сада у табели <em>autori</em>.</p>
+<a class="reference internal image-reference" href="../_images/slika_314f.jpg"><img alt="../_images/slika_314f.jpg" class="align-center" src="../_images/slika_314f.jpg" style="width: 780px;" /></a>
+<p>Програм ћемо да зауставимо и да се вратимо у развојно окружење. Следи програмски код са угњежденом командом DELETE. Да би знали ког аутора бришемо, потребно је да прочитамо податке из реда који је корисник обележио. Посебно нам је значајан идентификациони број.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">dataGridView1_RowHeaderMouseClick</span><span class="p">(...)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">id</span><span class="w"> </span><span class="o">=</span>
+<span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">Rows</span><span class="p">[</span><span class="n">e</span><span class="p">.</span><span class="n">RowIndex</span><span class="p">].</span><span class="n">Cells</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Value</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="w">            </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="w">            </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">Rows</span><span class="p">[</span><span class="n">e</span><span class="p">.</span><span class="n">RowIndex</span><span class="p">].</span><span class="n">Cells</span><span class="p">[</span><span class="m">1</span><span class="p">].</span><span class="n">Value</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="w">            </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">Rows</span><span class="p">[</span><span class="n">e</span><span class="p">.</span><span class="n">RowIndex</span><span class="p">].</span><span class="n">Cells</span><span class="p">[</span><span class="m">2</span><span class="p">].</span><span class="n">Value</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button3_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">&quot;DELETE FROM autori WHERE id_autora=@id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">                </span><span class="n">con</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">                </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">                </span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteNonQuery</span><span class="p">();</span>
+<span class="w">                </span><span class="n">con</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">                </span><span class="n">PrikaziTabelu</span><span class="p">();</span>
+<span class="w">                </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Oznacite red koji zelite da obrisete!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Можемо да апликацију покренемо кликом на дугме Start и да се тестирамо опцију брисања.</p>
+<a class="reference internal image-reference" href="../_images/slika_314g.jpg"><img alt="../_images/slika_314g.jpg" class="align-center" src="../_images/slika_314g.jpg" style="width: 780px;" /></a>
+<p>Програм ћемо да зауставимо и да се вратимо у развојно окружење. Следи програмски код са угњежденом командом UPDATE.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button2_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">&quot;UPDATE autori &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;SET id_autora=@id, ime=@ime, prezime=@prezime &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE id_autora=@id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">con</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@ime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@prezime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteNonQuery</span><span class="p">();</span>
+<span class="w">        </span><span class="n">con</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="w">        </span><span class="n">PrikaziTabelu</span><span class="p">();</span>
+<span class="w">        </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">textBox2</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">textBox3</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Oznacite red koji zelite da izmenite!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Можемо да апликацију покренемо кликом на дугме Start и да се тестирамо опцију измене података. Рецимо да је, на пример, у базу података унет аутор Цеца Радловачки, али не желимо да у бази чувамо надимак, него пуно име.</p>
+<a class="reference internal image-reference" href="../_images/slika_314h.jpg"><img alt="../_images/slika_314h.jpg" class="align-center" src="../_images/slika_314h.jpg" style="width: 780px;" /></a>
+<p>Када се означи Цеца Радловачки, у пољима за унос текста може да се унесе измењено име Светлана које ће бити сачувано у бази након клика на дугме за измену.</p>
+<a class="reference internal image-reference" href="../_images/slika_314i.jpg"><img alt="../_images/slika_314i.jpg" class="align-center" src="../_images/slika_314i.jpg" style="width: 780px;" /></a>
+<p>Унутар програмског кода смо директно користили угњеждене команде INSERT, UPDATE и DELETE. Могли смо и да позивамо процедуре које имамо сачуване у бази података за унос, измену и брисање.</p>
 </section>
 
 

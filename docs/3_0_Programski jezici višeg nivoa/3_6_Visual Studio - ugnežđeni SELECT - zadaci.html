@@ -444,6 +444,100 @@
     
   <section id="select">
 <h1>Угнежђени упит SELECT унутар програма - задаци<a class="headerlink" href="#select" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Вратимо се на пример да библиотека жели да провери колико има примeрака књига једног издавача да би размотрили да ли да набављају још књига тог издавача. За сваки примерак је пожељно да се види и која је књига у питању да би се размотрило могуће додатно набављање и појединих наслова овог издавача који се већ налазе у библиотеци. Потребно је написати програм којим ћемо добити овај извештај.</p>
+
+    </div></div>
+<p>Програми се пишу у развојном окружењу <em>Visual Studio Community</em> и помоћу програмког језика C#.</p>
+<p>Када се покрене развојно окружење <em>Visual Studio Community</em>, потребно је да се креира нови пројекат избором опције <em>Create a new project</em>. Изабрани језик треба да буде С#, а врста пројекта <em>Windows Forms App</em>, апликација са графичким коирсничким интерфејсом.</p>
+<p>У следећем кораку је потребно да се пројекат именује и да се изабере локација на којој ће се пројекат чувати. Може да остане и предложена локација. Кликнути на дугме <em>Create</em> и прелазимо у простор за креирање апликације, тј. програма.</p>
+<p>Први корак је додавање раније креиране базе података новом пројекту. У прозору <em>Solution Explorer</em> је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере <em>Add/Existing Item…</em> са менија који се појави. База података коју смо креирали се већ налази на рачунару и потребно је пронаћи и изабрати фајл <em>Biblioteka_knjige.mdf</em> у којем је сачувана. Тачна локација може да се провери у систему <em>SQL Server Management Studio</em> у којем смо креирали базу.</p>
+<a class="reference internal image-reference" href="../_images/slika_35a.jpg"><img alt="../_images/slika_35a.jpg" class="align-center" src="../_images/slika_35a.jpg" style="width: 780px;" /></a>
+<p>За приказ резултата угњежденог упита SELECT који узима податке из релационе базе података је најбоље да се користи контрола <em>DataGridView</em> који можемо да превучемо из прозора <em>Toolbox</em>.</p>
+<p>Потребно је да додамо и поље за унос назива издавача, тј. један <em>TextBox</em>, као и три дугмета за различите опције. У прозору <em>Properties</em> изменимо својство <em>Text</em> за свако дугме тако да на дугмету пише текст који одговара радњи која ће да се догоди када се на дугме кликне. Комплетан дизајн апликације може да се види на следећој слици.</p>
+<a class="reference internal image-reference" href="../_images/slika_36a.jpg"><img alt="../_images/slika_36a.jpg" class="align-center" src="../_images/slika_36a.jpg" style="width: 780px;" /></a>
+<p>Централни део програма је упит којим се приказују инвентарски бројеви и назив књига издавача чији је назив дат. Списак је уређен по називу књиге, а ако имамо више примерака исте књиге, ти примерци ће бити уређени по инвентарском броју</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">inventarski_broj</span> <span class="n">primerak</span><span class="p">,</span> <span class="n">knjige</span><span class="o">.</span><span class="n">naziv</span> <span class="n">naziv_knjige</span>
+<span class="n">FROM</span> <span class="n">primerci</span> <span class="n">JOIN</span> <span class="n">knjige</span> <span class="n">ON</span> <span class="p">(</span><span class="n">primerci</span><span class="o">.</span><span class="n">id_knjige</span><span class="o">=</span><span class="n">knjige</span><span class="o">.</span><span class="n">id_knjige</span><span class="p">)</span>
+<span class="n">JOIN</span> <span class="n">izdavaci</span> <span class="n">ON</span> <span class="p">(</span><span class="n">knjige</span><span class="o">.</span><span class="n">id_izdavaca</span><span class="o">=</span><span class="n">izdavaci</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">WHERE</span> <span class="n">izdavaci</span><span class="o">.</span><span class="n">naziv</span> <span class="o">=</span> <span class="s1">&#39;CET&#39;</span>
+<span class="n">ORDER</span> <span class="n">BY</span> <span class="n">knjige</span><span class="o">.</span><span class="n">naziv</span><span class="p">,</span> <span class="n">inventarski_broj</span>
+</pre></div>
+</div>
+<p>Овај упит ћемо да уградимо у програмски код, а на месту назива издавача ћемо да налепимо текст који се унесе у поље за унос текста.</p>
+<p>Класе које су нам потребне за читање података из базе и њихов приказ у програму се налазе у именском простору <em>System.Data.SqlClient</em> који није аутоматски укључен у нови пројекат. Потребно је да додамо следећи ред на врх документа са програмским кодом.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="n">ausing</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">SqlClient</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Следи комплетан програмски код којим се приказује тражени списак свих примерака књига једног издавача. Уместо <em>KONEKCIONI_STRING</em> треба ставити конекциони стринг који је формиран у ранијим примерима, а односи се на повезивање програма на базу података <em>Biblioteka_knjige.mdf</em>.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="n">SqlDataAdapter</span><span class="w"> </span><span class="n">da</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DataTable</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KONEKCIONI_STRING</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">upit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT inventarski_broj primerak, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;knjige.naziv naziv_knjige &quot;</span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;FROM primerci JOIN knjige ON(primerci.id_knjige = knjige.id_knjige)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;JOIN izdavaci ON(knjige.id_izdavaca = izdavaci.id)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;WHERE izdavaci.naziv = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;ORDER BY knjige.naziv, inventarski_broj&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">upit</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Све је спремно да се покрене апликација кликом на дугме Start и да се тестира прва опција коју смо испрограмирали. На следећој слици може да се види резултат рада програма када се кликне на прво дугме.</p>
+<a class="reference internal image-reference" href="../_images/slika_36b.jpg"><img alt="../_images/slika_36b.jpg" class="align-center" src="../_images/slika_36b.jpg" style="width: 780px;" /></a>
+<p>Има смисла да додамо и извештај који приказује за сваку књигу број примерака. Програм можемо да зауставимо тако што затворимо прозор у којем је покренут и вратимо се у развојно окружење.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button2_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">upit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT knjige.naziv naziv_knjige, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;COUNT(inventarski_broj) broj_primeraka &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;FROM primerci JOIN knjige ON(primerci.id_knjige = knjige.id_knjige)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;JOIN izdavaci ON(knjige.id_izdavaca = izdavaci.id)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;WHERE izdavaci.naziv = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;GROUP BY knjige.naziv &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s">&quot;ORDER BY knjige.naziv&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">upit</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">    </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Апликација се покреће кликом на дугме <em>Start</em> и можемо да тестирамо овај извештај. На следеће две слике може да се види резултат рада програма када се кликне на друго дугме за различите издаваче.</p>
+<a class="reference internal image-reference" href="../_images/slika_36c.jpg"><img alt="../_images/slika_36c.jpg" class="align-center" src="../_images/slika_36c.jpg" style="width: 780px;" /></a>
+<a class="reference internal image-reference" href="../_images/slika_36d.jpg"><img alt="../_images/slika_36d.jpg" class="align-center" src="../_images/slika_36d.jpg" style="width: 780px;" /></a>
+<p>Програм можемо да зауставимо тако што затворимо прозор у којем је покренут и вратимо се у развојно окружење. Додаћемо и програмски код којим се издвајају оне књиге од којих имамо само један примерак у библиотеци.</p>
+<div class="highlight-Csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button3_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">textBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">upit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT knjige.naziv naziv_knjige &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;FROM primerci JOIN knjige ON(primerci.id_knjige = knjige.id_knjige)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;JOIN izdavaci ON(knjige.id_izdavaca = izdavaci.id)&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;WHERE izdavaci.naziv = &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izdavac</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;GROUP BY knjige.naziv &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;HAVING COUNT(inventarski_broj) = 1 &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="s">&quot;ORDER BY knjige.naziv&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">da</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlDataAdapter</span><span class="p">(</span><span class="n">upit</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataTable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">da</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">dt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dataGridView1</span><span class="p">.</span><span class="n">DataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dt</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Апликација се покреће кликом на дугме <em>Start</em> и можемо да тестирамо и овај извештај. На следећој слици може да се види резултат рада програма када се кликне на треће дугме.</p>
+<a class="reference internal image-reference" href="../_images/slika_36e.jpg"><img alt="../_images/slika_36e.jpg" class="align-center" src="../_images/slika_36e.jpg" style="width: 780px;" /></a>
 </section>
 
 
