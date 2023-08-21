@@ -567,9 +567,9 @@ lessons:
   - description: ''
     file: 3_8_Kreirana procedura unutar programa.html
     guid: 36a42dd2-1d64-4253-810e-c881c9310236
-    normalized_title: 3.8 Позив креиране процедуре унутар програма
+    normalized_title: 3.8 Позив креиране функције унутар програма
     src: 3_8_Kreirana procedura unutar programa.rst
-    title: 3.8 Позив креиране процедуре унутар програма
+    title: 3.8 Позив креиране функције унутар програма
     type: reading
   - description: ''
     file: 3_9_Visual studio program sa ugnežđenim komandama_kviz.html
