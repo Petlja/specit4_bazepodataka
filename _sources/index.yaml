@@ -12,10 +12,10 @@ description:
     - Кроз много практичног рада креираћеш у изабраним окружењима једноставне рачунарске програме који извршавају основне анализе и обраду података употребом различитих могућности упита SELECT; 
     - Израдићеш дијаграм ентитета и веза као пројекат за креирање базе података, а затим и саму базу података и рачунарски програм у којем се та база користи.
   requirements:
-    - Инсталиран алат за пројектовање база података Oracle SQL Developer Data Modeler (упутство за инсталацију је дато у склопу курса);
-    - Инсталиран систем за управљање базама података Microsoft SQL Server Management Studio (упутство за инсталацију је дато у склопу курса);
-    - Инсталирано развојно окружење Visual Studio (упутство за инсталацију је дато у склопу курса);
-    - Креиран онлајн налог за приступ систему за управљање базама података Oracle Apex (упутство за креирање налога је дато у склопу курса).
+    - Инсталиран алат за пројектовање база података Oracle SQL Developer Data Modeler (линк за инсталацију је дат у склопу курса );
+    - Инсталиран систем за управљање базама података Microsoft SQL Server Management Studio (линк за инсталацију је дат у склопу курса );
+    - Инсталирано развојно окружење Visual Studio (линк за инсталацију је дат у склопу курса );
+    - Креиран онлајн налог за приступ систему за управљање базама података Oracle Apex (линк за креирање налога је дат у склопу курса).
   toc:
     - Intro to Petljadoc INDEX.yaml
   externalLinks:  
@@ -39,32 +39,32 @@ description:
 
 
 lessons:
-  - title: 0.0 Упутство
+  - title: Упутство
     guid: 17f50e8a-1f7e-48bd-9d6c-78190f553223
     description: 
     folder: 0_0_Uputstvo
     activities:
       - type: reading
-        title: 0.1 Основне информације о курсу
+        title: Основне информације о курсу
         file: 0_1_Osnovne informacije o kursu.rst
         description: #Optional
         guid: bd98af64-e7ed-41b4-a51b-41229b1d855b
       - type: reading
-        title: 0.2 Примери релационих база података
+        title: Примери релационих база података
         file: 0_2_Primeri baza podataka.rst
         description: #Optional
         guid: 6707107c-25b7-41b8-bebd-e45bd2fd570a
       - type: reading
-        title: 0.3 Практичан и пројектни рад
+        title: Практичан и пројектни рад
         file: 0_3_Praktičan i projektni rad.rst
         description: #Optional
         guid: 3f40aafe-c977-4a8b-b2b7-4fac5462dc0d
-      - type: reading
-        title: 0.4 Упутство за наставнике
-        file: 0_4_Uputstvo za nastavnike.rst
-        description: #Optional
-        guid: 60c9fa11-5609-42b7-b32d-7d7f9dc0bf86
-  - title: 1.0 Релационе базе података
+    #  - type: reading
+    #   title: Упутство за наставнике
+    #    file: 0_4_Uputstvo za nastavnike.rst
+    #    description: #Optional
+    #    guid: 60c9fa11-5609-42b7-b32d-7d7f9dc0bf86
+  - title: 1 Релационе базе података
     guid: 01e84981-a1e7-4daf-b2f6-c557f73ffb03
     description: 
     folder: 1_0_Relacione baze podataka
@@ -159,7 +159,7 @@ lessons:
         title: 1.22 Упит SELECT - нерешени задаци
         file: 1_22_Upit SELECT_nerešeni_zadaci.rst
         guid: 4873cc22-23c2-47ed-97a6-38e4b71a8852
-  - title: 2.0 Писање програма унутар система за управљање базама података 
+  - title: 2 Писање програма унутар система за управљање базама података 
     guid: d6b51134-774a-4f90-9cbb-582a3eb032a5
     description: 
     folder: 2_0_SUBP
@@ -345,7 +345,7 @@ lessons:
         file: 2_34_Procedure i funkcije_ nerešeni zadaci.rst
         description: #Optional
         guid: ed93d34a-7eb3-44cf-9401-ba2fc479e102
-  - title: 3.0 Писање програма у програмским језицима вишег нивоа
+  - title: 3 Писање програма у програмским језицима вишег нивоа
     guid: 6a0bb8ff-44a4-45b0-9fdd-76807d2ded8e
     description: 
     folder: 3_0_Programski jezici višeg nivoa
@@ -460,7 +460,7 @@ lessons:
         file: 3_22_Filmovi - ugnežđeni upit  - nerešeni zadaci.rst
         description: #Optional
         guid: 941394a3-9b81-4b35-9736-2f9d0c1223ae
-  - title: 4.0 СУБП Oracle Apex и језик PL / SQL
+  - title: 4 Друга софтверска решења - СУБП Oracle
     guid: 216f9efb-b9c9-4efc-82c5-74c6aeee936d
     description: 
     folder: 4_0_SUBP Oracle Apex i PL i SQL
