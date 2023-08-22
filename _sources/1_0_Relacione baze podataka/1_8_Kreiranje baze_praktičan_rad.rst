@@ -141,7 +141,7 @@
     broj_clanske_karte INT NOT NULL, 
     datum_uzimanja DATE NOT NULL,
     FOREIGN KEY (inventarski_broj, broj_clanske_karte, datum_uzimanja) 
-    REFERENCES pozajmice(inventarski_broj, broj_clanske_karte, datum_uzimanja) 
+    REFERENCES pozajmice(inventarski_broj, broj_clanske_karte, datum_uzimanja), 
     UNIQUE (inventarski_broj, broj_clanske_karte, datum_uzimanja) )
 
 Након што су све табеле креиране, појављују се на списку у прозору *Object Explorer*. Уколико се не виде, потребно је кликнути *Refresh*.

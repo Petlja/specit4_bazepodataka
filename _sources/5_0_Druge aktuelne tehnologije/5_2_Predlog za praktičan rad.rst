@@ -94,15 +94,17 @@
 
 Следећа слика илуструје фолдер у којем се налази наша веб-апликација. 
 
-.. image:: ../../_images/slika_12_2c.jpg
-    :width: 600
-    :align: center
+..
+    .. image:: ../../_images/slika_12_2c.jpg
+        :width: 600
+        :align: center
 
 Да бисмо имали тачну путању до фајла која нам је неопходна да покренемо програм, можемо да употребимо опцију *Copy adress* када урадимо десни клик мишем у прозору *File Explorer*. 
 
-.. image:: ../../_images/slika_12_2d.jpg
-    :width: 600
-    :align: center
+..
+    .. image:: ../../_images/slika_12_2d.jpg
+        :width: 600
+        :align: center
 
 Након тога у командној линији се постављамо у директоријум у коме смо креирали датотеку *app.py* тако што напишемо:
 
@@ -112,9 +114,10 @@
 
 После покретања *Flask* апликације командом *flask run*, апликацији можемо приступити из прегледача веба.
 
-.. image:: ../../_images/slika_12_2e.jpg
-    :width: 600
-    :align: center
+..
+    .. image:: ../../_images/slika_12_2e.jpg
+        :width: 600
+        :align: center
 
 У адресну линију прегледача, на пример прегледача Chrome, унети адресу http://127.0.0.1:5000/artists, како је приказано на следећој слици.
 
@@ -124,6 +127,7 @@
 
 На следећој слици је приказан изглед апликације. 
 
-.. image:: ../../_images/slika_12_2g.jpg
-    :width: 600
-    :align: center
+..
+    .. image:: ../../_images/slika_12_2g.jpg
+        :width: 600
+        :align: center
