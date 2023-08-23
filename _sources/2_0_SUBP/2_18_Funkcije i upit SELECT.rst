@@ -152,3 +152,21 @@
     FROM broj_primeraka_knjiga_izdavaca()
 
 Резултат овог упита може да се види на следећој слици. Иако ова функција нема параметре, заграде су обавезне и код креирања и код позива. 
+
+.. image:: ../../_images/slika_517d.jpg
+    :width: 600
+    :align: center
+
+Исту функцију можемо да употребимо и у неком другом упиту. Можемо, на пример, да издвојимо књиге са бројем примерака који имамо у библиотеци само за једног издавача. 
+
+::
+
+    SELECT naziv_knjige, broj_primeraka
+    FROM broj_primeraka_knjiga_izdavaca()
+    WHERE naziv_izdavaca = 'Laguna'
+
+Резултат овог упита може да се види на следећој слици.
+
+.. image:: ../../_images/slika_517e.jpg
+    :width: 600
+    :align: center

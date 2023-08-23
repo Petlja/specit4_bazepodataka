@@ -21,9 +21,13 @@
 
 Сетимо се програмског кода за креирање табеле *autori*. 
 
-.. image:: ../../_images/slika_510b.jpg
-    :width: 600
-    :align: center
+::
+
+    CREATE TABLE autori
+    ( id_autora INT PRIMARY KEY, 
+    ime VARCHAR(15) NOT NULL, 
+    prezime VARCHAR(15) NOT NULL )
+
 
 Како је потребно да унесемо податке у ову табелу, вредности које уносимо треба да буду одговарајућег типа. 
 
