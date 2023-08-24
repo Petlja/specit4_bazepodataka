@@ -51,12 +51,14 @@
 Потребно је да додамо, након ових наредби, а унутар простора за писање догађаја *Form1_Load*, следеће команде којима се крије свих пет објекта *DataGridView*.
 
 ::
+    private void button1_Click(object sender, EventArgs e)
+    {
 
-    dataGridView1.Visible = false;
-    dataGridView2.Visible = false;
-    dataGridView3.Visible = false;
-    dataGridView4.Visible = false;
-    dataGridView5.Visible = false;
+        dataGridView1.Visible = false;
+        dataGridView2.Visible = false;
+        dataGridView3.Visible = false;
+        dataGridView4.Visible = false;
+        dataGridView5.Visible = false;
 
 На следећој слици се види комплетан програмски код који се извршава приликом покретања програма. 
 

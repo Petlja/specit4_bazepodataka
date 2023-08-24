@@ -16,6 +16,7 @@ description:
     - Инсталиран систем за управљање базама података Microsoft SQL Server Management Studio (линк за инсталацију је дат у склопу курса );
     - Инсталирано развојно окружење Visual Studio (линк за инсталацију је дат у склопу курса );
     - Креиран онлајн налог за приступ систему за управљање базама података Oracle Apex (линк за креирање налога је дат у склопу курса).
+    - Креиран онлјан налог за приступ систему за управљање базама података Oracle Apex (линк за креирање налога је дат у склопу курса).
   toc:
     - Intro to Petljadoc INDEX.yaml
   externalLinks:  
@@ -411,20 +412,20 @@ lessons:
         description: #Optional
         guid: 90346c15-dc65-4439-874a-d22f851a2b54
       - type: reading
-        title: 3.1 9Програм са угнежђеним упитом - нерешени задаци
+        title: 3.1 9 Програм са класом
+        file: 3_15_Program sa klasom.rst
+        description: #Optional
+        guid: 277f09c4-4231-469d-a932-566d9b9870bd
+      - type: reading
+        title: 3.1 10 Програм са угнежђеним упитом - нерешени задаци
         file: 3_13_Program sa ugnežđenim upitom - nerešeni zadaci.rst
         description: #Optional
         guid: 6cdbaf0d-9a97-44e6-aa09-687e6f841aaf
       - type: reading
-        title: 3.1 10 Програм са угнежђеним командама INSERT, UPDATE, и DELETE
+        title: 3.1 11 Програм са угнежђеним командама INSERT, UPDATE, и DELETE
         file: 3_14_Program sa ugnežđenim komandama INSTERT, UPDATE, DELETE.rst
         description: #Optional
         guid: 6ba6eae4-7b77-46f6-bb71-23af43b1aef8
-      - type: reading
-        title: 3.1 11 Програм са класом
-        file: 3_15_Program sa klasom.rst
-        description: #Optional
-        guid: 277f09c4-4231-469d-a932-566d9b9870bd
       - type: reading
         title: 3.2 1 База података за библиотеку - програм са угнежђеним упитом SELECT из једне табеле - задаци
         file: 3_16_Biblioteka - ugnežđeni upit select - zadaci.rst

@@ -54,7 +54,7 @@
     :width: 780
     :align: center
 
-Први корак је додавање раније креиране базе података новом пројекту. У прозору *Solution Explorer* је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере* Add/Existing Item...* са менија који се појави. 
+Први корак је додавање раније креиране базе података новом пројекту. У прозору *Solution Explorer* је потребно да се кликне десни тастер миша над називом пројекта, а затим да се изабере *Add/Existing Item...* са менија који се појави. 
 
 .. image:: ../../_images/slika_31f.jpg
     :width: 780
@@ -74,7 +74,7 @@
 
 Када додамо објекат класе *DataGridView*, његов подразумевани назив је исти само са почетним малим словом и бројем један *dataGridView1*. Исто правило именовања важи и када додајемо у програм објекте других класа, на пример, класе *Button*. Редом како их додајемо, објекти класе *Button* ће добијати називе *button1*, *button2*, *button3*...
 
-Неопходно је да изаберемо податке који ће бити приказани у програму у оквиру табеле *DataGridView*. У горњем десном углу постоји мала стрелица која води до падајућег менија Choose Data Source. Са падајућег менија изабрати *Add Project Data Source...*
+Неопходно је да изаберемо податке који ће бити приказани у програму у оквиру табеле *DataGridView*. У горњем десном углу постоји мала стрелица која води до падајућег менија *Choose Data Source*. Са падајућег менија изабрати *Add Project Data Source...*
 
 .. image:: ../../_images/slika_31i.jpg
     :width: 780
@@ -113,8 +113,8 @@
 ::
 
     "Data Source=(LocalDB)\\MSSQLLocalDB;
-    AttachDbFilename=
-    C:\\Users\\Dusa\\Documents\\SQL Server Management Studio\\Biblioteka_knjige.mdf;
+    AttachDbFilename=C:\\Users\\Dusa\\Documents
+    \\SQL Server Management Studio\\Biblioteka_knjige.mdf;
     Integrated Security=True;Connect Timeout=30"
 
 .. image:: ../../_images/slika_31o.jpg
