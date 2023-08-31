@@ -33,7 +33,7 @@
         GROUP BY broj_clanske_karte, ime, prezime
 
     .. image:: ../../_images/slika_810a.jpg
-        :width: 600
+        :width: 780
         :align: center
 
     Уколико би се изоставило спољно спајање LEFT OUTER, не би био приказан члан који није имао позајмице. 
@@ -85,7 +85,7 @@
         END
 
     .. image:: ../../_images/slika_810b.jpg
-        :width: 600
+        :width: 400
         :align: center
     
     У наредном задатку, који је сличан, приказаћемо други начин да се приступи решавању овог проблема, а без спајања табела, без потребе да водимо рачуна о спољном спајању, и без употребе GROUP BY.
@@ -123,7 +123,7 @@
         END
 
     .. image:: ../../_images/slika_810c.jpg.jpg
-        :width: 600
+        :width: 400
         :align: center
 
 .. questionnote::

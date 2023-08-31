@@ -203,5 +203,5 @@
     END
 
 .. image:: ../../_images/slika_82c.jpg
-   :width: 600
+   :width: 300
    :align: center

@@ -70,7 +70,7 @@ clanovi(**broj_clanske_karte**, ime, prezime, adresa, telefon, mejl_adresa)
 Резултат рада програма може да се види на следећој слици. 
 
 .. image:: ../../_images/slika_91b.jpg
-    :width: 600
+    :width: 450
     :align: center
 
 Исту процедуру можемо да употребимо и у неком другом програму. На пример, можемо да обришемо програм који смо написали у едитору и напишемо следећи програм у којем ћемо за сваког члана да прикажемо ове податке. 
@@ -86,7 +86,7 @@ clanovi(**broj_clanske_karte**, ime, prezime, adresa, telefon, mejl_adresa)
     END
 
 .. image:: ../../_images/slika_91c.jpg
-    :width: 600
+    :width: 450
     :align: center
 
 

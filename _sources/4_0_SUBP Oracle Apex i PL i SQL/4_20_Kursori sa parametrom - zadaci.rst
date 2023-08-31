@@ -86,7 +86,7 @@
 Део резултата рада програма може да се види на следећој слици.
 
 .. image:: ../../_images/slika_86a.jpg
-   :width: 600
+   :width: 450
    :align: center
 
 .. questionnote::

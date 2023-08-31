@@ -121,9 +121,9 @@
             END IF;
         END
 
-.. image:: ../../_images/slika_11_2a.jpg
-    :width: 600
-    :align: center
+    .. image:: ../../_images/slika_11_2a.jpg
+        :width: 600
+        :align: center
 
 Курсор
 -------

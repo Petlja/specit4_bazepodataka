@@ -24,7 +24,7 @@
 Након што се кликне дугме *Create*, потребно је изабрати опцију *New Application*. 
 
 .. image:: ../../_images/slika_10b.jpg
-    :width: 600
+    :width: 300
     :align: center
 
 Први кораци у креирању апликације су унос назива и избор изгледа саме апликације. 
@@ -56,7 +56,7 @@
 
 
 .. image:: ../../_images/slika_10f.jpg
-    :width: 600
+    :width: 300
     :align: center
 
 Појавиће се прозор који можете да видите на следећој слици. 
@@ -97,5 +97,5 @@
 Да би се завршио процес креирања апликације, потребно је да се кликне дугме Create Application. 
 
 .. image:: ../../_images/slika_10k.jpg
-    :width: 600
+    :width: 300
     :align: center

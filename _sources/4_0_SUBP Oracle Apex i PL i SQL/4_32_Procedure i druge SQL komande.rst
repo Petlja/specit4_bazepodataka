@@ -58,7 +58,7 @@ izdavaci(**id**, naziv, adresa, veb_sajt
     SELECT telefon FROM clanovi WHERE broj_clanske_karte = 11
 
 .. image:: ../../_images/slika_96a.jpg
-    :width: 600
+    :width: 300
     :align: center
 
 У једној процедури можемо да имамо и више команди. Рецимо да треба да се уради корекција плата и да се у сваком тиму менаџеру смањи плата за одређени проценат, а свим запосленим у том тиму да се плата повећа за исти проценат. Процедура ће имати две команде UPDATE. 

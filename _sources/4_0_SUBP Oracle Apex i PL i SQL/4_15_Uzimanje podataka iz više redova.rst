@@ -66,7 +66,7 @@
    :align: center
 
 .. image:: ../../_images/slika_81b.jpg
-   :width: 600
+   :width: 300
    :align: center
 
 Можемо да користимо променљиву сложеног типа да у њу учитамо цео ред. 
