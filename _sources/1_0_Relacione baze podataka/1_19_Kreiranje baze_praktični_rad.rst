@@ -10,7 +10,7 @@
 На следећој слици је приказан модел базе података у којој чувамо основне податке о филмовима, жанровима и глумцима.
 
 .. image:: ../../_images/slika_141a.jpg
-    :width: 780
+    :width: 545
     :align: center
 
 У филму „Indiana Jones“ из 1981. године глуми Harrison Ford. У филму „Hunger Games“ из 2012. године глуми Jennifer Lawrence. У филмовима „Star Wars: Episode IV“, „Star Wars: Episode V“ и „Star Wars: Episode VI“ глуме Harrison Ford и Carrie Fisher. Филм „Indiana Jones“ је „avantura“, док су остали „fantastika“.
@@ -20,7 +20,7 @@
 Кликнути десни тастер миша над **Databases** у прозору *Object Explorer* и изабрати *New Database...*
 
 .. image:: ../../_images/slika_141b.jpg
-    :width: 780
+    :width: 600
     :align: center
 
 Унети назив нове базе података и кликнути дугме OK. 
@@ -50,7 +50,7 @@
 После сваке успешно извршене команде појави се одговарајућа порука.
 
 .. image:: ../../_images/slika_141f.jpg
-    :width: 780
+    :width: 350
     :align: center
 
 Након што се свака команда изврши, све табеле ће остати сачуване у бази података за даљу употребу. Фајл *SQLQuery1.sql* може, а и не мора да се сачува.

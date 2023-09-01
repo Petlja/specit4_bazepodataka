@@ -13,13 +13,13 @@
 Након што се унесе програмски код, кликне се на дугме *Execute*. Уколико се у простору за писање команди налази више блокова кода, потребно је обележити онај који желимо да покренемо. Ако имате више база података, обавезно проверите да ли је поред овог дугмета назив базе у којој желите да покрећете програме.  
 
 .. image:: ../../_images/slika_521a.jpg
-    :width: 600
+    :width: 350
     :align: center
 
 Сви приказани задаци су у вези са табелама које чине базу података за библиотеку. Следи списак свих табела са колонама. Примарни кључеви су истакнути болд, а страни италик. 
 
 .. image:: ../../_images/slika_521b.jpg
-    :width: 600
+    :width: 780
     :align: center
 
 .. questionnote::
@@ -87,7 +87,7 @@
         EXEC clanovi_sa_kaznama
 
     .. image:: ../../_images/slika_524a.jpg
-        :width: 600
+        :width: 400
         :align: center
 
 .. questionnote::
@@ -266,7 +266,7 @@
         EXEC mejlovi_zaposlenih_po_timovima
 
     .. image:: ../../_images/slika_524b.jpg
-        :width: 600
+        :width: 400
         :align: center
 
     Друго решење.
@@ -286,5 +286,5 @@
         EXEC mejlovi_zaposlenih_po_timovima2
 
     .. image:: ../../_images/slika_524c.jpg
-        :width: 600
+        :width: 400
         :align: center
