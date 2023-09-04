@@ -1,6 +1,6 @@
 courseId: specit4_bazepodataka 
 lang: sr-Cyrl
-title: Базе података за четврти разред гимназија за ученике са посебним способностима за рачунарство и информатику
+title: Базе података за четврти разред специјализованих ИТ одељења
 description:
   willLearn: 
     - Како се разматра и решава сложенији проблем разбијајући га на мање потпроблеме; 
@@ -36,7 +36,7 @@ description:
     <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
     <br />Овај курс Фондација Петља објавила je под лиценцом <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)</a>.
     </p>  
-  shortDescription: Базе података за четврти разред гимназија за ученике са посебним способностима за рачунарство и информатику.
+  shortDescription: Базе података за четврти разред специјализованих ИТ одељења.
 
 
 lessons:
