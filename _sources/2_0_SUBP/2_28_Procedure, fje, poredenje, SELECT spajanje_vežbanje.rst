@@ -87,7 +87,7 @@
         EXEC clanovi_sa_kaznama
 
     .. image:: ../../_images/slika_524a.jpg
-        :width: 400
+        :width: 375
         :align: center
 
 .. questionnote::

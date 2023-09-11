@@ -44,7 +44,7 @@
     END
 
 .. image:: ../../_images/slika_94b.jpg
-    :width: 300
+    :width: 150
     :align: center
 
 Исту функцију можемо да позовемо и у другом програму тако што ћемо за сваку књигу приказати укупан број позајмица. 
@@ -61,7 +61,7 @@
     END
 
 .. image:: ../../_images/slika_94c.jpg
-    :width: 600
+    :width: 500
     :align: center
 
 .. questionnote::
@@ -98,5 +98,5 @@
     END
 
 .. image:: ../../_images/slika_94d.jpg
-    :width: 450
+    :width: 300
     :align: center

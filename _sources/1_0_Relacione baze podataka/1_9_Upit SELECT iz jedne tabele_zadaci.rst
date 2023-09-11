@@ -26,7 +26,7 @@
     WHERE datum_zaposlenja<'2014-06-01' AND plata<70000
 
 .. image:: ../../_images/slika_122a.jpg
-    :width: 600
+    :width: 500
     :align: center
 
 У овом упиту су издвојени подаци из колона *ime*, *prezime* и *plata*, и подаци из оних редова који одговарају постављеним условима. 

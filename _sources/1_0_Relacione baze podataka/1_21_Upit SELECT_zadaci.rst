@@ -10,7 +10,7 @@
 Сви SELECT упити који следе обрађују податке из базе података за колекцију филмова. Следи списак свих табела са колонама. Примарни кључеви су истакнути болд, а страни италик. 
 
 .. image:: ../../_images/slika_143a.jpg
-    :width: 780
+    :width: 600
     :align: center
 
 Упити се пишу и покрећу када се кликне *New Query* након што се покрене систем *SQL Server* и кликне на креирану базу *Kolekcija_filmova* у прозору *Object Explorer*. Фајл са упитима *SQLQuery1.sql* може, а и не мора да се сачува.
@@ -18,7 +18,7 @@
 Након што се унесе једна команда, кликне се на дугме **Execute**. Уколико се у простору за писање команди налази више њих, потребно је обележити ону коју желимо да покренемо. Ако имате више база података, обавезно проверите да ли је поред овог дугмета назив базе у којој желите да вршите упите. 
 
 .. image:: ../../_images/slika_143b.jpg
-    :width: 350
+    :width: 400
     :align: center
 
 .. questionnote::
@@ -31,7 +31,7 @@
     WHERE naziv='Indiana Jones'
 
 .. image:: ../../_images/slika_143c.jpg
-    :width: 600
+    :width: 400
     :align: center
 
 .. questionnote::
@@ -45,7 +45,7 @@
     WHERE zanrovi.naziv='fantastika'
 
 .. image:: ../../_images/slika_143d.jpg
-    :width: 780
+    :width: 500
     :align: center
 
 .. questionnote::
@@ -61,7 +61,7 @@
     WHERE ime='Harrison Ford' ORDER BY naziv
 
 .. image:: ../../_images/slika_143e.jpg
-    :width: 780
+    :width: 600
     :align: center
 
 .. questionnote::
@@ -93,7 +93,7 @@
 Међутим, како нам нису потребни називи филмова, не морамо да укључимо табелу *filmovi*, већ је довољно да спојимо две табеле. 
 
 .. image:: ../../_images/slika_143f.jpg
-    :width: 780
+    :width: 500
     :align: center
 
 .. questionnote::
@@ -109,7 +109,7 @@
     HAVING COUNT(id_filma)>1
 
 .. image:: ../../_images/slika_143g.jpg
-    :width: 780
+    :width: 500
     :align: center
 
 .. questionnote::

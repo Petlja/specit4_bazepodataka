@@ -23,10 +23,10 @@
 
 .. infonote::
 
-    НАПОМЕНА: Препоручљиво је да се у сваки назив табеле на почетак дода *sa_* да би ове табеле биле груписане на списку свих табела које имамо на онлајн налогу *Oracle APEX*. Тако су предложени називи табела базе података за салон аутомобила *sa_proizvodjaci, sa_kategorije и sa_modeli*.
+    Препоручљиво је да се у сваки назив табеле на почетак дода *sa_* да би ове табеле биле груписане на списку свих табела које имамо на онлајн налогу *Oracle APEX*. Тако су предложени називи табела базе података за салон аутомобила *sa_proizvodjaci, sa_kategorije и sa_modeli*.
 
 .. image:: ../../_images/slika_11_1a.jpg
-    :width: 800
+    :width: 600
     :align: center 
 
 Следе подаци које треба унети у базу командама INSERT INTO.
@@ -332,7 +332,7 @@ sa_modeli (id_modela, oznaka, jacina_motora, broj_vrata, tip_goriva, pib, id_kat
         END
 
     .. image:: ../../_images/slika_11_1d.jpg
-        :width: 600
+        :width: 450
         :align: center
 
 Процедуре

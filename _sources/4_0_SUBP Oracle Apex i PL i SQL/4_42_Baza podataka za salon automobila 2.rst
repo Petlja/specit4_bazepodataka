@@ -180,7 +180,7 @@
 
 
     .. image:: ../../_images/slika_11_2b.jpg
-        :width: 600
+        :width: 400
         :align: center
 
 .. questionnote::
@@ -477,7 +477,7 @@
         END
 
     .. image:: ../../_images/slika_11_2d.jpg
-        :width: 600
+        :width: 400
         :align: center
 
     Следи PL/SQL програм у којем се процедура позива за све категорије. 

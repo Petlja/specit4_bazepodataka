@@ -129,5 +129,5 @@
 
 
 .. image:: ../../_images/slika_12_2g.jpg
-    :width: 300
+    :width: 200
     :align: center

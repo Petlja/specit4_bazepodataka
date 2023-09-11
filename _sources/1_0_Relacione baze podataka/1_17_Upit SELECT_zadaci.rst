@@ -10,7 +10,7 @@
 Сви SELECT упити који следе обрађују податке из базе података за евиденцију издатих возачких дозвола. Следи списак свих табела са колонама. Примарни кључеви су истакнути болд, а страни италик. 
 
 .. image:: ../../_images/slika_133a.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 Упити се пишу и покрећу када се кликне *New Query* након што се покрене систем *SQL Server* и кликне на креирану базу *Izdate_dozvole* у прозору *Object Explorer*. Фајл са упитима *SQLQuery1.sql* може, а и не мора да се сачува.
@@ -32,7 +32,7 @@
     WHERE broj_dozvole='000123175'
 
 .. image:: ../../_images/slika_133c.jpg
-    :width: 600
+    :width: 350
     :align: center
 
 .. questionnote::
@@ -60,7 +60,7 @@
     WHERE k.oznaka='B'
 
 .. image:: ../../_images/slika_133d.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 .. questionnote::
@@ -86,7 +86,7 @@
     WHERE broj_dozvole='001560375'
 
 .. image:: ../../_images/slika_133e.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 .. questionnote::
@@ -103,7 +103,7 @@
     ORDER BY oznaka
 
 .. image:: ../../_images/slika_133f.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 .. questionnote::
@@ -121,7 +121,7 @@
     WHERE gradovi.naziv='BEOGRAD'
 
 .. image:: ../../_images/slika_133g.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 .. questionnote::
@@ -153,13 +153,13 @@
     GROUP BY broj_dozvole
 
 .. image:: ../../_images/slika_133h.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 На следећој слици можемо да видимо како су пребројане категорије за сваку дозволу. 
 
 .. image:: ../../_images/slika_133i.jpg
-    :width: 780
+    :width: 580
     :align: center
 
 .. questionnote::
@@ -177,7 +177,7 @@
     HAVING COUNT(id_kategorije)>1
 
 .. image:: ../../_images/slika_133j.jpg
-    :width: 780
+    :width: 700
     :align: center
 
 .. questionnote::

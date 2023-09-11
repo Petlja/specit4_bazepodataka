@@ -4,13 +4,13 @@
 Након што је креирана комплетна база података, можемо да креирамо њен дијаграм. Кликнути десни тастер миша над *Database Diagrams* под базом података за евиденцију издатих возачких дозвола и изабрати *New Database Diagram*. 
 
 .. image:: ../../_images/slika_132a.jpg
-    :width: 600
+    :width: 450
     :align: center
 
 У наредном кораку додати све табеле. 
 
 .. image:: ../../_images/slika_132b.jpg
-    :width: 600
+    :width: 450
     :align: center
 
 Према потреби зумирати или одаљити слику и испремештати табеле. Добијени дијаграм је приказан на следећој слици. 
@@ -22,7 +22,7 @@
 Дијаграм може да се сачува. 
 
 .. image:: ../../_images/slika_132d.jpg
-    :width: 600
+    :width: 400
     :align: center
 
 Након чувања може да се пронађе у прозору *Object Explorer* и да се поново отвори. Уколико се не прикаже одмах, потребно је урадити *Refresh*. 
@@ -38,13 +38,13 @@
     :align: center
 
 .. image:: ../../_images/slika_132g.jpg
-    :width: 600
+    :width: 500
     :align: center
 
 .. image:: ../../_images/slika_132h.jpg
-    :width: 600
+    :width: 500
     :align: center
 
 .. image:: ../../_images/slika_132i.jpg
-    :width: 600
+    :width: 500
     :align: center

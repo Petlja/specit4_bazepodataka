@@ -152,7 +152,7 @@
         EXEC clanovi_kazne
 
     .. image:: ../../_images/slika_525a.jpg
-        :width: 400
+        :width: 375
         :align: center
 
 
@@ -196,7 +196,7 @@
         EXEC clanovi_kazne2
 
     .. image:: ../../_images/slika_525b.jpg
-        :width: 400
+        :width: 375
         :align: center
 
 **Задатак 4**: Приказати имена и презимена чланова, уз број плаћених казни, који имају више од једне плаћене казне.
