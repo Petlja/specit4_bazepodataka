@@ -2,9 +2,9 @@
 
 Ovaj repozitorijum posvećen je kursu za  Baze podataka za četvrti razred specijalizovanih IT odeljenja.
 
-Kurs je na Petljom portalu dotupan ovde: [https://petlja.org/kurs/11233/0](https://petlja.org/kurs/11233/0)
+Kurs je na Petljinom portalu dotupan ovde: [https://petlja.org/kurs/11233/0](https://petlja.org/kurs/11233/0)
 
-Kurs možete integrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_bazepodataka/releases
+Kurs možete inntegrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_bazepodataka/releases
 
 ## Konverzija u *HTML*
 
