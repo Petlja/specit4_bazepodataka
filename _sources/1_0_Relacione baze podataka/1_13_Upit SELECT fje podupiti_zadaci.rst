@@ -74,6 +74,16 @@
     GROUP BY ime, prezime
     ORDER BY ime, prezime
 
+Уколико два члана имају исто име и презиме, овај упит ће за те чланове дати погрешне податке зато што ће их посматрати као једну особу. Упит може да се прошири тако да се приказује и број чланске карте. 
+
+::
+
+    SELECT clanovi.broj_clanske_karte, ime, prezime, COUNT(*)
+    FROM kazne JOIN clanovi
+    ON (kazne.broj_clanske_karte=clanovi.broj_clanske_karte)
+    GROUP BY clanovi.broj_clanske_karte, ime, prezime
+    ORDER BY clanovi.broj_clanske_karte, ime, prezime
+
 **Задатак 4:** Написати упит којим се приказују имена и презимена чланова, уз број плаћених казни, који имају више од једне плаћене казне. Списак уредити по члановима.
 
 ::
@@ -84,6 +94,8 @@
     GROUP BY ime, prezime
     HAVING COUNT(*)>1
     ORDER BY ime, prezime
+
+Ако именујемо последњу колону као, на пример, *br_kazni*, у делу HAVING не би могло да пише *br_kazni>1*  јер се именовање колона у резултату упита врши након издвајања података. 
 
 **Задатак 5:** Написати упит који враћа име и презиме члана који је платио највећи износ казне до сада. 
 
@@ -118,11 +130,13 @@
     ON (clanovi.broj_clanske_karte=clanarine.broj_clanske_karte)
     WHERE ime='Milica' AND prezime='Zoranovic'
 
+Ако би постојала два или више чланова са овим именом и презименом добио би се укупан резултат за све кориснике са тим именом и презименом. 
+
 .. questionnote::
 
     3. Библиотека разматра да наручи још књига Завода за уџбенике. Да би донели ту одлуку, потребно је да се види колико су књиге овог издавача тражене. 
 
-**Задатак 1:** Написати упит којим се приказује укупан број позајмице књига чији је издавач Завод за уџбенике. 
+**Задатак 1:** Написати упит којим се приказује укупан број позајмица књига чији је издавач Завод за уџбенике. 
 
 ::
 
@@ -150,6 +164,18 @@
     :align: center
 
 Овај извештај нам даје више података од претходног, зато што имамо јасан преглед и које књиге ове издавачке куће су тражене. 
+
+Ако постоји више књига са истим називом, нећемо добити исправне податке. Упит може да се допуни тако да се приказује идентификациони број књиге који ће бити укључен и у груписање.  
+
+::
+
+    SELECT knjige.id_knjige, knjige.naziv, COUNT(*)
+    FROM pozajmice JOIN primerci
+    ON (pozajmice.inventarski_broj=primerci.inventarski_broj)
+    JOIN knjige ON (primerci.id_knjige=knjige.id_knjige)
+    JOIN izdavaci ON (knjige.id_izdavaca=izdavaci.id)
+    WHERE izdavaci.naziv='Zavod za udzbenike'
+    GROUP BY knjige.id_knjige, knjige.naziv
 
 **Задатак 3:** Написати упит којим се приказује за сваког издавача укупан број позајмица његових књига. 
 
@@ -244,7 +270,7 @@
 ::
 
     SELECT DISTINCT ime+' '+prezime
-    ROM clanovi JOIN pozajmice ON (pozajmice.broj_clanske_karte=clanovi.broj_clanske_karte)
+    FROM clanovi JOIN pozajmice ON (pozajmice.broj_clanske_karte=clanovi.broj_clanske_karte)
     JOIN primerci ON (pozajmice.inventarski_broj=primerci.inventarski_broj)
     WHERE id_knjige =ANY (
     SELECT id_knjige

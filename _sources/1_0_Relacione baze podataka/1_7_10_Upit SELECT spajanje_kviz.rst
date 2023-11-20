@@ -72,5 +72,5 @@
         :answer_d: FROM knjige, izdavaci ON (id_izdavaca.knjige=id.izdavaci)
         :correct: b
 
-        У табели knjige постоји страни кључ id_izdavaca који показује на примерни кључ, колону id табеле izdavaci. Како правилно изгледа спајање ове две табеле?
+        У табели *knjige* постоји страни кључ *id_izdavaca* који показује на примарни кључ, колону *id* табеле *izdavaci*. Како правилно изгледа спајање ове две табеле?
 

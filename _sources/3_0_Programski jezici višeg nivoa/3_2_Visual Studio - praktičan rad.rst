@@ -51,6 +51,7 @@
 Потребно је да додамо, након ових наредби, а унутар простора за писање догађаја *Form1_Load*, следеће команде којима се крије свих пет објекта *DataGridView*.
 
 ::
+
     private void button1_Click(object sender, EventArgs e)
     {
 
@@ -72,7 +73,11 @@
 
 .. code-block:: Csharp
 
+
+    private void button1_Click(object sender, EventArgs e)
+
     {
+        {
             dataGridView1.Visible = true;
             dataGridView2.Visible = false;
             dataGridView3.Visible = false;
@@ -115,6 +120,7 @@
             dataGridView4.Visible = false;
             dataGridView5.Visible = true;
         }
+    }
 
 У прозору *Properties* може да се пронађе фајл *App.config* који је у *XML* формату и у којем може да се пронађе конекциони стринг.  
 

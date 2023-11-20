@@ -78,7 +78,7 @@
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             double procenat = double.Parse(textBox1.Text);
@@ -106,7 +106,7 @@
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             int broj = int.Parse(textBox1.Text);
@@ -132,7 +132,7 @@
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string ime = textBox1.Text;
@@ -165,7 +165,7 @@
         RETURN @broj;
     END
 
-Програмски код.
+Следи програмски код.
 
 .. code-block:: Csharp
 
@@ -194,7 +194,7 @@
 
 .. code-block::
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -214,7 +214,7 @@
 
 .. code-block::
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -239,7 +239,7 @@
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -264,11 +264,11 @@
     WHERE datum_vracanja IS NULL
     ORDER BY datum_uzimanja
 
-Програмски код.
+Следи програмски код.
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(KONEKCIONI_STRING);
             SqlDataAdapter da = new SqlDataAdapter();
@@ -284,11 +284,11 @@
 
     7. Члан библиотеке са својом чланском картом чији је број 33 је дошао да позајми неке књиге. Пре него што му библиотека изда нове књиге, потребно је да се провери да ли члан тренутно држи неке књиге код себе. 
 
-**Задатак:** Приказати датуме узимања и инвентарске бројеви књига које се тренутно налазе код члана са датим бројем чланске карте. 
+**Задатак:** Приказати датуме узимања и инвентарске бројевe књига које се тренутно налазе код члана са датим бројем чланске карте. 
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -319,11 +319,11 @@
     WHERE broj_clanske_karte=@broj_clanske_karte 
     AND datum_vracanja IS NULL
 
-Програмски код.
+Следи програмски код.
 
 .. code-block:: Csharp
 
-    private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -343,7 +343,7 @@
 
 .. code-block:: Csharp
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -372,11 +372,11 @@
     WHERE broj_clanske_karte=@broj_clanske_karte
     ORDER BY datum_uzimanja DESC, datum_vracanja DESC, inventarski_broj
 
-Програмски код.
+Следи програмски код.
 
 .. code-block::
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(KONEKCIONI_STRING);
             SqlDataAdapter da = new SqlDataAdapter();

@@ -78,7 +78,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -164,7 +164,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(KONEKCIONI_STRING);
             SqlDataAdapter da = new SqlDataAdapter();
@@ -190,7 +190,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -347,7 +347,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;

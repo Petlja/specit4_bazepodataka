@@ -43,7 +43,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -105,7 +105,7 @@
 
 
 
-**Задатак 4**: Приказати имена и презимена чланова, уз број плаћених казни. Списак уредити по члановима.
+**Задатак 4**: : Приказати број чланске карте, име и презиме сваког члана, уз број плаћених казни. Списак уредити по члановима.
 
 .. reveal:: pitanje_317d
     :showtitle: Прикажи решење
@@ -117,11 +117,11 @@
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
-            cmd = "SELECT ime, prezime, COUNT(*) " +
+            cmd = "SELECT clanovi.broj_clanske_karte, ime, prezime, COUNT(*) " +
                 "FROM kazne JOIN clanovi " +
                 "ON(kazne.broj_clanske_karte = clanovi.broj_clanske_karte) " +
-                "GROUP BY ime, prezime " +
-                "ORDER BY ime, prezime";
+                "GROUP BY clanovi.broj_clanske_karte, ime, prezime " +
+                "ORDER BY clanovi.broj_clanske_karte, ime, prezime";
             SqlDataAdapter da = new SqlDataAdapter(cmd, conText);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -153,6 +153,7 @@
             dataGridView1.DataSource = dt;
         }
 
+    Потребно је употребити спољно спајање LEFT OUTER JOIN да би се на списку појавио и запослени који нема менаџера.
 
 
 **Задатак 6:** Приказати име и презиме члана који је платио највећи износ казне до сада. 
@@ -165,7 +166,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -245,7 +246,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -306,7 +307,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;
@@ -332,7 +333,7 @@
 
     .. code-block:: Csharp
 
-                private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string conText = KONEKCIONI_STRING;
             string cmd;

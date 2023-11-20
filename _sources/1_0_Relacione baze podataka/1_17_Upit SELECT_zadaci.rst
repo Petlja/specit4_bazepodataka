@@ -197,3 +197,5 @@
         ON (kategorije_dozvole.id_dozvole=vozacke_dozvole.id)
         JOIN kategorije ON (kategorije_dozvole.id_kategorije=kategorije.id)
         WHERE oznaka='B' AND ime='Branislav' AND prezime='Zoranovic')
+
+Када би постојале две особе са именом и презименом Бранислав Зораноић овај упит не би био коректан зато што би подупит вратио више вредности. Једно од могућих проширења је да се користи <ALL пре подупита. 

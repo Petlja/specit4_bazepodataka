@@ -131,7 +131,7 @@ lessons:
         file: 1_7_7_Upit SELECT fje podupiti_zadaci.rst
         guid: 2a9f3334-fba6-4448-a0ca-1e4c7e6a0f3b
       - type: quiz
-        title: 1.1 5 Упит SELECT - фунцкије и подупити - квиз
+        title: 1.1 5 Упит SELECT - функције и подупити - квиз
         file: 1_7_8_Upit SELECT fje podupiti_kviz.rst
         guid: 89599bb3-32be-4391-a962-9836143404ad
       - type: reading
@@ -362,7 +362,7 @@ lessons:
         description: #Optional
         guid: 78149668-5251-476d-83c4-83245d288467
       - type: reading
-        title: 3.0 3 Писање програма у развојном окружењу Visual Studio - stored procedure
+        title: 3.0 3 Писање програма у развојном окружењу Visual Studio - процедуре
         file: 3_3_Visual Studio - stored procedure.rst
         description: #Optional
         guid: 81e19c58-fbc7-4ae2-ac44-32ac90feac06
