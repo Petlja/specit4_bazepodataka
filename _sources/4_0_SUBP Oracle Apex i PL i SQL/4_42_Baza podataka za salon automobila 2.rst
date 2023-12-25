@@ -23,11 +23,10 @@
 
 Креирати PL/SQL програме који узимају податке из базе података за салон аутомобила. Следи списак свих табела са колонама. Примарни кључеви су истакнути болд, а страни италик. 
 
-::
+.. image:: ../../_images/slika_rec1.jpg
+    :width: 600
+    :align: center
 
-    sa_kategorije(id_kategorije, naziv, opis)
-    sa_proizvodjaci(pib, maticni_broj, naziv, adresa)
-    sa_modeli (id_modela, oznaka, jacina_motora, broj_vrata, tip_goriva, pib, id_kategorije)
 
 Задаци су груписани у неколико целина.
 
@@ -252,7 +251,7 @@
     :showtitle: Прикажи одговор
     :hidetitle: Сакриј одговор
 
-    Како и категорија и произвођач имају назив, има смисла да у курсору одговарајућа поља преименујемо, тако да ће *sa_kategorije.naziv* бити *k*ategorija*, а *sa_proizvodjaci.naziv* ће бити *proizvodjac*.
+    Како и категорија и произвођач имају назив, има смисла да у курсору одговарајућа поља преименујемо, тако да ће *sa_kategorije.naziv* бити *kategorija*, а *sa_proizvodjaci.naziv* ће бити *proizvodjac*.
 
     ::
 

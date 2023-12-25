@@ -35,7 +35,7 @@
     :width: 300
     :align: center
 
-Назив странице треба да се унесе у поље *Name*. У овом примеру ћемо страницу да назовемо *Pozajmice_knjiga*. Да би могао да се унесе упит, потребно је за *Source Type* изабрати опцију *SQL* Query*. Упит се уписује у поље *Enter a SQL SELECT statement*.
+Назив странице треба да се унесе у поље *Name*. У овом примеру ћемо страницу да назовемо *Pozajmice_knjiga*. Да би могао да се унесе упит, потребно је за *Source Type* изабрати опцију *SQL Query*. Упит се уписује у поље *Enter a SQL SELECT statement*.
 
 .. image:: ../../_images/slika_10_4c.jpg
     :width: 600

@@ -19,7 +19,7 @@
 
 Све команде потребне да се креира база се налазе у скрипт фајлу. Фајл треба да се преузме и сачува негде на рачунару да би се после искористио за креирање базе. 
 
-`biblioteka.sql <_sources\biblioteka.sql>`_ (ОБЕЗБЕДИТИ ПРЕУЗИМАЊЕ ФАЈЛА)
+`biblioteka.sql <https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/specit4_bazepodataka/biblioteka.sql>`_
 
 .. infonote::
 

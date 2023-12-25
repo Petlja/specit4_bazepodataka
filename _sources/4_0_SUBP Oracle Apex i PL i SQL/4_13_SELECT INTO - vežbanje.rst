@@ -174,7 +174,7 @@
             WHERE broj_clanske_karte = 33;
             DBMS_OUTPUT.PUT_LINE ('Broj izdavaca: '||v_broj_izdavaca);
         EXCEPTION
-            WHEN NO_DATA_FOUND THEN DBMS_OUTPUT.PUT_LINE(Nema takvog clana');
+            WHEN NO_DATA_FOUND THEN DBMS_OUTPUT.PUT_LINE('Nema takvog clana');
             WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Doslo je do greske');
         END
 
@@ -309,9 +309,9 @@
             FROM zaposleni WHERE id_menadzera=5;
 
             IF v_prosek_menadzer_5 > v_prosek THEN
-                DBMS_OUTPUT.PUT_LINE('Tim 5 ima prosek plata veci od proseka svih zaposlenih');
+            DBMS_OUTPUT.PUT_LINE('Tim 5 ima prosek plata veci od proseka svih zaposlenih');
             ELSE
-                DBMS_OUTPUT.PUT_LINE('Tim 5 nema prosek plata veci od proseka svih zaposlenih');
+            DBMS_OUTPUT.PUT_LINE('Tim 5 nema prosek plata veci od proseka svih zaposlenih');
             END IF;
         END
 
@@ -356,14 +356,14 @@
             DBMS_OUTPUT.PUT_LINE('Mejl: '||v_mejl);
             EXCEPTION
             WHEN TOO_MANY_ROWS THEN
-                DBMS_OUTPUT.PUT_LINE('Postoji vise zaposlenih sa istim najvecim iznosom plate');
+            DBMS_OUTPUT.PUT_LINE('Postoji vise zaposlenih sa istim najvecim iznosom plate');
         END
 
     Друга опција са једном сложеном променљивом.
     ::
 
         DECLARE 
-            i zaposleni%ROWTYPE;
+            v_zaposleni zaposleni%ROWTYPE;
         BEGIN 
             SELECT * INTO v_zaposleni
             FROM zaposleni WHERE plata = (SELECT MAX(plata) FROM zaposleni);
@@ -372,7 +372,7 @@
             DBMS_OUTPUT.PUT_LINE('Mejl: '||v_zaposleni.mejl);
             EXCEPTION
             WHEN TOO_MANY_ROWS THEN
-                DBMS_OUTPUT.PUT_LINE('Postoji vise zaposlenih sa istim najvecim iznosom plate');
+            DBMS_OUTPUT.PUT_LINE('Postoji vise zaposlenih sa istim najvecim iznosom plate');
         END
 
 .. questionnote::

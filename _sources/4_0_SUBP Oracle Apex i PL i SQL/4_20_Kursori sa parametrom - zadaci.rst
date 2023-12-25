@@ -72,10 +72,10 @@
             v_broj := 0;
             OPEN kursor_primerci(v_red_knjiga.naziv);
             LOOP
-            FETCH kursor_primerci INTO v_red;
-            EXIT WHEN kursor_primerci%NOTFOUND;
-            v_broj := v_broj+1;
-            DBMS_OUTPUT.PUT_LINE('  '||v_broj||'. '||v_red.inventarski_broj);
+                FETCH kursor_primerci INTO v_red;
+                EXIT WHEN kursor_primerci%NOTFOUND;
+                v_broj := v_broj+1;
+                DBMS_OUTPUT.PUT_LINE('  '||v_broj||'. '||v_red.inventarski_broj);
             END LOOP;
             CLOSE kursor_primerci;
             DBMS_OUTPUT.PUT_LINE('  Ukupan broj primeraka: '||v_broj);
@@ -134,8 +134,8 @@
             DBMS_OUTPUT.PUT_LINE('AUTOR: '||v_autor.ime||' '||v_autor.prezime);
             v_broj := 0;
             FOR v_knjiga IN spisak_knjiga(v_autor.id_autora) LOOP
-            v_broj := v_broj+1;
-            DBMS_OUTPUT.PUT_LINE('  '||v_broj||'. '||v_knjiga.naziv);
+                v_broj := v_broj+1;
+                DBMS_OUTPUT.PUT_LINE('  '||v_broj||'. '||v_knjiga.naziv);
             END LOOP;
             DBMS_OUTPUT.PUT_LINE('  Ukupan broj knjiga u biblioteci: '||v_broj);
         END LOOP;

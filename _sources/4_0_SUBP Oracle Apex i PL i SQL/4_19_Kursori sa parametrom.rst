@@ -21,7 +21,7 @@
 
 Илустроваћемо рад са курсором са параметром тако што ћемо приказати све позајмице члана чији се број чланске карте унесе са тастатуре. 
 
-Потребно је креирати курсор са параметром, назовимо га *p_broj_clanske_karte*, који је истог типа као колона *clanovi.broj_clanske_karte* и чија ће се вредност употребити у SELECT упиту да би се издвојиле само позајмице оног члана који има тај број чланске карте. 
+У декларацији курсора се као аргумент наводи назив и тип параметра. У овом случају је потребно креирати курсор са једним параметром, назовимо га p_broj_clanske_karte, који је истог типа као колона clanovi.broj_clanske_karte и чија ће се вредност употребити у SELECT упиту да би се издвојиле само позајмице оног члана који има тај број чланске карте.
 
 Приликом отварања курсора, потребно је проследити конкретну вредност, у овом случају вредност коју смо прочитали са тастатуре и која се налази у променљивој *v_broj_clanske_karte*.
 
@@ -37,10 +37,10 @@
         v_broj_clanske_karte := :broj_clanske_karte;
         OPEN kursor_pozajmica(v_broj_clanske_karte);
         LOOP
-            FETCH kursor_pozajmica INTO v_red_pozajmica;
-            EXIT WHEN kursor_pozajmica%NOTFOUND;
-            DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
-            DBMS_OUTPUT.PUT_LINE('   Inventarski broj: '||v_red_pozajmica.inventarski_broj);
+        FETCH kursor_pozajmica INTO v_red_pozajmica;
+        EXIT WHEN kursor_pozajmica%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
+        DBMS_OUTPUT.PUT_LINE('   Broj: '||v_red_pozajmica.inventarski_broj);
         END LOOP;
         CLOSE kursor_pozajmica;
     END
@@ -51,7 +51,7 @@
    :width: 780
    :align: center
 
-Следи програм у којем се користи имплицитни облик рада са курсором са параметром. 
+Следи програм у којем се користи имплицитни облик рада са курсором са параметром. На самом почетку извршавања циклуса FOR се изврши упит из декларације курсора и том приликом се прослеђује вредност параметра. 
 
 ::
 
@@ -63,8 +63,8 @@
     BEGIN
         v_broj_clanske_karte := :broj_clanske_karte;
         FOR v_red_pozajmica IN kursor_pozajmica(v_broj_clanske_karte) LOOP
-            DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
-            DBMS_OUTPUT.PUT_LINE('   Inventarski broj: '||v_red_pozajmica.inventarski_broj);
+        DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
+        DBMS_OUTPUT.PUT_LINE('   Broj: '||v_red_pozajmica.inventarski_broj);
         END LOOP;
     END
 
@@ -85,8 +85,8 @@
         WHERE broj_clanske_karte=v_broj_clanske_karte; 
         DBMS_OUTPUT.PUT_LINE('Clan: '||v_ime||' '||v_prezime);
         FOR v_red_pozajmica IN kursor_pozajmica(v_broj_clanske_karte) LOOP
-            DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
-            DBMS_OUTPUT.PUT_LINE('   Inventarski broj: '||v_red_pozajmica.inventarski_broj);
+        DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
+        DBMS_OUTPUT.PUT_LINE('   Broj: '||v_red_pozajmica.inventarski_broj);
         END LOOP;
     END
 
@@ -98,7 +98,9 @@
 
 Курсор са параметром можемо да употребимо и у сложенијим задацима као што је пример који следи. 
 
-Приказати све позајмице за сваког члана. Довољно је приказати датум и инвентарски број позајмљеног примерка. 
+.. questionnote::
+    
+    Приказати све позајмице за сваког члана. Довољно је приказати датум и инвентарски број позајмљеног примерка. 
 
 У решењу ћемо употребити један обичан курсор да прођемо кроз списак свих чланова. Курсор са параметром ћемо отворити за сваког члана посебно да бисмо приказали његове позајмице. 
 
@@ -117,7 +119,7 @@
             DBMS_OUTPUT.PUT_LINE('Telefon: '|| v_red_clan.telefon);
             FOR v_red_pozajmica IN kursor_pozajmica(v_red_clan.broj_clanske_karte) LOOP
             DBMS_OUTPUT.PUT_LINE('   Datum pozajmice: '||v_red_pozajmica.datum_uzimanja);
-            DBMS_OUTPUT.PUT_LINE('   Inventarski broj: '||v_red_pozajmica.inventarski_broj);
+            DBMS_OUTPUT.PUT_LINE('   Broj: '||v_red_pozajmica.inventarski_broj);
             END LOOP;
         END LOOP;
     END
@@ -137,7 +139,8 @@
         CURSOR kursor_clan 
             IS SELECT broj_clanske_karte, ime||' '||prezime clan, telefon FROM clanovi;
         CURSOR kursor_pozajmica (p_broj_clanske_karte clanovi.broj_clanske_karte%TYPE) 
-            IS SELECT datum_uzimanja, naziv FROM pozajmice JOIN primerci USING (inventarski_broj)
+            IS SELECT datum_uzimanja, naziv FROM pozajmice JOIN primerci 
+            USING (inventarski_broj)
             JOIN knjige USING (id_knjige) WHERE broj_clanske_karte=p_broj_clanske_karte;
     BEGIN
         FOR v_red_clan IN kursor_clan LOOP
@@ -160,7 +163,8 @@
             IS SELECT broj_clanske_karte, ime||' '||prezime clan, telefon FROM clanovi;
         v_red_clan kursor_clan%ROWTYPE;
         CURSOR kursor_pozajmica (p_broj_clanske_karte clanovi.broj_clanske_karte%TYPE) 
-            IS SELECT datum_uzimanja, naziv FROM pozajmice JOIN primerci USING (inventarski_broj)
+            IS SELECT datum_uzimanja, naziv FROM pozajmice JOIN primerci 
+            USING (inventarski_broj)
             JOIN knjige USING (id_knjige) WHERE broj_clanske_karte=p_broj_clanske_karte;
         v_red_pozajmica kursor_pozajmica%ROWTYPE;
     BEGIN

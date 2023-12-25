@@ -60,9 +60,9 @@
     BEGIN
         FOR v_red IN spisak_zaposlenih LOOP
             v_zaposleni := zaposleni_fja(v_red.id);
-            DBMS_OUTPUT.PUT_LINE('Zaposleni: '||v_zaposleni.prezime||' '||v_zaposleni.ime);
-            DBMS_OUTPUT.PUT_LINE('Mejl: '||v_zaposleni.mejl);
-            DBMS_OUTPUT.PUT_LINE('Plata: '||v_zaposleni.plata||' RSD'); 
+        DBMS_OUTPUT.PUT_LINE('Zaposleni: '||v_zaposleni.prezime||' '||v_zaposleni.ime);
+        DBMS_OUTPUT.PUT_LINE('Mejl: '||v_zaposleni.mejl);
+        DBMS_OUTPUT.PUT_LINE('Plata: '||v_zaposleni.plata||' RSD'); 
         END LOOP;
     END
 
@@ -207,7 +207,8 @@
         CURSOR kursor_clan 
             IS SELECT broj_clanske_karte, ime||' '||prezime clan, telefon FROM clanovi;
         CURSOR kursor_pozajmica (p_broj_clanske_karte clanovi.broj_clanske_karte%TYPE) 
-            IS SELECT datum_uzimanja, naziv FROM pozajmice JOIN primerci USING (inventarski_broj)
+            IS SELECT datum_uzimanja, naziv 
+            FROM pozajmice JOIN primerci USING (inventarski_broj)
             JOIN knjige USING (id_knjige) WHERE broj_clanske_karte=p_broj_clanske_karte;
     BEGIN
         FOR v_red_clan IN kursor_clan LOOP

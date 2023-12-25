@@ -30,7 +30,8 @@
     CREATE OR REPLACE FUNCTION broj_pozajmica(p_naziv knjige.naziv%TYPE) RETURN NUMBER AS
             broj NUMBER;
     BEGIN
-        SELECT COUNT(*) INTO broj FROM pozajmice JOIN primerci USING(inventarski_broj) JOIN knjige USING(id_knjige)
+        SELECT COUNT(*) INTO broj FROM pozajmice JOIN primerci USING(inventarski_broj) JOIN knjige 
+        USING(id_knjige)
         WHERE naziv = p_naziv;
         RETURN broj;
     END
@@ -56,7 +57,7 @@
     BEGIN
         FOR v_knjiga IN kursor_knjige LOOP
             DBMS_OUTPUT.PUT_LINE('Naziv knjige: '||v_knjiga.naziv);
-            DBMS_OUTPUT.PUT_LINE('  Broj pozajmica: '||broj_pozajmica(v_knjiga.naziv));
+            DBMS_OUTPUT.PUT_LINE('Broj pozajmica: '||broj_pozajmica(v_knjiga.naziv));
         END LOOP;  
     END
 
@@ -71,7 +72,7 @@
 ::
 
     
-        CREATE OR REPLACE PROCEDURE spisak_pozajmica(p_naziv knjige.naziv%TYPE) AS
+    CREATE OR REPLACE PROCEDURE spisak_pozajmica(p_naziv knjige.naziv%TYPE) AS
         CURSOR kursor_pozajmice IS 
         SELECT * FROM pozajmice JOIN primerci USING (inventarski_broj) 
         JOIN knjige USING(id_knjige) WHERE naziv = p_naziv;
@@ -83,7 +84,7 @@
                 ELSE
                     DBMS_OUTPUT.PUT_LINE('Datum vracanja ' || v_pozajmica.datum_vracanja);
                 END IF;
-                DBMS_OUTPUT.PUT_LINE('Broj_clanske_karte ' || v_pozajmica.broj_clanske_karte);
+                DBMS_OUTPUT.PUT_LINE('Clanska_karta ' || v_pozajmica.broj_clanske_karte);
                 DBMS_OUTPUT.PUT_LINE(' ');
             END LOOP;
     END

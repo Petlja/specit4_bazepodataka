@@ -17,7 +17,9 @@
    :width: 780
    :align: center
 
-Анализираћемо следећи проблем. Приказати укупан број позајмица за сваког члана библиотеке. Приказати и чланове који нису имали позајмице.
+.. questionnote::
+    
+    Приказати укупан број позајмица за сваког члана библиотеке. Приказати и чланове који нису имали позајмице.
 
 Погледајмо прво упит којим ове податке узимамо из базе података. 
 
@@ -52,7 +54,8 @@
         LOOP
             FETCH kursor_clanovi INTO v_clan;
             EXIT WHEN kursor_clanovi%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(v_clan.broj_clanske_karte||' - '||v_clan.ime||' '||v_clan.prezime);
+        DBMS_OUTPUT.PUT_LINE(v_clan.broj_clanske_karte||' - '||v_clan.ime||' '||
+        v_clan.prezime);
             DBMS_OUTPUT.PUT_LINE('  Broj pozajmica: '||v_clan.broj);
         END LOOP;
         CLOSE kursor_clanovi;
@@ -70,7 +73,8 @@
             v_clan kursor_clanovi%ROWTYPE;
     BEGIN
         FOR v_clan IN kursor_clanovi LOOP
-        DBMS_OUTPUT.PUT_LINE(v_clan.broj_clanske_karte||' '||v_clan.ime||' '||v_clan.prezime);
+        DBMS_OUTPUT.PUT_LINE(v_clan.broj_clanske_karte||' '||v_clan.ime||' '||
+        v_clan.prezime);
             DBMS_OUTPUT.PUT_LINE('  Broj pozajmica: '||v_clan.broj);
         END LOOP;
     END
@@ -91,7 +95,8 @@
         broj NUMBER(3);
     BEGIN
         FOR v_clan IN kursor_clanovi LOOP
-        DBMS_OUTPUT.PUT_LINE(v_clan.broj_clanske_karte||' - '||v_clan.ime||' '||v_clan.prezime);
+        DBMS_OUTPUT.PUT_LINE(v_clan.broj_clanske_karte||' - '||v_clan.ime||' '||
+        v_clan.prezime);
             SELECT COUNT(*) INTO broj
             FROM pozajmice WHERE broj_clanske_karte=v_clan.broj_clanske_karte;
             DBMS_OUTPUT.PUT_LINE('  Broj pozajmica: '||broj);

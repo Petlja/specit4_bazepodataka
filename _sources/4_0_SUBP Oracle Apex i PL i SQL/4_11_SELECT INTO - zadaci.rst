@@ -51,8 +51,6 @@
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
             DBMS_OUTPUT.PUT_LINE('Nepostojeci broj clanske karte');
-        WHEN TOO_MANY_ROWS THEN
-            DBMS_OUTPUT.PUT_LINE('Vise redova odgovara zahtevu');
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('Greska');
     END
@@ -170,7 +168,7 @@
         DBMS_OUTPUT.PUT_LINE('Prezime menadzera: '||v_prezime);       
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
-            DBMS_OUTPUT.PUT_LINE('Nepostojeci broj clanske karte');
+            DBMS_OUTPUT.PUT_LINE('Nepostojeci identifikacioni broj');
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('Greska');
     END
@@ -191,11 +189,11 @@
         SELECT z.prezime, m.prezime INTO v_zaposleni, v_menadzer
         FROM zaposleni z JOIN zaposleni m
         ON (z.id_menadzera=m.id) WHERE z.id=3;
-        DBMS_OUTPUT.PUT_LINE('Prezime zapolsenog: '||v_zaposleni); 
+        DBMS_OUTPUT.PUT_LINE('Prezime zaposlenog: '||v_zaposleni); 
         DBMS_OUTPUT.PUT_LINE('Prezime menadzera: '||v_menadzer);       
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
-            DBMS_OUTPUT.PUT_LINE('Nema zaposlenog sa id=3');
+            DBMS_OUTPUT.PUT_LINE('Nema zaposlenog sa id=3 ili on nema menadzera');
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('Greska');
     END
@@ -226,11 +224,11 @@
         --prezime menadzera
         SELECT prezime INTO v_menadzer
         FROM zaposleni WHERE id=v_id_menadzera;
-        DBMS_OUTPUT.PUT_LINE('Prezime zapolsenog: '||v_zaposleni); 
+        DBMS_OUTPUT.PUT_LINE('Prezime zaposlenog: '||v_zaposleni); 
         DBMS_OUTPUT.PUT_LINE('Prezime menadzera: '||v_menadzer);       
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
-            DBMS_OUTPUT.PUT_LINE('Nema zaposlenog sa id=3');
+            DBMS_OUTPUT.PUT_LINE('Nema zaposlenog sa id=3 ili on nema menadzera');
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('Greska');
     END
@@ -280,7 +278,8 @@
         FROM zaposleni 
         WHERE id = v_id_menadzera;
 
-        IF UPPER(v_ime_menadzera) = 'VOJIN' AND UPPER(v_prezime_menadzera) = 'PUPAVAC' THEN
+        IF UPPER(v_ime_menadzera) = 'VOJIN' AND UPPER(v_prezime_menadzera) = 'PUPAVAC' 
+        THEN
             DBMS_OUTPUT.PUT_LINE('Vojin je menadzer Aleksandru');
         ELSE 
             DBMS_OUTPUT.PUT_LINE('Vojin nije menadzer Aleksandru');
@@ -304,11 +303,11 @@
         DBMS_OUTPUT.PUT_LINE('Mejl: '||v_zaposleni.mejl);
     EXCEPTION
         WHEN TOO_MANY_ROWS THEN
-            DBMS_OUTPUT.PUT_LINE('Postoji vise zaposlenih koji su poceli da rade istog dana');
+        DBMS_OUTPUT.PUT_LINE('Postoji vise zaposlenih koji su poceli da rade istog dana');
         WHEN NO_DATA_FOUND THEN
-            DBMS_OUTPUT.PUT_LINE('Ne postoje zaposleni');  
+        DBMS_OUTPUT.PUT_LINE('Ne postoje zaposleni');  
         WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Greska');
+        DBMS_OUTPUT.PUT_LINE('Greska');
     END
 
 Други начин је да употребимо две наредбе SELECT INTO. 
@@ -351,7 +350,7 @@
     BEGIN
         SELECT prezime INTO v_prezime
         FROM zaposleni WHERE id_menadzera=3;
-        DBMS_OUTPUT.PUT_LINE('Prezime menadzera: '||v_prezime);       
+        DBMS_OUTPUT.PUT_LINE('Prezime: '||v_prezime);       
     EXCEPTION
         WHEN TOO_MANY_ROWS THEN
             DBMS_OUTPUT.PUT_LINE('Postoji vise od jednog zaposlenog');

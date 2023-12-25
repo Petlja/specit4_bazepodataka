@@ -36,7 +36,7 @@
 
 Комплетан XML фајл који ћемо користити са списком награђених књига треба да се преузме и сачува негде на рачунару да би се после искористио за креирање базе. 
 
-spisak_nagrada.xml (ОБЕЗБЕДИТИ ПРЕУЗИМАЊЕ ФАЈЛА)
+`spisak_nagrada.xml <https://petljamediastorage.blob.core.windows.net/root/Media/Default/Kursevi/OnlineNastava/specit4_bazepodataka/spisak_nagrada.xml>`_
 
 Алату *App Builder* се приступа у оквиру СУБП-а *Oracle APEX*:
 

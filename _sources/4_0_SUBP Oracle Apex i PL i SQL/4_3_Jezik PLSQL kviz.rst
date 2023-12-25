@@ -100,7 +100,7 @@
         :answer_d: 14
         :correct: a
 
-        Која је коначна вредност променљиве of v_promenljiva? 
+        Која је коначна вредност променљиве *v_promenljiva*? 
 
         DECLARE 
 
@@ -121,7 +121,7 @@
         :answer_d: 14
         :correct: d
 
-        Која је коначна вредност променљиве of v_promenljiva?
+        Која је коначна вредност променљиве *v_promenljiva*?
 
         DECLARE 
 
